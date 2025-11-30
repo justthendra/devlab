@@ -12,31 +12,37 @@ export default function DocsPage() {
       title: "🚀 Getting Started",
       link: "/docs/getting-started",
       desc: "Quick start guide for using DevLab.",
+      gradient: "from-green-400 to-blue-400",
     },
     {
       title: "🧠 How It Works",
       link: "/docs/how-it-works",
       desc: "Browser-based FFmpeg pipeline and WebAssembly model.",
+      gradient: "from-purple-400 to-pink-400",
     },
     {
       title: "🔒 Security & Privacy",
       link: "/docs/security",
       desc: "No files are uploaded. All processing happens on-device.",
+      gradient: "from-yellow-400 to-red-400",
     },
     {
       title: "⚙️ FFmpeg Technology",
       link: "/docs/ffmpeg",
       desc: "Libraries used, version details, and optimal quality settings.",
+      gradient: "from-indigo-400 to-purple-400",
     },
     {
       title: "📦 API / Modularity",
       link: "/docs/api",
       desc: "Developer integration and tool modules overview.",
+      gradient: "from-pink-400 to-red-400",
     },
     {
       title: "❓ Frequently Asked Questions",
       link: "/docs/faq",
       desc: "Troubleshooting, performance, and support.",
+      gradient: "from-teal-400 to-cyan-400",
     },
   ];
 
@@ -87,12 +93,12 @@ export default function DocsPage() {
                   cursor-pointer p-5 rounded-xl text-left border transition
                   ${
                     theme === "dark"
-                      ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200 hover:shadow-[0_0_25px_rgba(0,255,220,0.3)]"
+                      ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200"
                       : "bg-white border-gray-200 text-slate-800 hover:shadow-[0_0_15px_rgba(0,150,255,0.15)]"
                   }
                 `}
               >
-                <h3 className="text-lg font-semibold bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">
+                <h3 className={`text-lg font-semibold bg-gradient-to-r ${section.gradient} bg-clip-text text-transparent`}>
                   {section.title}
                 </h3>
                 <p
