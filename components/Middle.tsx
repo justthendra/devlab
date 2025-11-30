@@ -27,8 +27,8 @@ export default function Middle() {
     ].map((item) => (
       <span
         key={item}
-        className={`px-3 py-1 rounded-full 
-        ${theme === "dark" ? "bg-[rgba(3,3,3,0.04)] border border-[rgba(255,255,255,0.06)]" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.1)] text-slate-700 hover:border-emerald-600 hover:text-emerald-500"} transition`}
+        className={`px-3 py-1 rounded-full cursor-pointer
+        ${theme === "dark" ? "bg-[rgba(3,3,3,0.04)] border border-[rgba(255,255,255,0.06)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.1)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 text-slate-700 hover:border-emerald-600 hover:text-emerald-500"} transition`}
       >
         {item}
       </span>
