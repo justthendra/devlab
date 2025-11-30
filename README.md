@@ -18,7 +18,7 @@ DevLab provides instant conversion, formatting, QR generation, and visual effect
 | 📷 JPG → WEBP Optimizer | Image format conversion (browser-based). |
 | 🌀 GIF Optimizer | Lightweight GIF processing. |
 | 🔢 QR Code Generator | High-quality QR code generation + PNG download. |
-| 🎧 MP3 Downloader *(experimental)* | YouTube to MP3 conversion (partial support). |
+| 🎧 MP3 Downloader *(Temporarily disabled)* | YouTube to MP3 conversion (Temporarily disabled). |
 | 📁 Upcoming | More frontend & media tools on the way. |
 
 > ⚠️ Note: MP3 Downloader support is limited due to FFmpeg Windows restrictions. Recommended to run using Linux Docker.
