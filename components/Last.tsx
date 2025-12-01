@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { Github  } from "lucide-react";
+import Image from "next/image";
 import { FaDiscord } from "react-icons/fa";
 
 
@@ -80,5 +81,6 @@ export default function Last() {
 </section>
   );
 }
+
 
 
