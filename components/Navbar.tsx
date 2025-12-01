@@ -36,13 +36,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="text-sm font-semibold mr-auto">
-          <Image
-          src="/DevLabnew.png"
-          alt="devLab Logo"
-          width={40}
-          height={40}
-          className="transition-transform group-hover:scale-105"
-        />
+          <span>DevLab</span>
         </Link>
 
         {/* Menü */}
@@ -106,6 +100,7 @@ export default function Navbar() {
     </div>
   );
 }
+
 
 
 
