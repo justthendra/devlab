@@ -23,7 +23,7 @@ export default function Last() {
     className="mb-4"
   >
     <Image
-      src="/DevLab.png"
+      src="/DevLabnew.png"
       alt="DevLab Logo"
       width={42}
       height={42}
@@ -80,4 +80,5 @@ export default function Last() {
 </section>
   );
 }
+
 
