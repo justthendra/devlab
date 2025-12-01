@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "DevLab",
-  description: "Tarayıcı tabanlı dönüştürücü araçlar",
+  description: "DevLab is a service that offers you many tools to make your work easier and it is completely free to use..",
   favicon: "./favicon.ico",
 };
 
