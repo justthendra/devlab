@@ -19,19 +19,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`min-h-screen flex flex-col ${poppins.className}`} suppressHydrationWarning={true}>
-        <div className="pointer-events-none absolute -top-32 -left-28 w-[400px] h-[400px] bg-[rgba(0,255,200,0.10)] blur-[180px] rounded-full animate-pulse" />
-        <div className="pointer-events-none absolute bottom-[-50px] right-[-40px] w-[350px] h-[350px] bg-[rgba(0,150,255,0.10)] blur-[200px] rounded-full animate-pulse" />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
         >
+        <div className="pointer-events-none absolute -top-32 -left-28 w-[400px] h-[400px] bg-[rgba(0,255,200,0.10)] blur-[180px] rounded-full animate-pulse" />
+        <div className="pointer-events-none absolute bottom-[-50px] right-[-40px] w-[350px] h-[350px] bg-[rgba(0,150,255,0.10)] blur-[200px] rounded-full animate-pulse" />
         <Navbar />
-        <div className="pt-40 md:pt-28">
         {children}
-        </div>
-        </ThemeProvider>
         <Footer />
+        </ThemeProvider>
         </body>
     </html>
   );
