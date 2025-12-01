@@ -17,7 +17,7 @@ export default function Footer() {
       `}
     >
       <p className="text-center">
-        Built with 💚 for{" "}
+        Developed by 💚 with{" "}
         <a
           href="https://github.com/justthendra"
           target="_blank"
@@ -33,3 +33,4 @@ export default function Footer() {
     </footer>
   );
 }
+
