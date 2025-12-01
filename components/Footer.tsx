@@ -26,7 +26,7 @@ export default function Footer() {
       />
 
       <p className="text-center">
-        Built with 💚 for{" "}
+        Developed by 💚 with{" "}
         <a href="https://github.com/justthendra" target="_blank" rel="noopener noreferrer" className="text-green-400 no-underline font-medium">
           Thendra
         </a>
@@ -37,3 +37,4 @@ export default function Footer() {
     </footer>
   );
 }
+
