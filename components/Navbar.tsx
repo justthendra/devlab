@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
@@ -105,4 +106,5 @@ export default function Navbar() {
     </div>
   );
 }
+
 
