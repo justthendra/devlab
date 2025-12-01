@@ -13,7 +13,7 @@ const tools = [
   { name: "🎧 MP4 → MP3", path: "/tools/mp4tomp3" },
   { name: "📷 JPG → WEBP", path: "/tools/jpgtowebp" },
   { name: "🌀 GIF Optimize", path: "/tools/gifoptimize" },
-  { name: "🎨 Gradient Generator", path: "/tools/gradientgenerator" },
+  { name: "🎨 Gradient Generator", path: "/tools/cssglow" },
   { name: "🧠 JSON + Lua Formatter", path: "/tools/formatter" },
   { name: "🔣 QR Code Generator", path: "/tools/qrcode" },
   { name: "🎧 MP3 Downloader", path: "/tools/mp3downloader" },
@@ -63,7 +63,7 @@ export default function Navbar() {
           max-w-5xl w-full mx-4 px-4 py-2 flex items-center gap-4
           backdrop-blur-md border rounded-full pointer-events-auto
           ${theme === "dark"
-            ? "bg-[rgba(11,11,14,0.11)] border-[rgba(255,255,255,0.07)]"
+            ? "bg-[rgba(11,11,14,0.09)] border-[rgba(255,255,255,0.07)]"
             : "bg-[rgba(245,245,245,0.6)] border-[rgba(0,0,0,0.1)]"}
         `}
       >
@@ -157,7 +157,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)]"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]"
         >
           {theme === "dark" ? (
             <Sun className="w-4 h-4 text-yellow-300" />
@@ -170,7 +170,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)]"
+          className="md:hidden w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]"
         >
           {menuOpen ? <X size={18} /> : <Menu size={18} />}
         </motion.button>
@@ -187,7 +187,7 @@ export default function Navbar() {
             className="
               fixed top-20 right-4 left-4 rounded-xl px-6 py-4
               backdrop-blur-md z-40
-              bg-[rgba(16,16,18,0.85)] border-[rgba(255,255,255,0.08)]
+              bg-[rgba(24,24,24,0.85)] border-[rgba(255,255,255,0.08)]
             "
           >
             {/* Arama */}
