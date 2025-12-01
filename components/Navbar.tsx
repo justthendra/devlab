@@ -35,9 +35,13 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="text-sm font-semibold mr-auto">
-          <span className={`text-md ${theme === "dark" ? "text-white" : "text-slate-900"}`}>
-            DevLab
-          </span>
+          <Image
+          src="/DevLabnew.png"
+          alt="devLab Logo"
+          width={34}
+          height={34}
+          className="transition-transform group-hover:scale-105"
+        />
         </Link>
 
         {/* Menü */}
@@ -101,3 +105,4 @@ export default function Navbar() {
     </div>
   );
 }
+
