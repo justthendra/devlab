@@ -39,8 +39,8 @@ export default function Navbar() {
           <Image
           src="/DevLabnew.png"
           alt="devLab Logo"
-          width={34}
-          height={34}
+          width={40}
+          height={40}
           className="transition-transform group-hover:scale-105"
         />
         </Link>
@@ -106,5 +106,6 @@ export default function Navbar() {
     </div>
   );
 }
+
 
 
