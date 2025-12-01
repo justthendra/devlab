@@ -1,244 +1,163 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Sun, Moon, Search } from "lucide-react";
-import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Sun, Moon, Menu, X } from "lucide-react";
 
-const TOOL_INDEX = [
-  {
-    name: "MP4 → WEBM",
-    path: "/tools/mp4towebm",
-    keywords: ["mp4", "webm", "video", "convert"],
-  },
-  {
-    name: "MP4 → MP3",
-    path: "/tools/mp4tomp3",
-    keywords: ["mp4", "mp3", "audio"],
-  },
-  {
-    name: "JPG → WEBP",
-    path: "/tools/jpgtowebp",
-    keywords: ["jpg", "webp", "image"],
-  },
-  {
-    name: "GIF Optimize",
-    path: "/tools/gifoptimize",
-    keywords: ["gif", "optimize"],
-  },
-  {
-    name: "JSON/Lua Formatter",
-    path: "/tools/formatter",
-    keywords: ["json", "lua", "format"],
-  },
-  {
-    name: "QR Code Generator",
-    path: "/tools/qrcode",
-    keywords: ["qr", "qrcode", "qr code"],
-  },
-  {
-    name: "Color Palette Extractor",
-    path: "/tools/colorpalette",
-    keywords: ["color", "palette", "extractor"],
-  },
-  {
-    name: "CSS Glow Generator",
-    path: "/tools/cssglow",
-    keywords: ["css", "glow", "gradient"],
-  },
-  {
-    name: "JS Beautify & Minify",
-    path: "/tools/jsbeautify",
-    keywords: ["js", "javascript", "beautify", "minify"],
-  },
-  {
-    name: "MP3 Downloader",
-    path: "/tools/mp3downloader",
-    keywords: ["mp3", "download", "mp3download"],
-  },
+// 🔍 Arama içeriği
+const tools = [
+  { name: "🎬 MP4 → WEBM", path: "/tools/mp4towebm" },
+  { name: "🎧 MP4 → MP3", path: "/tools/mp4tomp3" },
+  { name: "📷 JPG → WEBP", path: "/tools/jpgtowebp" },
+  { name: "🌀 GIF Optimize", path: "/tools/gifoptimize" },
+  { name: "🎨 Gradient Generator", path: "/tools/gradientgenerator" },
+  { name: "🧠 JSON + Lua Formatter", path: "/tools/formatter" },
+  { name: "🔣 QR Code Generator", path: "/tools/qrcode" },
+  { name: "🎧 MP3 Downloader", path: "/tools/mp3downloader" },
+];
+
+const navItems = [
+  { label: "Tools", path: "/tools" },
+  { label: "Docs", path: "/docs" },
+  { label: "About", path: "/about" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
-  const router = useRouter();
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
+  const [results, setResults] = useState<typeof tools>([]);
 
-  const navItems = [
-    { label: "Tools", path: "/tools" },
-    { label: "About", path: "/about" },
-    { label: "Docs", path: "/docs" },
-  ];
-
-  const results = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    if (!q) return [];
-    return TOOL_INDEX.filter((t) => {
-      return (
-        t.name.toLowerCase().includes(q) ||
-        t.keywords.some((k) => k.toLowerCase().includes(q))
+  // Arama filtreleme
+  useEffect(() => {
+    if (query.length > 0) {
+      setResults(
+        tools.filter((tool) =>
+          tool.name.toLowerCase().includes(query.toLowerCase())
+        )
       );
-    }).slice(0, 6);
+    } else {
+      setResults([]);
+    }
   }, [query]);
 
   const handleSearchEnter = () => {
     if (results.length > 0) {
-      router.push(results[0].path);
-      setFocused(false);
-      setQuery("");
-    } else if (query.trim()) {
-      router.push("/tools");
-      setFocused(false);
+      window.location.href = results[0].path;
+      setMenuOpen(false);
     }
   };
 
   return (
-    <div className="w-full flex justify-center mt-6 fixed top-0 z-50 pointer-events-none">
+    <div className="w-full flex justify-center mt-6 fixed top-0 z-50">
       <motion.nav
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className={`
           max-w-5xl w-full mx-4 px-4 py-2 flex items-center gap-4
-          rounded-full pointer-events-auto
-          backdrop-blur-md border
-          ${
-            theme === "dark"
-              ? "bg-[rgba(12,12,14,0.09)] border-[rgba(255,255,255,0.06)]"
-              : "bg-[rgba(245,245,247,0.92)] border-[rgba(0,0,0,0.06)]"
-          }
+          backdrop-blur-md border rounded-full pointer-events-auto
+          ${theme === "dark"
+            ? "bg-[rgba(11,11,14,0.11)] border-[rgba(255,255,255,0.07)]"
+            : "bg-[rgba(245,245,245,0.6)] border-[rgba(0,0,0,0.1)]"}
         `}
       >
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 mr-1">
+        {/* 🔥 Logo */}
+        <Link href="/" className="flex items-center gap-2 mr-auto">
           <span
-            className={`hidden sm:inline text-sm font-semibold tracking-wide ${
-              theme === "dark" ? "text-slate-100" : "text-slate-900"
+            className={`text-sm font-semibold ${
+              theme === "dark" ? "text-slate-200" : "text-slate-900"
             }`}
           >
             DevLab
           </span>
         </Link>
 
-        {/* Orta kısım: nav linkler + search */}
-        <div className="flex items-center gap-4 flex-1">
-          <div className="hidden md:flex items-center gap-3">
-            {navItems.map((item) => {
-              const isActive = pathname.startsWith(item.path);
-              return (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`text-xs font-medium transition ${
-                    isActive
-                      ? theme === "dark"
-                        ? "text-emerald-300"
-                        : "text-emerald-600"
-                      : theme === "dark"
-                      ? "text-slate-400 hover:text-slate-200"
-                      : "text-slate-500 hover:text-slate-800"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Search bar */}
-          <div className="relative ml-auto">
-            <div
-              className={`
-                flex items-center gap-1 px-3 py-1.5 rounded-full text-xs
-                border transition-colors w-40 sm:w-52
-                ${
-                  theme === "dark"
-                    ? "bg-[rgba(12,14,17,0.04)] border-[rgba(88,88,88,0.4)]"
-                    : "bg-[rgba(248,249,252,0.9)] border-[rgba(90,90,90,0.4)]"
-                }
-              `}
-            >
-              <Search className="w-3.5 h-3.5 text-gray-400" />
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onFocus={() => setFocused(true)}
-                onBlur={() => setTimeout(() => setFocused(false), 150)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    handleSearchEnter();
-                  }
-                }}
-                placeholder="Search tools…"
-                className={`
-                  bg-transparent outline-none text-[11px] flex-1
-                  ${
-                    theme === "dark"
-                      ? "text-slate-100 placeholder:text-slate-500"
-                      : "text-slate-800 placeholder:text-slate-500"
-                  }
-                `}
-              />
-            </div>
-
-            {/* Sonuç dropdown'u */}
-            {focused && results.length > 0 && (
-              <div
-                className={`
-                  absolute mt-1 right-0 left-0 rounded-2xl text-[11px] z-40
-                  border shadow-lg overflow-hidden
-                  ${
-                    theme === "dark"
-                      ? "bg-[rgba(17,20,26,0.3)] border-[rgba(104,104,104,0.35)]"
-                      : "bg-white border-[rgba(148,163,184,0.45)]"
-                  }
-                `}
+        {/* 📌 Desktop Menü */}
+        <div className="hidden md:flex items-center gap-4">
+          {navItems.map((item) => {
+            const isActive = pathname.startsWith(item.path);
+            return (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`text-sm transition ${
+                  isActive
+                    ? "text-emerald-400 font-semibold"
+                    : theme === "dark"
+                    ? "text-slate-400 hover:text-white"
+                    : "text-slate-600 hover:text-slate-800"
+                }`}
               >
-                {results.map((tool) => (
-                  <button
-                    key={tool.path}
-                    type="button"
-                    onMouseDown={(e) => {
-                      e.preventDefault();
-                      router.push(tool.path);
-                      setQuery("");
-                      setFocused(false);
-                    }}
-                    className={`
-                      w-full text-left px-3 py-1.5 cursor-pointer hover:bg-[rgba(41,41,41,0.09)]
-                      ${
-                        theme === "dark"
-                          ? "text-slate-200"
-                          : "text-slate-800"
-                      }
-                    `}
-                  >
-                    {tool.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Tema butonu + profil */}
+        {/* 🔍 Arama alanı (desktop) */}
+        <div className="hidden md:block relative">
+          <div
+            className={`
+              flex items-center gap-1 px-3 py-1.5 rounded-full text-xs border w-52
+              ${theme === "dark"
+                ? "bg-[rgba(15,15,18,0.09)] border-[rgba(255,255,255,0.07)]"
+                : "bg-white border-slate-300"}
+            `}
+          >
+            <Search className="w-4 h-4 text-slate-400" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onFocus={() => setFocused(true)}
+              onBlur={() => setTimeout(() => setFocused(false), 200)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
+              placeholder="Search tools..."
+              className="bg-transparent outline-none text-xs flex-1 text-slate-300"
+            />
+          </div>
+
+          <AnimatePresence>
+            {focused && results.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.18 }}
+                className="
+                  absolute mt-2 w-full rounded-xl border backdrop-blur-md
+                  bg-[rgba(18,18,23,0.18)] border-[rgba(255,255,255,0.07)]
+                  shadow-[0_4px_14px_rgba(0,0,0,0.4)] overflow-hidden z-50
+                "
+              >
+                {results.map((r) => (
+                  <motion.a
+                    key={r.path}
+                    href={r.path}
+                    whileHover={{ x: 4 }}
+                    className="
+                      block px-3 py-2 text-xs text-slate-300
+                      hover:text-emerald-300 hover:bg-[rgba(255,255,255,0.05)]
+                    "
+                  >
+                    {r.name}
+                  </motion.a>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* ☀️ Tema butonu */}
         <motion.button
-          whileHover={{ scale: 1.1 }}
-          className={`
-            w-8 h-8 flex items-center justify-center rounded-full
-            border transition cursor-pointer
-            ${
-              theme === "dark"
-                ? "bg-[rgba(9,10,12,0.25)] border-[rgba(100,100,100,0.4)] hover:border-[rgba(179,179,179,0.4)]"
-                : "bg-[rgba(243,244,246,0.95)] border-[rgba(148,163,184,0.4)]"
-            }
-          `}
+          whileHover={{ scale: 1.15 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)]"
         >
           {theme === "dark" ? (
             <Sun className="w-4 h-4 text-yellow-300" />
@@ -246,8 +165,74 @@ export default function Navbar() {
             <Moon className="w-4 h-4 text-indigo-500" />
           )}
         </motion.button>
+
+        {/* 📱 Menü butonu */}
+        <motion.button
+          whileHover={{ scale: 1.15 }}
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)]"
+        >
+          {menuOpen ? <X size={18} /> : <Menu size={18} />}
+        </motion.button>
       </motion.nav>
+
+      {/* 📱 Mobile Menü Panel */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className="
+              fixed top-20 right-4 left-4 rounded-xl px-6 py-4
+              backdrop-blur-md z-40
+              bg-[rgba(16,16,18,0.85)] border-[rgba(255,255,255,0.08)]
+            "
+          >
+            {/* Arama */}
+            <div className="flex items-center gap-2 mb-3 px-3 py-2 rounded-lg border">
+              <Search className="w-4 h-4 text-slate-400" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search tools..."
+                onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
+                className="bg-transparent flex-1 text-sm outline-none"
+              />
+            </div>
+
+            {/* Sonuçlar */}
+            {results.length > 0 && (
+              <div className="mb-4 rounded-lg bg-[rgba(255,255,255,0.04)] p-2">
+                {results.map((r) => (
+                  <motion.a
+                    key={r.path}
+                    href={r.path}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setMenuOpen(false)}
+                    className="block px-2 py-1 text-sm text-slate-300 hover:text-emerald-300"
+                  >
+                    {r.name}
+                  </motion.a>
+                ))}
+              </div>
+            )}
+
+            {/* Menü Elemanları */}
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                onClick={() => setMenuOpen(false)}
+                className="block py-2 text-sm border-b border-[rgba(255,255,255,0.07)]"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
-
