@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "DevLab",
-  description: "DevLab is a service that offers you many tools to make your work easier and it is completely free to use..",
+  description: "Tarayıcı tabanlı dönüştürücü araçlar",
   favicon: "./favicon.ico",
 };
 
@@ -27,7 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem={false}
         >
         <Navbar />
+        <div className="pt-40 md:pt-28">
         {children}
+        </div>
         </ThemeProvider>
         <Footer />
         </body>
