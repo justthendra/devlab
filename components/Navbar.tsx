@@ -53,6 +53,11 @@ const TOOL_INDEX = [
     path: "/tools/jsbeautify",
     keywords: ["js", "javascript", "beautify", "minify"],
   },
+  {
+    name: "MP3 Downloader",
+    path: "/tools/mp3downloader",
+    keywords: ["mp3", "download", "mp3download"],
+  },
 ];
 
 export default function Navbar() {
@@ -245,3 +250,4 @@ export default function Navbar() {
     </div>
   );
 }
+
