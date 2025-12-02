@@ -9,7 +9,7 @@ export default function AIImageGeneratorPage() {
 
   return (
     <div className="max-w-3xl mx-auto w-full px-5 pb-16 mt-24">
-
+      <title>DevLab - AI Image Generator</title>
       {/* Başlık */}
       <h1
         className="
@@ -43,3 +43,4 @@ export default function AIImageGeneratorPage() {
     </div>
   );
 }
+
