@@ -158,7 +158,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)] cursor-pointer"
         >
           {theme === "dark" ? (
             <Sun className="w-4 h-4 text-yellow-300" />
@@ -237,3 +237,4 @@ export default function Navbar() {
     </div>
   );
 }
+
