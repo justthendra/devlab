@@ -273,8 +273,8 @@ export default function ColorPaletteTool() {
             </span>
             <span className="text-[11px] text-slate-500">
               {colors.length > 0
-                ? `${colors.length} color finded`
-                : "Color waiting"}
+                ? `${colors.length} renk bulundu`
+                : "Renk bekleniyor"}
             </span>
           </div>
 
@@ -410,5 +410,3 @@ function rgbToHex(r: number, g: number, b: number) {
 function clampColor(v: number) {
   return Math.max(0, Math.min(255, v));
 }
-
-

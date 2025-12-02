@@ -17,6 +17,7 @@ const tools = [
   { name: "🧠 JSON + Lua Formatter", path: "/tools/formatter" },
   { name: "🔣 QR Code Generator", path: "/tools/qrcode" },
   { name: "🎧 MP3 Downloader", path: "/tools/mp3downloader" },
+  { name: "🎨 AI Image Generator", path: "/tools/image-generator" },
 ];
 
 const navItems = [

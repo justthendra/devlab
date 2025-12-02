@@ -22,7 +22,7 @@ export default function Footer() {
           href="https://github.com/justthendra"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-emerald-400 no-underline font-medium"
+          className="text-emerald-400 no-underline font-medium hover:underline"
         >
           Thendra
         </a>
@@ -33,4 +33,3 @@ export default function Footer() {
     </footer>
   );
 }
-

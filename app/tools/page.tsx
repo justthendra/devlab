@@ -68,6 +68,12 @@ export default function ToolsPage() {
     desc: "JavaScript formatting and minification.",
     gradient: "from-yellow-400 via-amber-500 to-orange-400",
   },
+  {
+    title: "🖼 AI Image Generator",
+    link: "/tools/image-generator",
+    desc: "Generate images from text prompts using AI.",
+    gradient: "from-pink-400 via-purple-500 to-indigo-400",
+  },
 ];
 
 
