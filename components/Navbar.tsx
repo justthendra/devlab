@@ -107,7 +107,7 @@ export default function Navbar() {
             className={`
               flex items-center gap-1 px-3 py-1.5 rounded-full text-xs border w-52
               ${theme === "dark"
-                ? "bg-[rgba(15,15,18,0.09)] border-[rgba(255,255,255,0.07)]"
+                ? "bg-[rgba(15,15,18,0.05)] border-[rgba(255,255,255,0.07)]"
                 : "bg-white border-slate-300"}
             `}
           >
@@ -237,4 +237,5 @@ export default function Navbar() {
     </div>
   );
 }
+
 
