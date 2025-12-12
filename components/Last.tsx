@@ -23,7 +23,7 @@ export default function Last() {
         className="mb-[-60px]"
       >
         <Image
-          src={`${theme === "dark" ? "/devLabnew.png" : "/devLabLight.png"}`}
+          src={`${theme === "dark" ? "/DevLabnew.png" : "/DevLabLight.png"}`}
           alt="DevLab Logo"
           width={240}
           height={240}
@@ -78,3 +78,4 @@ export default function Last() {
     </section>
   );
 }
+
