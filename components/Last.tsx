@@ -23,7 +23,7 @@ export default function Last() {
         className="mb-[-60px]"
       >
         <Image
-          src="/DevLabnew.png"
+          src={`${theme === "dark" ? "/devLabnew.png" : "/devLabLight.png"}`}
           alt="DevLab Logo"
           width={240}
           height={240}
@@ -66,7 +66,7 @@ export default function Last() {
           flex items-center gap-1 px-3 py-2 rounded-lg text-xs border transition
           ${theme === "dark"
                 ? "bg-[rgba(15,13,13,0.01)] border-[rgba(255,255,255,0.12)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 text-slate-300 hover:bg-[rgba(31,31,31,0.02)]"
-                : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)]"
+                : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
               }
         `}
           >

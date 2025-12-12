@@ -70,8 +70,8 @@ export default function AboutPage() {
                 p-5 rounded-xl text-left backdrop-blur-md border transition
                 ${
                   theme === "dark"
-                    ? "bg-[rgba(11,12,14,0.08)] border-[rgba(255,255,255,0.05)] text-slate-200"
-                    : "bg-white border-gray-200 text-slate-700"
+                    ? "bg-[rgba(11,12,14,0.08)] border-[rgba(255,255,255,0.05)] text-slate-200 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                    : "bg-white border-gray-200 text-slate-700 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
                 }
               `}
             >
@@ -127,8 +127,8 @@ export default function AboutPage() {
                   flex items-center gap-1 px-3 py-2 rounded-lg text-xs border transition
                   ${
                     theme === "dark"
-                      ? "bg-[rgba(15,13,13,0.05)] border-[rgba(255,255,255,0.12)] text-slate-300 hover:bg-[rgba(31,31,31,0.15)]"
-                      : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)]"
+                      ? "bg-[rgba(15,13,13,0.05)] border-[rgba(255,255,255,0.12)] text-slate-300 hover:bg-[rgba(31,31,31,0.15)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                      : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
                   }
                 `}
               >

@@ -108,10 +108,10 @@ export default function Navbar() {
               flex items-center gap-1 px-3 py-1.5 rounded-full text-xs border w-52
               ${theme === "dark"
                 ? "bg-[rgba(15,15,18,0.05)] border-[rgba(255,255,255,0.07)]"
-                : "bg-white border-slate-300"}
+                : "bg-white border-[rgba(0,0,0,0.39)]"}
             `}
           >
-            <Search className="w-4 h-4 text-slate-400" />
+            <Search className="w-4 h-4 text-slate-500" />
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -119,7 +119,7 @@ export default function Navbar() {
               onBlur={() => setTimeout(() => setFocused(false), 200)}
               onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
               placeholder="Search tools..."
-              className="bg-transparent outline-none text-xs flex-1 text-slate-300"
+              className={`bg-transparent outline-none text-xs flex-1 ${theme === "dark" ? "text-slate-300" : "text-slate-900"}`}
             />
           </div>
 
@@ -158,7 +158,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)] cursor-pointer"
+          className={`w-8 h-8 flex items-center justify-center rounded-full ${theme === "dark" ? "bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]" : "bg-[rgba(255,255,255,0.8)] border border-[rgba(0,0,0,0.27)]"}`}
         >
           {theme === "dark" ? (
             <Sun className="w-4 h-4 text-yellow-300" />
@@ -237,6 +237,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-
-
