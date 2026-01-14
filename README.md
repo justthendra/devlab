@@ -41,7 +41,7 @@ DevLab provides instant conversion, formatting, QR generation, and visual effect
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/devlab.git
+git clone https://github.com/justthendra/devlab.git
 cd devlab
 
 # Install dependencies
