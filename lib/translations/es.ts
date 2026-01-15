@@ -106,6 +106,8 @@ export const es = {
     by: "por",
     tools: "Herramientas",
     docs: "Documentación",
+    privacy: "Privacidad",
+    terms: "Términos",
   },
 
   // Tools page

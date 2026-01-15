@@ -1,18 +1,15 @@
-"use client";
-
-import Hero from "@/components/Hero";
-import Last from "@/components/Last";
-import Middle from "@/components/Middle";
+import HeroModern from "@/components/HeroModern";
+import ToolsBentoGrid from "@/components/ToolsBentoGrid";
+import FeaturesSection from "@/components/FeaturesSection";
+import CommunitySection from "@/components/CommunitySection";
 
 export default function Home() {
-
-
   return (
-    <main>
-      <Hero/>
-      <Middle/>
-      <Last/>
+    <main className="min-h-screen bg-transparent">
+      <HeroModern />
+      <ToolsBentoGrid />
+      <FeaturesSection />
+      <CommunitySection />
     </main>
-    
   );
 }

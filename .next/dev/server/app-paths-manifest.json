@@ -1,12 +1,4 @@
 {
-  "/docs/api/page": "app/docs/api/page.js",
-  "/docs/faq/page": "app/docs/faq/page.js",
-  "/docs/ffmpeg/page": "app/docs/ffmpeg/page.js",
-  "/docs/getting-started/page": "app/docs/getting-started/page.js",
-  "/docs/how-it-works/page": "app/docs/how-it-works/page.js",
-  "/docs/page": "app/docs/page.js",
-  "/docs/security/page": "app/docs/security/page.js",
-  "/page": "app/page.js",
-  "/tools/mp4towebm/page": "app/tools/mp4towebm/page.js",
-  "/tools/page": "app/tools/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js"
 }

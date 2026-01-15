@@ -106,6 +106,8 @@ export const de = {
     by: "von",
     tools: "Tools",
     docs: "Dokumentation",
+    privacy: "Datenschutz",
+    terms: "Nutzungsbedingungen",
   },
 
   // Tools page

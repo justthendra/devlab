@@ -1085,7 +1085,9 @@ const tr = {
         contact: "İletişim",
         support: "Destek",
         allRightsReserved: "Tüm hakları saklıdır.",
-        by: "tarafından"
+        by: "tarafından",
+        tools: "Araçlar",
+        docs: "Dökümanlar"
     },
     // Tools page
     toolsPage: {
@@ -2053,7 +2055,11 @@ const de = {
         contact: "Kontakt",
         support: "Support",
         allRightsReserved: "Alle Rechte vorbehalten.",
-        by: "von"
+        by: "von",
+        tools: "Tools",
+        docs: "Dokumentation",
+        privacy: "Datenschutz",
+        terms: "Nutzungsbedingungen"
     },
     // Tools page
     toolsPage: {
@@ -2892,7 +2898,11 @@ const fr = {
         contact: "Contact",
         support: "Support",
         allRightsReserved: "Tous droits réservés.",
-        by: "par"
+        by: "par",
+        tools: "Outils",
+        docs: "Documentation",
+        privacy: "Confidentialité",
+        terms: "Conditions"
     },
     // Tools page
     toolsPage: {
@@ -3731,7 +3741,11 @@ const es = {
         contact: "Contacto",
         support: "Soporte",
         allRightsReserved: "Todos los derechos reservados.",
-        by: "por"
+        by: "por",
+        tools: "Herramientas",
+        docs: "Documentación",
+        privacy: "Privacidad",
+        terms: "Términos"
     },
     // Tools page
     toolsPage: {
