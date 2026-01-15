@@ -3,45 +3,41 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function DocsPage() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const sections = [
     {
-      title: "🚀 Getting Started",
+      key: "gettingStarted",
       link: "/docs/getting-started",
-      desc: "Quick start guide for using DevLab.",
       gradient: "from-green-400 to-blue-400",
     },
     {
-      title: "🧠 How It Works",
+      key: "howItWorks",
       link: "/docs/how-it-works",
-      desc: "Browser-based FFmpeg pipeline and WebAssembly model.",
       gradient: "from-purple-400 to-pink-400",
     },
     {
-      title: "🔒 Security & Privacy",
+      key: "security",
       link: "/docs/security",
-      desc: "No files are uploaded. All processing happens on-device.",
       gradient: "from-yellow-400 to-red-400",
     },
     {
-      title: "⚙️ FFmpeg Technology",
+      key: "ffmpeg",
       link: "/docs/ffmpeg",
-      desc: "Libraries used, version details, and optimal quality settings.",
       gradient: "from-indigo-400 to-purple-400",
     },
     {
-      title: "📦 API / Modularity",
+      key: "api",
       link: "/docs/api",
-      desc: "Developer integration and tool modules overview.",
       gradient: "from-pink-400 to-red-400",
     },
     {
-      title: "❓ Frequently Asked Questions",
+      key: "faq",
       link: "/docs/faq",
-      desc: "Troubleshooting, performance, and support.",
       gradient: "from-teal-400 to-cyan-400",
     },
   ];
@@ -68,18 +64,16 @@ export default function DocsPage() {
           className="text-3xl md:text-5xl font-bold mb-3"
         >
           <span className="bg-gradient-to-r from-green-400 via-blue-400 to-gray-400 bg-clip-text text-transparent">
-            Documentation
+            {t("docs.title")}
           </span>
         </motion.h1>
 
         {/* Açıklama */}
         <p
-          className={`text-sm md:text-base max-w-2xl mx-auto mb-12 ${
-            theme === "dark" ? "text-slate-300" : "text-slate-600"
-          }`}
+          className={`text-sm md:text-base max-w-2xl mx-auto mb-12 ${theme === "dark" ? "text-slate-300" : "text-slate-600"
+            }`}
         >
-          Technical documentation for DevLab: build process, security model,
-          and developer information.
+          {t("docs.description")}
         </p>
 
         {/* Bölüm kartları */}
@@ -91,22 +85,20 @@ export default function DocsPage() {
                 whileTap={{ scale: 0.97 }}
                 className={`
                   cursor-pointer p-5 rounded-xl text-left border transition
-                  ${
-                    theme === "dark"
-                      ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200"
-                      : "bg-white border-gray-200 text-slate-800 hover:shadow-[0_0_15px_rgba(0,150,255,0.15)]"
+                  ${theme === "dark"
+                    ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200"
+                    : "bg-white border-gray-200 text-slate-800 hover:shadow-[0_0_15px_rgba(0,150,255,0.15)]"
                   }
                 `}
               >
                 <h3 className={`text-lg font-semibold bg-gradient-to-r ${section.gradient} bg-clip-text text-transparent`}>
-                  {section.title}
+                  {t(`docs.sections.${section.key}.title`)}
                 </h3>
                 <p
-                  className={`text-xs mt-1 ${
-                    theme === "dark" ? "text-slate-400" : "text-slate-600"
-                  }`}
+                  className={`text-xs mt-1 ${theme === "dark" ? "text-slate-400" : "text-slate-600"
+                    }`}
                 >
-                  {section.desc}
+                  {t(`docs.sections.${section.key}.desc`)}
                 </p>
               </motion.div>
             </Link>

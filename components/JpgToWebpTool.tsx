@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 type Quality = "low" | "medium" | "high";
 
@@ -11,6 +12,7 @@ export default function JpgToWebpTool() {
   const [loading, setLoading] = useState(false);
   const [quality, setQuality] = useState<Quality>("medium");
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const handleConvert = async () => {
     if (!selectedImage) return;
@@ -58,17 +60,17 @@ export default function JpgToWebpTool() {
     >
       {/* Başlık */}
       <h2 className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-black"} mb-1`}>
-        JPG / PNG → WEBP Converter
+        {t("tools.jpgtowebp.title")}
       </h2>
       <p className={`text-[13px] ${theme === "dark" ? "text-slate-200" : "text-slate-700"} mb-6`}>
-        Convert and optimize images to WebP format.{" "}
-        <span className="font-semibold text-emerald-400">Runs entirely in the browser.</span>
+        {t("tools.jpgtowebp.description")}{" "}
+        <span className="font-semibold text-emerald-400">{t("tools.common.runsInBrowser")}</span>
       </p>
 
       {/* Dosya seçimi */}
       <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
         <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>
-          📸 Select image (JPG, PNG)
+          {t("tools.jpgtowebp.selectImage")}
         </span>
         <input
           type="file"
@@ -84,18 +86,17 @@ export default function JpgToWebpTool() {
       {/* Quality selection */}
       <div className="mt-4 flex gap-2 text-[11px]">
         {[
-          { key: "low", label: "⚡ Low" },
-          { key: "medium", label: "🎯 Medium" },
-          { key: "high", label: "💎 High" },
+          { key: "low", label: t("tools.common.quality.low") },
+          { key: "medium", label: t("tools.common.quality.medium") },
+          { key: "high", label: t("tools.common.quality.high") },
         ].map(({ key, label }) => (
           <button
             key={key}
             onClick={() => setQuality(key as Quality)}
-            className={`px-3 py-1.5 rounded-lg border transition ${
-              quality === key
+            className={`px-3 py-1.5 rounded-lg border transition ${quality === key
                 ? "shadow-[0_0_12px_rgba(0,255,150,0.7)] text-white"
                 : "hover:bg-[#0e121a] text-slate-300"
-            }`}
+              }`}
           >
             {label}
           </button>
@@ -108,7 +109,7 @@ export default function JpgToWebpTool() {
         disabled={!selectedImage || loading}
         className="mt-6 w-full py-3 text-sm rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:opacity-90 disabled:opacity-30"
       >
-        {loading ? "Converting..." : "Convert to WEBP"}
+        {loading ? t("tools.common.converting") : t("tools.jpgtowebp.convertBtn")}
       </button>
 
       {/* Önizleme & İndirme */}
@@ -116,7 +117,7 @@ export default function JpgToWebpTool() {
         <div className="mt-6 space-y-2">
           <img src={outputUrl} alt="converted" className="w-full rounded-lg border border-slate-700" />
           <a href={outputUrl} download="converted.webp" className="block w-full text-center py-2 rounded-lg bg-slate-800 text-emerald-300">
-            WEBP Download
+            {t("tools.jpgtowebp.downloadBtn")}
           </a>
         </div>
       )}

@@ -4,32 +4,34 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Hero() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const featuredTools = [
     {
-      title: "🎬 MP4 → WEBM Converter",
-      desc: "Browser-based, quality-controlled video converter.",
+      title: t("featuredTools.mp4towebm.title"),
+      desc: t("featuredTools.mp4towebm.desc"),
       link: "/tools/mp4towebm",
       gradient: "from-green-400 via-emerald-500 to-cyan-400",
-      tag: "Video Tool",
+      tag: t("hero.videoTool"),
     },
     {
-      title: "✨ JavaScript Beautify & Minify",
-      desc: "Instantly format or minimize JS code.",
+      title: t("featuredTools.jsbeautify.title"),
+      desc: t("featuredTools.jsbeautify.desc"),
       link: "/tools/jsbeautify",
       gradient: "from-yellow-400 via-amber-500 to-orange-400",
-      tag: "Dev Tool",
+      tag: t("hero.devTool"),
     },
   ];
 
   const quickLinks = [
-    { label: "All Tools", href: "/tools" },
-    { label: "JSON/Lua Formatter", href: "/tools/formatter" },
-    { label: "QR Code Generator", href: "/tools/qrcode" },
-    { label: "Color Palette Extractor", href: "/tools/colorpalette" },
+    { label: t("hero.allTools"), href: "/tools" },
+    { label: t("hero.jsonFormatter"), href: "/tools/formatter" },
+    { label: t("hero.qrGenerator"), href: "/tools/qrcode" },
+    { label: t("hero.colorPalette"), href: "/tools/colorpalette" },
   ];
 
   const textMain = theme === "light" ? "text-slate-900" : "text-white";
@@ -45,25 +47,25 @@ export default function Hero() {
       >
         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] cursor-default text-slate-300 mb-4 ${theme === "dark" ? "bg-[rgba(22,22,22,0.05)] border border-[rgba(86,95,107,0.3)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.29)] text-slate-900"} hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 transition`}>
           <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-          <span>DevLab • Browser-based toolset</span>
+          <span>{t("hero.badge")}</span>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-start lg:items-center">
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-3">
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Convert, Optimize,
+                {t("hero.title1")}
               </span>
               <br />
-              <span className={textMain}> from a single hub.</span>
+              <span className={textMain}>{t("hero.title2")}</span>
             </h1>
 
             <p className={`${textSub} text-sm md:text-base max-w-xl mt-3`}>
-              DevLab offers video, audio, image, and code tools{" "}
+              {t("hero.description")}{" "}
               <span className="font-semibold text-emerald-400">
-                entirely in the browser
+                {t("hero.descriptionHighlight")}
               </span>{" "}
-              no installation, no account – just open and use.
+              {t("hero.descriptionEnd")}
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -73,15 +75,15 @@ export default function Hero() {
                   bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950
                   hover:opacity-90 hover:-translate-y-[1px] transition"
               >
-                Explore Tools
+                {t("hero.exploreTools")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-  
+
             <div className="mt-7">
               <p className="text-[11px] uppercase tracking-[0.22em] text-slate-500 mb-2">
-                Quick Links
+                {t("hero.quickLinks")}
               </p>
               <div className="flex flex-wrap gap-2 text-[11px]">
                 {quickLinks.map((item) => (
@@ -114,7 +116,7 @@ export default function Hero() {
                     <div className="flex items-center justify-between gap-3">
                       <p className={`text-[11px] ${theme === "dark" ? "text-slate-300" : "text-slate-700"}`}>{tool.tag}</p>
                       <span className={`text-[10px] font-medium px-2 py-1 rounded-full ${theme === "dark" ? "bg-[rgba(255,255,255,0)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] text-slate-700"}`}>
-                        Featured Tool
+                        {t("hero.featuredTool")}
                       </span>
                     </div>
                     <h3
@@ -131,6 +133,6 @@ export default function Hero() {
         </div>
       </motion.div>
     </div>
-    
+
   );
 }

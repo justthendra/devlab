@@ -4,9 +4,11 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import beautify from "js-beautify";
 import { Copy, Scissors, Wand2 } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function JsBeautifierTool() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const [inputCode, setInputCode] = useState<string>(
     `function test(a,b){return a+b}`
@@ -60,18 +62,17 @@ export default function JsBeautifierTool() {
     >
       {/* Başlık */}
       <h2 className="text-xl font-semibold mb-1">
-        JavaScript Beautify & Minify
+        {t("tools.jsbeautify.title")}
       </h2>
       <p
-        className={`text-[13px] mb-6 ${
-          theme === "dark" ? "text-slate-300" : "text-slate-700"
-        }`}
+        className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-300" : "text-slate-700"
+          }`}
       >
-        Improve JavaScript code readability or{" "}
+        {t("tools.jsbeautify.description")}{" "}
         <span className="font-semibold text-emerald-400">
-          minify
+          {t("tools.jsbeautify.descriptionHighlight")}
         </span>{" "}
-        to reduce file size.
+        {t("tools.jsbeautify.descriptionEnd")}
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -79,7 +80,7 @@ export default function JsBeautifierTool() {
         <textarea
           value={inputCode}
           onChange={(e) => setInputCode(e.target.value)}
-          placeholder="// Paste JS code here"
+          placeholder={t("tools.jsbeautify.inputPlaceholder")}
           className={`
             w-full h-60 rounded-xl p-4 font-mono text-xs outline-none resize-none
             border transition
@@ -95,7 +96,7 @@ export default function JsBeautifierTool() {
           <textarea
             readOnly
             value={outputCode}
-            placeholder="// Output will appear here"
+            placeholder={t("tools.jsbeautify.outputPlaceholder")}
             className={`
               w-full h-60 rounded-xl p-4 font-mono text-xs outline-none resize-none
               border transition
@@ -111,15 +112,14 @@ export default function JsBeautifierTool() {
             <button
               onClick={copyOutput}
               className={`absolute top-3 right-3 flex items-center cursor-pointer gap-1 px-2 py-1 rounded-md text-[11px]
-                ${
-                  copied
-                    ? "bg-emerald-500 text-white"
-                    : "bg-[rgba(255,255,255,0)] border border-[#242424] hover:bg-[rgba(255,255,255,0.02)]"
+                ${copied
+                  ? "bg-emerald-500 text-white"
+                  : "bg-[rgba(255,255,255,0)] border border-[#242424] hover:bg-[rgba(255,255,255,0.02)]"
                 }
               `}
             >
               <Copy className="w-3 h-3" />
-              {copied ? "Copied" : "Copy"}
+              {copied ? t("tools.common.copied") : t("tools.common.copy")}
             </button>
           )}
         </div>
@@ -132,7 +132,7 @@ export default function JsBeautifierTool() {
           className="px-4 py-2 rounded-lg flex items-center cursor-pointer gap-2 text-sm font-semibold
             bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:opacity-80 transition"
         >
-          <Wand2 className="w-4 h-4" /> Beautify
+          <Wand2 className="w-4 h-4" /> {t("tools.formatter.beautify")}
         </button>
 
         <button
@@ -140,7 +140,7 @@ export default function JsBeautifierTool() {
           className="px-4 py-2 rounded-lg flex items-center cursor-pointer gap-2 text-sm font-semibold
             bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:opacity-80 transition"
         >
-          <Scissors className="w-4 h-4" /> Minify
+          <Scissors className="w-4 h-4" /> {t("tools.formatter.minify")}
         </button>
       </div>
     </div>

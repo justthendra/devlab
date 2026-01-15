@@ -6,35 +6,38 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Sun, Moon, Menu, X } from "lucide-react";
-
-// 🔍 Arama içeriği
-const tools = [
-  { name: "🎬 MP4 → WEBM", path: "/tools/mp4towebm" },
-  { name: "🎧 MP4 → MP3", path: "/tools/mp4tomp3" },
-  { name: "📷 JPG → WEBP", path: "/tools/jpgtowebp" },
-  { name: "🌀 GIF Optimize", path: "/tools/gifoptimize" },
-  { name: "🎨 Gradient Generator", path: "/tools/cssglow" },
-  { name: "🧠 JSON + Lua Formatter", path: "/tools/formatter" },
-  { name: "🔣 QR Code Generator", path: "/tools/qrcode" },
-  { name: "🎧 MP3 Downloader", path: "/tools/mp3downloader" },
-  { name: "🎨 AI Image Generator", path: "/tools/image-generator" },
-];
-
-const navItems = [
-  { label: "Tools", path: "/tools" },
-  { label: "Docs", path: "/docs" },
-  { label: "About", path: "/about" },
-];
+import { useLanguage } from "@/lib/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
+  const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
-  const [results, setResults] = useState<typeof tools>([]);
+  const [results, setResults] = useState<{ name: string; path: string }[]>([]);
 
-  // Arama filtreleme
+  // Tools list with translations
+  const tools = [
+    { name: t("toolNames.mp4towebm"), path: "/tools/mp4towebm" },
+    { name: t("toolNames.mp4tomp3"), path: "/tools/mp4tomp3" },
+    { name: t("toolNames.jpgtowebp"), path: "/tools/jpgtowebp" },
+    { name: t("toolNames.gifoptimize"), path: "/tools/gifoptimize" },
+    { name: t("toolNames.cssglow"), path: "/tools/cssglow" },
+    { name: t("toolNames.formatter"), path: "/tools/formatter" },
+    { name: t("toolNames.qrcode"), path: "/tools/qrcode" },
+    { name: t("toolNames.mp3downloader"), path: "/tools/mp3downloader" },
+    { name: t("toolNames.imageGenerator"), path: "/tools/image-generator" },
+  ];
+
+  const navItems = [
+    { label: t("navbar.tools"), path: "/tools" },
+    { label: t("navbar.docs"), path: "/docs" },
+    { label: t("navbar.about"), path: "/about" },
+  ];
+
+  // Search filtering
   useEffect(() => {
     if (query.length > 0) {
       setResults(
@@ -45,7 +48,7 @@ export default function Navbar() {
     } else {
       setResults([]);
     }
-  }, [query]);
+  }, [query, t]);
 
   const handleSearchEnter = () => {
     if (results.length > 0) {
@@ -71,15 +74,14 @@ export default function Navbar() {
         {/* 🔥 Logo */}
         <Link href="/" className="flex items-center gap-2 mr-auto">
           <span
-            className={`text-sm font-semibold ${
-              theme === "dark" ? "text-slate-200" : "text-slate-900"
-            }`}
+            className={`text-sm font-semibold ${theme === "dark" ? "text-slate-200" : "text-slate-900"
+              }`}
           >
             DevLab
           </span>
         </Link>
 
-        {/* 📌 Desktop Menü */}
+        {/* 📌 Desktop Menu */}
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => {
             const isActive = pathname.startsWith(item.path);
@@ -87,13 +89,12 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm transition ${
-                  isActive
+                className={`text-sm transition ${isActive
                     ? "text-emerald-400 font-semibold"
                     : theme === "dark"
-                    ? "text-slate-400 hover:text-white"
-                    : "text-slate-600 hover:text-slate-800"
-                }`}
+                      ? "text-slate-400 hover:text-white"
+                      : "text-slate-600 hover:text-slate-800"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -101,7 +102,7 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* 🔍 Arama alanı (desktop) */}
+        {/* 🔍 Search area (desktop) */}
         <div className="hidden md:block relative">
           <div
             className={`
@@ -118,7 +119,7 @@ export default function Navbar() {
               onFocus={() => setFocused(true)}
               onBlur={() => setTimeout(() => setFocused(false), 200)}
               onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
-              placeholder="Search tools..."
+              placeholder={t("navbar.searchPlaceholder")}
               className={`bg-transparent outline-none text-xs flex-1 ${theme === "dark" ? "text-slate-300" : "text-slate-900"}`}
             />
           </div>
@@ -154,7 +155,10 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
 
-        {/* ☀️ Tema butonu */}
+        {/* 🌐 Language Selector */}
+        <LanguageSelector />
+
+        {/* ☀️ Theme button */}
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -167,7 +171,7 @@ export default function Navbar() {
           )}
         </motion.button>
 
-        {/* 📱 Menü butonu */}
+        {/* 📱 Mobile menu button */}
         <motion.button
           whileHover={{ scale: 1.15 }}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -177,7 +181,7 @@ export default function Navbar() {
         </motion.button>
       </motion.nav>
 
-      {/* 📱 Mobile Menü Panel */}
+      {/* 📱 Mobile Menu Panel */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -191,19 +195,19 @@ export default function Navbar() {
               bg-[rgba(24,24,24,0.85)] border-[rgba(255,255,255,0.08)]
             "
           >
-            {/* Arama */}
+            {/* Search */}
             <div className="flex items-center gap-2 mb-3 px-3 py-2 rounded-lg border">
               <Search className="w-4 h-4 text-slate-400" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search tools..."
+                placeholder={t("navbar.searchPlaceholder")}
                 onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
                 className="bg-transparent flex-1 text-sm outline-none"
               />
             </div>
 
-            {/* Sonuçlar */}
+            {/* Results */}
             {results.length > 0 && (
               <div className="mb-4 rounded-lg bg-[rgba(255,255,255,0.04)] p-2">
                 {results.map((r) => (
@@ -220,7 +224,7 @@ export default function Navbar() {
               </div>
             )}
 
-            {/* Menü Elemanları */}
+            {/* Menu Items */}
             {navItems.map((item) => (
               <Link
                 key={item.path}

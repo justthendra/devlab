@@ -2,11 +2,32 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { Github, Mail, MessageCircle,  } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutPage() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
+
+  const infoCards = [
+    {
+      title: t("about.whyDevlab.title"),
+      desc: t("about.whyDevlab.desc"),
+    },
+    {
+      title: t("about.technology.title"),
+      desc: t("about.technology.desc"),
+    },
+    {
+      title: t("about.vision.title"),
+      desc: t("about.vision.desc"),
+    },
+    {
+      title: t("about.developer.title"),
+      desc: t("about.developer.desc"),
+    },
+  ];
 
   return (
     <div
@@ -16,13 +37,14 @@ export default function AboutPage() {
         ${theme === "dark" ? "bg-transparent" : "bg-transparent"}
       `}
     >
+      <title>DevLab - About</title>
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="max-w-4xl w-full text-center"
       >
-        {/* Başlık */}
+        {/* Title */}
         <motion.h1
           className="text-4xl font-bold mb-4"
           initial={{ scale: 0.95 }}
@@ -30,48 +52,29 @@ export default function AboutPage() {
           transition={{ duration: 0.4 }}
         >
           <span className="bg-gradient-to-r from-green-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
-            About
+            {t("about.title")}
           </span>
         </motion.h1>
 
-        {/* Açıklama */}
+        {/* Description */}
         <p
-          className={`text-sm md:text-base ${
-            theme === "dark" ? "text-slate-300" : "text-slate-600"
-          } mb-10 max-w-2xl mx-auto`}
+          className={`text-sm md:text-base ${theme === "dark" ? "text-slate-300" : "text-slate-600"
+            } mb-10 max-w-2xl mx-auto`}
         >
-          DevLab is a fast and secure platform that performs media conversions directly in your browser. No files are uploaded to any server.
+          {t("about.description")}
         </p>
 
-        {/* Kartlar */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {[
-            {
-              title: "🚀 Why DevLab?",
-              desc: "Files are processed on-device, privacy is preserved, and performance is ultra fast."
-            },
-            {
-              title: "🛠 Technology",
-              desc: "Built with Next.js, WebAssembly, FFmpeg, Tailwind CSS, and Framer Motion."
-            },
-            {
-              title: "🌍 Vision",
-              desc: "Create simple, secure, and accessible media conversion tools for everyone."
-            },
-            {
-              title: "👤 Developer",
-              desc: "Designed by Thendra, focused on modern UI and performance-oriented systems."
-            }
-          ].map((info, idx) => (
+          {infoCards.map((info, idx) => (
             <motion.div
               key={idx}
               whileHover={{ scale: 1.02 }}
               className={`
                 p-5 rounded-xl text-left backdrop-blur-md border transition
-                ${
-                  theme === "dark"
-                    ? "bg-[rgba(11,12,14,0.08)] border-[rgba(255,255,255,0.05)] text-slate-200 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
-                    : "bg-white border-gray-200 text-slate-700 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                ${theme === "dark"
+                  ? "bg-[rgba(11,12,14,0.08)] border-[rgba(255,255,255,0.05)] text-slate-200 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                  : "bg-white border-gray-200 text-slate-700 hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
                 }
               `}
             >
@@ -83,7 +86,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* 🎯 Sosyal Medya & İletişim */}
+        {/* Social Media & Contact */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,11 +94,10 @@ export default function AboutPage() {
           className="mt-6 flex flex-col items-center"
         >
           <p
-            className={`text-sm mb-3 ${
-              theme === "dark" ? "text-slate-300" : "text-slate-600"
-            }`}
+            className={`text-sm mb-3 ${theme === "dark" ? "text-slate-300" : "text-slate-600"
+              }`}
           >
-            For more information or to get in touch:
+            {t("about.contact")}
           </p>
 
           <div className="flex gap-3">
@@ -125,10 +127,9 @@ export default function AboutPage() {
                 whileTap={{ scale: 0.95 }}
                 className={`
                   flex items-center gap-1 px-3 py-2 rounded-lg text-xs border transition
-                  ${
-                    theme === "dark"
-                      ? "bg-[rgba(15,13,13,0.05)] border-[rgba(255,255,255,0.12)] text-slate-300 hover:bg-[rgba(31,31,31,0.15)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
-                      : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                  ${theme === "dark"
+                    ? "bg-[rgba(15,13,13,0.05)] border-[rgba(255,255,255,0.12)] text-slate-300 hover:bg-[rgba(31,31,31,0.15)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
+                    : "bg-[rgba(0,0,0,0.03)] border-[rgba(0,0,0,0.1)] text-slate-700 hover:bg-[rgba(0,0,0,0.07)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300"
                   }
                 `}
               >

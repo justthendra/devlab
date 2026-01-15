@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import Mp4ToMp3Tool from "@/components/Mp4ToMp3Tool";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Mp4ToMp3Page() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
     <div
@@ -29,7 +31,7 @@ export default function Mp4ToMp3Page() {
       >
         <h1 className="text-3xl md:text-5xl font-bold mb-3">
           <span className="bg-gradient-to-r from-green-400 via-blue-400 to-yellow-400 bg-clip-text text-transparent">
-            MP4 → MP3 Converter
+            {t("pageHeaders.mp4tomp3.title")}
           </span>
         </h1>
 
@@ -39,8 +41,7 @@ export default function Mp4ToMp3Page() {
             ${theme === "dark" ? "text-slate-300" : "text-slate-600"}
           `}
         >
-          Select your video and DevLab will convert it to MP3
-          in your browser.  
+          {t("pageHeaders.mp4tomp3.desc1")}
           <br />
           <span
             className={`
@@ -48,7 +49,7 @@ export default function Mp4ToMp3Page() {
               ${theme === "dark" ? "text-emerald-400" : "text-blue-600"}
             `}
           >
-            No data is uploaded — processing happens on your device.
+            {t("pageHeaders.mp4tomp3.desc2")}
           </span>
         </p>
       </motion.div>

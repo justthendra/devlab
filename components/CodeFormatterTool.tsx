@@ -7,11 +7,13 @@ import "prismjs/components/prism-json";
 import "prismjs/components/prism-lua";
 import "prismjs/themes/prism-tomorrow.css";
 import { Copy, Check } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 type FormatType = "json" | "lua";
 
 export default function CodeFormatterTool() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const [code, setCode] = useState("");
   const [formattedCode, setFormattedCode] = useState("");
@@ -67,11 +69,11 @@ export default function CodeFormatterTool() {
         }`}
     >
       <h2 className="text-xl font-semibold mb-3">
-        JSON / Lua Formatter
+        {t("tools.formatter.title")}
       </h2>
 
       <p className="text-xs text-slate-400 mb-5">
-        Enter your code → select type or detect automatically → Format (beautify / minify).
+        {t("tools.formatter.description")}
       </p>
 
       <div className="flex gap-3 mb-4">
@@ -93,14 +95,14 @@ export default function CodeFormatterTool() {
           onClick={detectType}
           className="px-3 py-1 text-sm rounded-lg border border-slate-600 hover:bg-[#111419]"
         >
-          Detect Automatically
+          {t("tools.formatter.detectAuto")}
         </button>
       </div>
 
       <textarea
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        placeholder="Paste JSON or Lua code here..."
+        placeholder={t("tools.formatter.paste")}
         className="w-full min-h-[120px] p-3 text-sm rounded-lg bg-[#08090ace] border border-[#292929] text-white font-mono focus:outline-none mb-4"
       />
 
@@ -109,13 +111,13 @@ export default function CodeFormatterTool() {
           onClick={beautifyCode}
           className="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm"
         >
-          Beautify
+          {t("tools.formatter.beautify")}
         </button>
         <button
           onClick={minifyCode}
           className="px-4 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-sm"
         >
-          Minify
+          {t("tools.formatter.minify")}
         </button>
         <button
           onClick={() => {
@@ -125,7 +127,7 @@ export default function CodeFormatterTool() {
           }}
           className="px-4 py-1.5 border border-slate-600 hover:bg-[#1c1f27] rounded-lg text-sm"
         >
-          Clear
+          {t("tools.common.clear")}
         </button>
       </div>
 
@@ -138,7 +140,7 @@ export default function CodeFormatterTool() {
         <div className="relative mt-6">
 
           <h2 className="text-base font-semibold text-white/90 mb-2">
-            Updated Code
+            {t("tools.formatter.updatedCode")}
           </h2>
 
           <pre className="relative p-4 bg-[#08090ace] border border-[#292929] text-white text-xs rounded-lg overflow-auto max-h-[350px]">
@@ -155,11 +157,11 @@ export default function CodeFormatterTool() {
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" /> Copied
+                  <Check className="w-3.5 h-3.5 text-emerald-400" /> {t("tools.common.copied")}
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5" /> Copy
+                  <Copy className="w-3.5 h-3.5" /> {t("tools.common.copy")}
                 </>
               )}
             </button>

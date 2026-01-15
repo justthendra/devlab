@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 declare global {
   interface Window {
@@ -23,6 +24,7 @@ export default function Mp4ToMp3Tool() {
   const [status, setStatus] = useState("");
   const [quality, setQuality] = useState<Quality>("medium");
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const loadFFmpeg = async () => {
@@ -43,12 +45,12 @@ export default function Mp4ToMp3Tool() {
         setStatus("");
       } catch (err) {
         console.error(err);
-        setStatus("❌ FFmpeg failed to load. Check the public/ffmpeg folder.");
+        setStatus(t("tools.common.ffmpegError"));
       }
     };
 
     loadFFmpeg();
-  }, []);
+  }, [t]);
 
   const handleConvert = async () => {
     if (!selectedFile || !window.FFmpeg || loading) return;
@@ -56,7 +58,7 @@ export default function Mp4ToMp3Tool() {
     setLoading(true);
     setProgress(0);
     setOutputUrl(null);
-    setStatus("Audio extraction started...");
+    setStatus(t("tools.mp4tomp3.audioExtraction"));
 
     let interval: number | null = null;
 
@@ -76,11 +78,11 @@ export default function Mp4ToMp3Tool() {
         corePath: "/ffmpeg/ffmpeg-core.js",
       });
 
-      setStatus("Starting FFmpeg...");
+      setStatus(t("tools.mp4towebm.startingFFmpeg"));
       await ffmpeg.load();
       setProgress(15);
 
-      setStatus("Writing file...");
+      setStatus(t("tools.mp4tomp3.writingFile"));
       const inputData = await fetchFile(selectedFile);
       ffmpeg.FS("writeFile", "input.mp4", inputData);
       setProgress(30);
@@ -89,7 +91,7 @@ export default function Mp4ToMp3Tool() {
       if (quality === "low") bitrate = "96k";
       if (quality === "high") bitrate = "192k";
 
-      setStatus("Processing audio...");
+      setStatus(t("tools.mp4tomp3.processingAudio"));
       setProgress(50);
 
       await ffmpeg.run(
@@ -103,7 +105,7 @@ export default function Mp4ToMp3Tool() {
         "output.mp3"
       );
 
-      setStatus("Preparing output...");
+      setStatus(t("tools.mp4towebm.preparingOutput"));
       setProgress(95);
 
       const data = ffmpeg.FS("readFile", "output.mp3");
@@ -113,7 +115,7 @@ export default function Mp4ToMp3Tool() {
 
       setOutputUrl(url);
       setProgress(100);
-      setStatus("✔ Audio extraction completed!");
+      setStatus(t("tools.mp4tomp3.completed"));
 
       ffmpeg.FS("unlink", "input.mp4");
       ffmpeg.FS("unlink", "output.mp3");
@@ -139,14 +141,14 @@ export default function Mp4ToMp3Tool() {
       `}
     >
       <h2 className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-black"} mb-1`}>
-        MP4 → MP3 Converter
+        {t("tools.mp4tomp3.title")}
       </h2>
       <p className={`text-[13px] ${theme === "dark" ? "text-slate-200" : "text-slate-700"} mb-6`}>
-        Extract audio from video. <span className="font-semibold text-emerald-400">Runs entirely in the browser.</span>
+        {t("tools.mp4tomp3.description")} <span className="font-semibold text-emerald-400">{t("tools.common.runsInBrowser")}</span>
       </p>
 
       <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
-        <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>📁 Select MP4 video</span>
+        <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>{t("tools.mp4tomp3.selectVideo")}</span>
         <input
           type="file"
           accept="video/mp4"
@@ -198,7 +200,7 @@ export default function Mp4ToMp3Tool() {
         disabled={!selectedFile || loading || !ffmpegReady}
         className="mt-6 w-full py-3 text-sm rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:opacity-90"
       >
-        {loading ? "Converting..." : "Convert to MP3"}
+        {loading ? t("tools.common.converting") : t("tools.mp4tomp3.convertBtn")}
       </button>
 
       {/* Çıktı */}
@@ -206,12 +208,12 @@ export default function Mp4ToMp3Tool() {
         <div className="mt-6 space-y-2">
           <audio controls src={outputUrl} className="w-full" />
           <a href={outputUrl} download="output.mp3" className="block w-full text-center py-2 rounded-lg bg-slate-800 text-emerald-300">
-            Download MP3
+            {t("tools.mp4tomp3.downloadBtn")}
           </a>
         </div>
       )}
 
-      {!ffmpegReady && <p className="mt-2 text-[11px] text-yellow-400">🔄 FFmpeg is preparing...</p>}
+      {!ffmpegReady && <p className="mt-2 text-[11px] text-yellow-400">{t("tools.common.ffmpegLoading")}</p>}
     </div>
   );
 }

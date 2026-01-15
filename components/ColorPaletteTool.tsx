@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import { useTheme } from "next-themes";
 import { Copy, Upload, Image as ImageIcon } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 type PaletteColor = {
   hex: string;
@@ -12,6 +13,7 @@ type PaletteColor = {
 
 export default function ColorPaletteTool() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [colors, setColors] = useState<PaletteColor[]>([]);
@@ -158,18 +160,16 @@ export default function ColorPaletteTool() {
       `}
     >
       <h2
-        className={`text-xl font-semibold mb-1 ${
-          theme === "dark" ? "text-white" : "text-slate-900"
-        }`}
+        className={`text-xl font-semibold mb-1 ${theme === "dark" ? "text-white" : "text-slate-900"
+          }`}
       >
-        Color Palette Extractor & Gradient Generator
+        {t("tools.colorpalette.title")}
       </h2>
       <p
-        className={`text-[13px] mb-6 ${
-          theme === "dark" ? "text-slate-300" : "text-slate-700"
-        }`}
+        className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-300" : "text-slate-700"
+          }`}
       >
-        Upload an image, DevLab will extract the{" "}
+        {t("tools.colorpalette.description1")}{" "}
         <span
           className={
             theme === "dark"
@@ -177,11 +177,11 @@ export default function ColorPaletteTool() {
               : "text-emerald-600 font-semibold"
           }
         >
-          dominant color palette
+          {t("tools.colorpalette.descriptionHighlight")}
         </span>{" "}
-        extracted. From the color box, you can{" "}
-        <span className="font-semibold">copy HEX</span> or{" "}
-        <span className="font-semibold">generate CSS gradient</span>.
+        {t("tools.colorpalette.description2")}{" "}
+        <span className="font-semibold">{t("tools.colorpalette.copyHex")}</span> or{" "}
+        <span className="font-semibold">{t("tools.colorpalette.generateGradient")}</span>.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6">
@@ -190,20 +190,19 @@ export default function ColorPaletteTool() {
           {/* Upload alanı */}
           <div
             className={`flex flex-col items-center justify-center px-5 py-7 rounded-xl border border-[rgba(48,48,48,0.4)]
-              ${
-                theme === "dark"
-                  ? "bg-[#07080842] text-slate-200"
-                  : "bg-slate-50 text-slate-800"
+              ${theme === "dark"
+                ? "bg-[#07080842] text-slate-200"
+                : "bg-slate-50 text-slate-800"
               }
               cursor-pointer hover:border-emerald-400/80 transition`}
             onClick={() => fileInputRef.current?.click()}
           >
             <Upload className="w-6 h-6 mb-2 opacity-80" />
             <span className="text-[12px] font-medium">
-              Click to upload an image
+              {t("tools.colorpalette.uploadImage")}
             </span>
             <span className="text-[11px] opacity-70 mt-1">
-              PNG, JPG, WEBP • Medium-sized images recommended
+              {t("tools.colorpalette.uploadHint")}
             </span>
             <input
               ref={fileInputRef}
@@ -231,7 +230,7 @@ export default function ColorPaletteTool() {
                 </p>
                 {processing && (
                   <p className="mt-1 text-emerald-400">
-                    🎨 Extracting colors...
+                    {t("tools.colorpalette.extractingColors")}
                   </p>
                 )}
               </div>
@@ -242,7 +241,7 @@ export default function ColorPaletteTool() {
             <div className="flex items-center gap-2 text-[11px] text-slate-500">
               <ImageIcon className="w-3.5 h-3.5" />
               <span>
-                No image uploaded yet. Once you select an image, the dominant palette will appear here.
+                {t("tools.colorpalette.noImageYet")}
               </span>
             </div>
           )}
@@ -256,32 +255,30 @@ export default function ColorPaletteTool() {
         <div
           className={`
             rounded-2xl border p-4 flex flex-col gap-3
-            ${
-              theme === "dark"
-                ? "bg-[#04040500] border-[rgba(48,48,48,0.7)]"
-                : "bg-slate-50 border-slate-300"
+            ${theme === "dark"
+              ? "bg-[#04040500] border-[rgba(48,48,48,0.7)]"
+              : "bg-slate-50 border-slate-300"
             }
           `}
         >
           <div className="flex items-center justify-between mb-1">
             <span
-              className={`text-[11px] uppercase tracking-[0.18em] ${
-                theme === "dark" ? "text-slate-400" : "text-slate-600"
-              }`}
+              className={`text-[11px] uppercase tracking-[0.18em] ${theme === "dark" ? "text-slate-400" : "text-slate-600"
+                }`}
             >
-              Palette
+              {t("tools.colorpalette.palette")}
             </span>
             <span className="text-[11px] text-slate-500">
               {colors.length > 0
-                ? `${colors.length} renk bulundu`
-                : "Renk bekleniyor"}
+                ? `${colors.length} ${t("tools.colorpalette.colorsFound")}`
+                : t("tools.colorpalette.waitingForColors")}
             </span>
           </div>
 
           {/* Palet kartları */}
           {colors.length === 0 ? (
             <div className="flex-1 flex items-center justify-center text-[11px] text-slate-500">
-              Upload an image to extract the color palette.
+              {t("tools.colorpalette.uploadToExtract")}
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-3">
@@ -290,10 +287,9 @@ export default function ColorPaletteTool() {
                   key={c.hex}
                   className={`
                     group rounded-xl border text-left p-2 flex flex-col gap-1
-                    ${
-                      theme === "dark"
-                        ? "border-[rgba(48,48,48,0.7)] bg-[#06060710]"
-                        : "border-slate-300 bg-white"
+                    ${theme === "dark"
+                      ? "border-[rgba(48,48,48,0.7)] bg-[#06060710]"
+                      : "border-slate-300 bg-white"
                     }
                     transition
                   `}
@@ -324,7 +320,7 @@ export default function ColorPaletteTool() {
                       className="flex items-center gap-1 text-slate-400 cursor-pointer hover:text-slate-100 transition"
                     >
                       <Copy className="w-3 h-3 opacity-70 group-hover:opacity-100" />
-                      {copiedHex === c.hex ? "Copied" : "Copy"}
+                      {copiedHex === c.hex ? t("tools.common.copied") : t("tools.common.copy")}
                     </button>
 
                     <button
@@ -345,7 +341,7 @@ export default function ColorPaletteTool() {
             <div className="mt-4 p-3 rounded-xl border border-slate-600 bg-[#060607ef]">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-[12px] font-medium text-slate-100">
-                  Generated Gradient
+                  {t("tools.colorpalette.generatedGradient")}
                 </h3>
                 <button
                   className="text-[11px] px-2 py-1 rounded-md border border-slate-500 hover:bg-[#111827] transition"
@@ -353,7 +349,7 @@ export default function ColorPaletteTool() {
                     navigator.clipboard.writeText(gradientCss || "")
                   }
                 >
-                  📋 Copy CSS
+                  {t("tools.colorpalette.copyCss")}
                 </button>
               </div>
 
@@ -363,29 +359,27 @@ export default function ColorPaletteTool() {
               />
 
               <pre className="text-[11px] bg-black/40 p-2 rounded-md text-slate-200 overflow-x-auto">
-{gradientCss}
+                {gradientCss}
               </pre>
 
               <div className="flex gap-2 mt-2">
                 <button
-                  className={`text-[10px] px-2 py-1 border rounded-md ${
-                    gradientMode === "linear"
+                  className={`text-[10px] px-2 py-1 border rounded-md ${gradientMode === "linear"
                       ? "bg-emerald-500 text-white border-emerald-400"
                       : "border-slate-600 text-slate-300"
-                  }`}
+                    }`}
                   onClick={() => setGradientMode("linear")}
                 >
-                  ⬆️ Linear
+                  {t("tools.colorpalette.linear")}
                 </button>
                 <button
-                  className={`text-[10px] px-2 py-1 border rounded-md ${
-                    gradientMode === "radial"
+                  className={`text-[10px] px-2 py-1 border rounded-md ${gradientMode === "radial"
                       ? "bg-blue-500 text-white border-blue-400"
                       : "border-slate-600 text-slate-300"
-                  }`}
+                    }`}
                   onClick={() => setGradientMode("radial")}
                 >
-                  🔵 Radial
+                  {t("tools.colorpalette.radial")}
                 </button>
               </div>
             </div>

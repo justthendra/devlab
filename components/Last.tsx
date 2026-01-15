@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Github } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
+import { useLanguage } from "@/lib/LanguageContext";
 
 
 export default function Last() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
     <section
@@ -35,11 +37,11 @@ export default function Last() {
         className={`text-lg font-semibold mb-3 ${theme === "dark" ? "text-slate-300" : "text-slate-700"
           }`}
       >
-        Contribute
+        {t("last.contribute")}
       </h3>
 
       <p className="text-sm text-slate-400 mb-6">
-        DevLab is developed with an open-source spirit. Got any ideas?
+        {t("last.description")}
       </p>
 
       <div className="flex gap-3">

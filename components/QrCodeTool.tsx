@@ -4,9 +4,11 @@ import { useState, useRef } from "react";
 import { useTheme } from "next-themes";
 import QRCode from "react-qr-code";
 import { Copy, Download } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function QrCodeTool() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
   const [text, setText] = useState("https://thendra.dev");
   const [size, setSize] = useState(220);
   const [bgColor, setBgColor] = useState("#ffffff");
@@ -100,28 +102,28 @@ export default function QrCodeTool() {
         className={`text-xl font-semibold mb-1 ${theme === "dark" ? "text-white" : "text-slate-900"
           }`}
       >
-        QR Code Generator
+        {t("tools.qrcode.title")}
       </h2>
       <p
         className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-300" : "text-slate-700"
           }`}
       >
-        Enter a link, text, or any content; DevLab will generate a{" "}
+        {t("tools.qrcode.description")}{" "}
         <span
           className={
             theme === "dark" ? "text-emerald-400 font-semibold" : "text-emerald-600 font-semibold"
           }
         >
-          high-resolution QR code
+          {t("tools.qrcode.descriptionHighlight")}
         </span>{" "}
-        for you. You can download it as a PNG.
+        {t("tools.qrcode.descriptionEnd")}
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6">
         {/* Sol taraf: form */}
         <div className="space-y-4 text-[12px]">
           <div className="flex items-center justify-between gap-2">
-            <label className="text-slate-300 text-[12px]">Text / URL</label>
+            <label className="text-slate-300 text-[12px]">{t("tools.qrcode.textUrl")}</label>
             <button
               type="button"
               onClick={handleCopy}
@@ -129,11 +131,11 @@ export default function QrCodeTool() {
             >
               {copied ? (
                 <>
-                  <span className="text-emerald-400">✔</span> Copied
+                  <span className="text-emerald-400">✔</span> {t("tools.common.copied")}
                 </>
               ) : (
                 <>
-                  <Copy className="w-3 h-3" /> Copy Text
+                  <Copy className="w-3 h-3" /> {t("tools.qrcode.copyText")}
                 </>
               )}
             </button>
@@ -150,7 +152,7 @@ export default function QrCodeTool() {
             {/* Boyut */}
             <div>
               <div className="flex items-center justify-between mb-1">
-                <span className="text-slate-300 text-[11px]">Size</span>
+                <span className="text-slate-300 text-[11px]">{t("tools.qrcode.size")}</span>
                 <span className="text-slate-400 text-[11px]">{size}px</span>
               </div>
               <input
@@ -166,7 +168,7 @@ export default function QrCodeTool() {
 
             {/* Renkler */}
             <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-              <span className="text-slate-300 text-[11px]">Foreground</span>
+              <span className="text-slate-300 text-[11px]">{t("tools.qrcode.foreground")}</span>
               <div className="flex items-center gap-2">
                 <input
                   type="color"
@@ -176,7 +178,7 @@ export default function QrCodeTool() {
                 />
                 <span className="text-[10px] text-slate-400">{fgColor}</span>
               </div>
-              <span className="text-slate-300 text-[11px]">Background</span>
+              <span className="text-slate-300 text-[11px]">{t("tools.qrcode.background")}</span>
               <div className="flex items-center gap-2">
                 <input
                   type="color"
@@ -198,7 +200,7 @@ export default function QrCodeTool() {
               hover:opacity-90 disabled:opacity-40 cursor-pointer transition"
           >
             <Download className="w-4 h-4" />
-            {downloading ? "Downloading..." : "Download as PNG"}
+            {downloading ? t("tools.qrcode.downloading") : t("tools.qrcode.downloadBtn")}
           </button>
         </div>
 
@@ -228,12 +230,12 @@ export default function QrCodeTool() {
                 />
               ) : (
                 <div className="w-[200px] h-[200px] flex items-center justify-center text-[11px] text-slate-400">
-                  Create QR code by entering text.
+                  {t("tools.qrcode.createQr")}
                 </div>
               )}
             </div>
             <span className="text-[11px] text-slate-400">
-              Preview • Right click → “Save image as” to use.
+              {t("tools.qrcode.previewHint")}
             </span>
           </div>
         </div>

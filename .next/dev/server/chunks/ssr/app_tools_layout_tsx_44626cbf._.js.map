@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/PC/Desktop/devlab/app/tools/layout.tsx"],"sourcesContent":["export default function ToolsLayout({ children }: { children: React.ReactNode }) {\r\n  return (\r\n    <div className=\"min-h-screen py-24 w-full bg-transparent relative overflow-hidden\">\r\n      <div className=\"relative z-10\">\r\n          {children}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,YAAY,EAAE,QAAQ,EAAiC;IAC7E,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;sBACV;;;;;;;;;;;AAIX"}}]
+}

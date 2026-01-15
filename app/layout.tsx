@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import Navbar from "../components/Navbar";
 import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,20 +18,26 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`min-h-screen flex flex-col ${poppins.className}`} suppressHydrationWarning={true}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-        <div className="pointer-events-none absolute -top-32 -left-28 w-[400px] h-[400px] bg-[rgba(0,255,200,0.10)] blur-[180px] rounded-full animate-pulse" />
-        <div className="pointer-events-none absolute bottom-[-50px] right-[-40px] w-[350px] h-[350px] bg-[rgba(0,150,255,0.10)] blur-[200px] rounded-full animate-pulse" />
-        <Navbar />
-        {children}
-        <Footer />
-        </ThemeProvider>
-        </body>
+        <LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+          >
+            {/* Top Left Glow */}
+            <div className="pointer-events-none absolute -top-40 -left-20 w-[500px] h-[500px] bg-[rgba(0,255,200,0.08)] blur-[120px] rounded-full mix-blend-screen opacity-50 animate-pulse" />
+
+            {/* Bottom Right Glow (fixed position to ensure it stays in corner) */}
+            <div className="pointer-events-none fixed bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-[rgba(120,50,255,0.15)] blur-[150px] rounded-full mix-blend-screen opacity-50 animate-pulse z-0" />
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
+

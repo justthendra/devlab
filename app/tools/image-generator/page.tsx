@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import ImageGeneratorTool from "@/components/ImageGeneratorTool";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AIImageGeneratorPage() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
     <div className="max-w-3xl mx-auto w-full px-5 pb-16 mt-24">
@@ -18,18 +20,17 @@ export default function AIImageGeneratorPage() {
           bg-clip-text text-transparent
         "
       >
-        AI Image Generator
+        {t("pageHeaders.imagegenerator.title")}
       </h1>
 
       {/* Açıklama */}
       <p
-        className={`text-sm mb-8 text-center ${
-          theme === "dark" ? "text-slate-300" : "text-slate-700"
-        }`}
+        className={`text-sm mb-8 text-center ${theme === "dark" ? "text-slate-300" : "text-slate-700"
+          }`}
       >
-        Enter a descriptive prompt and generate high-quality AI images using
-        state-of-the-art SD3 technology. Every image is created instantly through
-        DevLab’s smart generation pipeline.
+        {t("pageHeaders.imagegenerator.desc1")}
+        <br />
+        <span className="text-emerald-400 font-medium">{t("pageHeaders.imagegenerator.desc2")}</span>
       </p>
 
       {/* Araç */}

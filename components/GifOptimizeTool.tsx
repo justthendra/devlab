@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 declare global {
   interface Window {
@@ -23,6 +24,7 @@ export default function GifOptimizeTool() {
   const [status, setStatus] = useState("");
   const [quality, setQuality] = useState<Quality>("medium");
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const loadFFmpeg = async () => {
@@ -43,12 +45,12 @@ export default function GifOptimizeTool() {
         setStatus("");
       } catch (err) {
         console.error(err);
-        setStatus("❌ FFmpeg failed to load. Please check the public/ffmpeg folder.");
+        setStatus(t("tools.common.ffmpegError"));
       }
     };
 
     loadFFmpeg();
-  }, []);
+  }, [t]);
 
   const handleOptimize = async () => {
     if (!selectedFile || !window.FFmpeg || loading) return;
@@ -56,7 +58,7 @@ export default function GifOptimizeTool() {
     setLoading(true);
     setProgress(0);
     setOutputUrl(null);
-    setStatus("Optimizing...");
+    setStatus(t("tools.common.optimizing"));
 
     let interval: number | null = null;
     interval = window.setInterval(() => {
@@ -98,7 +100,7 @@ export default function GifOptimizeTool() {
 
       setOutputUrl(url);
       setProgress(100);
-      setStatus("✔ Optimize completed!");
+      setStatus(t("tools.gifoptimize.completed"));
 
       ffmpeg.FS("unlink", "input.gif");
       ffmpeg.FS("unlink", "output.gif");
@@ -120,16 +122,16 @@ export default function GifOptimizeTool() {
         }`}
     >
       <h2 className={`text-xl font-semibold mb-1 ${theme === "dark" ? "text-white" : "text-black"}`}>
-        GIF Optimize Tool
+        {t("tools.gifoptimize.title")}
       </h2>
       <p className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-200" : "text-slate-700"}`}>
-        Reduce GIF size, lower FPS, and optimize.{" "}
-        <span className="font-semibold text-emerald-400">Runs in the browser – no file upload.</span>
+        {t("tools.gifoptimize.description")}{" "}
+        <span className="font-semibold text-emerald-400">{t("tools.common.runsInBrowser")}</span>
       </p>
 
       <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer hover:border-emerald-400 hover:bg-slate-900/30 transition">
         <span className={`${theme === "dark" ? "text-slate-100" : "text-slate-900"} text-sm font-medium`}>
-          📤 Select GIF file
+          {t("tools.gifoptimize.selectFile")}
         </span>
         <input
           type="file"
@@ -141,16 +143,15 @@ export default function GifOptimizeTool() {
 
       <div className="mt-4 flex gap-2 text-[11px]">
         {[
-          { key: "low", label: "⚡ Low" },
-          { key: "medium", label: "🎯 Medium" },
-          { key: "high", label: "💎 High" },
+          { key: "low", label: t("tools.common.quality.low") },
+          { key: "medium", label: t("tools.common.quality.medium") },
+          { key: "high", label: t("tools.common.quality.high") },
         ].map(({ key, label }) => (
           <button
             key={key}
             onClick={() => setQuality(key as Quality)}
-            className={`px-3 py-1.5 rounded-lg border transition ${
-              quality === key ? "shadow-[0_0_12px_rgba(0,255,150,0.7)] text-white" : "hover:bg-[#0e121a] text-slate-300"
-            }`}
+            className={`px-3 py-1.5 rounded-lg border transition ${quality === key ? "shadow-[0_0_12px_rgba(0,255,150,0.7)] text-white" : "hover:bg-[#0e121a] text-slate-300"
+              }`}
           >
             {label}
           </button>
@@ -162,19 +163,19 @@ export default function GifOptimizeTool() {
         disabled={!selectedFile || loading}
         className="mt-6 w-full py-3 text-sm rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 disabled:opacity-40"
       >
-        {loading ? "Optimizing..." : "Optimize GIF"}
+        {loading ? t("tools.common.optimizing") : t("tools.gifoptimize.optimizeBtn")}
       </button>
 
       {outputUrl && (
         <div className="mt-6 space-y-2">
           <img src={outputUrl} alt="optimized" className="w-full rounded-lg border" />
           <a href={outputUrl} download="optimized.gif" className="block text-center py-2 rounded-lg bg-slate-800 text-emerald-300">
-            Download Optimized GIF
+            {t("tools.gifoptimize.downloadBtn")}
           </a>
         </div>
       )}
 
-      {!ffmpegReady && <p className="mt-2 text-[11px] text-yellow-400">🔄 FFmpeg loading...</p>}
+      {!ffmpegReady && <p className="mt-2 text-[11px] text-yellow-400">{t("tools.common.ffmpegLoading")}</p>}
     </div>
   );
 }

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/PC/Desktop/devlab/app/docs/layout.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useTheme } from \"next-themes\";\r\n\r\nexport default function DocsLayout({ children }: { children: React.ReactNode }) {\r\n  const { theme } = useTheme();\r\n\r\n\r\n  return (\r\n    <div\r\n      className={`\r\n        min-h-screen w-full flex\r\n        ${theme === \"dark\" ? \"bg-transparent text-slate-200\" : \"bg-transparent text-slate-700\"}\r\n      `}\r\n    >\r\n      <title>DevLab - Documentation</title>\r\n\r\n      <main\r\n        className=\"\r\n    flex-1 \r\n    px-8 \r\n    py-24   /* önce 16 idi */\r\n    flex\r\n    justify-center\r\n  \"\r\n      >\r\n        <div className=\"max-w-4xl w-full mt-4\">{children}</div>\r\n      </main>\r\n\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS,WAAW,EAAE,QAAQ,EAAiC;IAC5E,MAAM,EAAE,KAAK,EAAE,GAAG,IAAA,4JAAQ;IAG1B,qBACE,8OAAC;QACC,WAAW,CAAC;;QAEV,EAAE,UAAU,SAAS,kCAAkC,gCAAgC;MACzF,CAAC;;0BAED,8OAAC;0BAAM;;;;;;0BAEP,8OAAC;gBACC,WAAU;0BAQV,cAAA,8OAAC;oBAAI,WAAU;8BAAyB;;;;;;;;;;;;;;;;;AAKhD"}}]
+}

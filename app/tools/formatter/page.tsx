@@ -1,12 +1,13 @@
 "use client";
 
-
 import CodeFormatterTool from "@/components/CodeFormatterTool";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function FormatterPage() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
     <div
@@ -17,12 +18,13 @@ export default function FormatterPage() {
       <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="max-w-3xl w-full text-center mb-10">
         <h1 className="text-3xl md:text-5xl font-bold">
           <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
-            JSON/Lua Formatter
+            {t("pageHeaders.formatter.title")}
           </span>
         </h1>
         <p className="text-sm text-slate-300 mb-8 py-3 text-center max-w-2xl mx-auto">
-          Paste your code → format, minify, validate.  
-          Ideal for Lua scripts and JSON configs.
+          {t("pageHeaders.formatter.desc1")}
+          <br />
+          <span className="text-emerald-400 font-medium">{t("pageHeaders.formatter.desc2")}</span>
         </p>
       </motion.div>
 

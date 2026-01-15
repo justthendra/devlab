@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 declare global {
   interface Window {
@@ -23,6 +24,7 @@ export default function Mp4ToWebmTool() {
   const [status, setStatus] = useState("");
   const [quality, setQuality] = useState<Quality>("fast");
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   // FFmpeg scriptini yükle
   useEffect(() => {
@@ -43,13 +45,13 @@ export default function Mp4ToWebmTool() {
         setFfmpegReady(true);
         setStatus("");
       } catch (err) {
-          console.error(err);
-          setStatus("❌ FFmpeg failed to load. Check the public/ffmpeg folder.");
+        console.error(err);
+        setStatus(t("tools.common.ffmpegError"));
       }
     };
 
     loadFFmpeg();
-  }, []);
+  }, [t]);
 
   // Dönüştürme işlemi
   const handleConvert = async () => {
@@ -58,7 +60,7 @@ export default function Mp4ToWebmTool() {
     setLoading(true);
     setProgress(0);
     setOutputUrl(null);
-    setStatus("Conversion started...");
+    setStatus(t("tools.mp4towebm.conversionStarted"));
 
     let interval: number | null = null;
     interval = window.setInterval(() => {
@@ -77,11 +79,11 @@ export default function Mp4ToWebmTool() {
         corePath: "/ffmpeg/ffmpeg-core.js",
       });
 
-      setStatus("Starting FFmpeg...");
+      setStatus(t("tools.mp4towebm.startingFFmpeg"));
       await ffmpeg.load();
       setProgress(15);
 
-      setStatus("Processing video...");
+      setStatus(t("tools.mp4towebm.processingVideo"));
       const inputData = await fetchFile(selectedFile);
       ffmpeg.FS("writeFile", "input.mp4", inputData);
       setProgress(30);
@@ -95,12 +97,12 @@ export default function Mp4ToWebmTool() {
         videoArgs = ["-c:v", "libvpx", "-preset", "slow", "-b:v", "2M"];
       }
 
-      setStatus("Conversion in progress...");
+      setStatus(t("tools.mp4towebm.conversionInProgress"));
       setProgress(45);
 
       await ffmpeg.run("-i", "input.mp4", ...videoArgs, "-c:a", "libvorbis", "output.webm");
 
-      setStatus("Preparing output...");
+      setStatus(t("tools.mp4towebm.preparingOutput"));
       setProgress(95);
 
       const data = ffmpeg.FS("readFile", "output.webm");
@@ -108,7 +110,7 @@ export default function Mp4ToWebmTool() {
 
       setOutputUrl(url);
       setProgress(100);
-      setStatus("✔ Conversion completed!");
+      setStatus(t("tools.mp4towebm.conversionCompleted"));
 
       ffmpeg.FS("unlink", "input.mp4");
       ffmpeg.FS("unlink", "output.webm");
@@ -122,7 +124,11 @@ export default function Mp4ToWebmTool() {
     }
   };
 
-  const qualityLabel = quality === "fast" ? "Fast" : quality === "medium" ? "Medium" : "High";
+  const qualityLabels = {
+    fast: t("tools.common.quality.fast"),
+    medium: t("tools.common.quality.medium"),
+    high: t("tools.common.quality.high"),
+  };
 
   return (
     <div
@@ -139,12 +145,12 @@ export default function Mp4ToWebmTool() {
       {/* Başlık */}
       <div className="relative z-10">
         <h2 className={`text-xl font-semibold mb-1 ${theme === "dark" ? "text-white" : "text-black"}`}>
-          MP4 → WEBM Converter
+          {t("tools.mp4towebm.title")}
         </h2>
         <p className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-200" : "text-slate-700"}`}>
-          Select your MP4 video, and DevLab will convert it to WEBM format right in your browser.{" "}
+          {t("tools.mp4towebm.description")}{" "}
           <span className={theme === "dark" ? "text-indigo-400" : "text-indigo-600"}>
-            Nothing is uploaded to any server.
+            {t("tools.common.noUpload")}
           </span>
         </p>
       </div>
@@ -154,10 +160,10 @@ export default function Mp4ToWebmTool() {
         className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer transition hover:border-indigo-400 hover:bg-slate-900/30"
       >
         <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>
-          📁 Select MP4 video
+          {t("tools.mp4towebm.selectVideo")}
         </span>
         <span className={`text-[11px] mt-1 ${theme === "dark" ? "text-slate-400" : "text-slate-600"}`}>
-          Click or drag and drop
+          {t("tools.common.clickOrDrag")}
         </span>
         <input
           type="file"
@@ -175,9 +181,9 @@ export default function Mp4ToWebmTool() {
       {/* Quality selector */}
       <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
         {[
-          { key: "fast", label: "⚡ Fast", desc: "480p • 512k" },
-          { key: "medium", label: "🎯 Medium", desc: "720p • 1M" },
-          { key: "high", label: "💎 High", desc: "2M" },
+          { key: "fast", label: t("tools.common.quality.fast"), desc: "480p • 512k" },
+          { key: "medium", label: t("tools.common.quality.medium"), desc: "720p • 1M" },
+          { key: "high", label: t("tools.common.quality.high"), desc: "2M" },
         ].map(({ key, label, desc }) => (
           <button
             key={key}
@@ -207,7 +213,7 @@ export default function Mp4ToWebmTool() {
       {/* Seçilen dosya adı */}
       {selectedFile && (
         <p className={`mt-3 text-[11px] ${theme === "dark" ? "text-indigo-300" : "text-indigo-700"}`}>
-          <span className="font-semibold">File Selected: </span>
+          <span className="font-semibold">{t("tools.common.fileSelected")}: </span>
           {selectedFile.name}
         </p>
       )}
@@ -249,7 +255,7 @@ export default function Mp4ToWebmTool() {
           disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-[1px] hover:scale-[1.01]
         `}
       >
-        {loading ? `Converting (${qualityLabel})...` : progress === 100 ? "Convert new video" : "Convert to WEBM"}
+        {loading ? t("tools.mp4towebm.convertingBtn") : progress === 100 ? t("tools.mp4towebm.convertNewVideo") : t("tools.mp4towebm.convertBtn")}
       </button>
 
       {/* Çıktı görüntüleme & indirme */}
@@ -266,14 +272,14 @@ export default function Mp4ToWebmTool() {
               }
             `}
           >
-            Download WEBM File
+            {t("tools.mp4towebm.downloadBtn")}
           </a>
         </div>
       )}
 
       {!ffmpegReady && (
         <p className={`mt-2 text-[11px] ${theme === "dark" ? "text-amber-300" : "text-amber-600"}`}>
-          🔄 FFmpeg is preparing, the first launch may take a while...
+          {t("tools.common.ffmpegLoading")}
         </p>
       )}
     </div>

@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import GifOptimizeTool from "@/components/GifOptimizeTool";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function GifOptimizePage() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
     <div
@@ -16,14 +18,14 @@ export default function GifOptimizePage() {
       <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="max-w-3xl w-full text-center mb-10">
         <h1 className="text-3xl md:text-5xl font-bold">
           <span className="bg-gradient-to-r from-green-400 via-blue-400 to-pink-400 bg-clip-text text-transparent">
-            GIF Optimize
+            {t("pageHeaders.gifoptimize.title")}
           </span>
         </h1>
         <p className={`${theme === "dark" ? "text-slate-300" : "text-slate-600"} text-sm py-6 md:text-base`}>
-          Optimize GIF size to create faster‑loading images.
+          {t("pageHeaders.gifoptimize.desc1")}
           <br />
           <span className={`${theme === "dark" ? "text-emerald-400" : "text-blue-600"} font-medium`}>
-            Reduce FPS, resize — runs entirely in the browser.
+            {t("pageHeaders.gifoptimize.desc2")}
           </span>
         </p>
       </motion.div>
