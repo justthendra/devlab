@@ -109,6 +109,8 @@ export const tr = {
     support: "Destek",
     allRightsReserved: "Tüm hakları saklıdır.",
     by: "tarafından",
+    tools: "Araçlar",
+    docs: "Dökümanlar",
   },
 
   // Tools page
