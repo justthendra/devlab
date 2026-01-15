@@ -210,10 +210,10 @@ export default function Navbar() {
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
             className={`
-              fixed top-20 right-4 left-4 rounded-2xl p-4
-              backdrop-blur-xl z-40 shadow-2xl border origin-top
+              fixed top-20 right-4 w-72 rounded-2xl p-4
+              backdrop-blur-xl z-40 shadow-2xl border origin-top-right
               ${theme === "dark"
-                ? "bg-[rgba(20,20,24,0.37)] border-[rgba(255,255,255,0.08)]"
+                ? "bg-[rgba(20,20,24,0.95)] border-[rgba(255,255,255,0.08)]"
                 : "bg-[rgba(255,255,255,0.95)] border-[rgba(0,0,0,0.1)]"}
             `}
           >
@@ -306,7 +306,7 @@ export default function Navbar() {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className={`
-                    p-2 rounded-full border transition-colors flex-shrink-0
+                    p-2 rounded-full border transition-colors shrink-0
                     ${theme === "dark"
                     ? "bg-white/5 border-white/10 text-yellow-300"
                     : "bg-gray-100 border-gray-200 text-indigo-500"}
