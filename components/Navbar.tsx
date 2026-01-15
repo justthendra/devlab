@@ -13,11 +13,30 @@ import Image from "next/image";
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
   const [results, setResults] = useState<{ name: string; path: string }[]>([]);
+
+  // Language flags for mobile menu
+  const languageFlags: Record<string, string> = {
+    en: "🇬🇧",
+    tr: "🇹🇷",
+    de: "🇩🇪",
+    fr: "🇫🇷",
+    es: "🇪🇸",
+  };
+
+  const languageNames: Record<string, string> = {
+    en: "English",
+    tr: "Türkçe",
+    de: "Deutsch",
+    fr: "Français",
+    es: "Español",
+  };
+
+  const languages = ["en", "tr", "de", "fr", "es"];
 
   // Tools list with translations
   const tools = [
@@ -156,21 +175,21 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
 
-        {/* 🌐 Language Selector */}
-        <LanguageSelector />
-
-        {/* ☀️ Theme button */}
-        <motion.button
-          whileHover={{ scale: 1.15 }}
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className={`w-8 h-8 flex items-center justify-center rounded-full ${theme === "dark" ? "bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]" : "bg-[rgba(255,255,255,0.8)] border border-[rgba(0,0,0,0.27)]"}`}
-        >
-          {theme === "dark" ? (
-            <Sun className="w-4 h-4 text-yellow-300" />
-          ) : (
-            <Moon className="w-4 h-4 text-indigo-500" />
-          )}
-        </motion.button>
+        {/* 🌐 Language & Theme (Desktop) */}
+        <div className="hidden md:flex items-center gap-2">
+          <LanguageSelector />
+          <motion.button
+            whileHover={{ scale: 1.15 }}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className={`w-8 h-8 flex items-center justify-center rounded-full ${theme === "dark" ? "bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]" : "bg-[rgba(255,255,255,0.8)] border border-[rgba(0,0,0,0.27)]"}`}
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4 text-yellow-300" />
+            ) : (
+              <Moon className="w-4 h-4 text-indigo-500" />
+            )}
+          </motion.button>
+        </div>
 
         {/* 📱 Mobile menu button */}
         <motion.button
@@ -190,34 +209,36 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="
-              fixed top-20 right-4 left-4 rounded-xl px-6 py-4
-              backdrop-blur-md z-40
-              bg-[rgba(24,24,24,0.85)] border-[rgba(255,255,255,0.08)]
-            "
+            className={`
+              fixed top-20 right-4 left-4 rounded-2xl px-5 py-6
+              backdrop-blur-xl z-40 shadow-2xl border
+              ${theme === "dark"
+                ? "bg-[rgba(20,20,24,0.9)] border-[rgba(255,255,255,0.08)]"
+                : "bg-[rgba(255,255,255,0.9)] border-[rgba(0,0,0,0.1)]"}
+            `}
           >
             {/* Search */}
-            <div className="flex items-center gap-2 mb-3 px-3 py-2 rounded-lg border">
+            <div className={`flex items-center gap-2 mb-6 px-3 py-2.5 rounded-xl border ${theme === 'dark' ? 'bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.06)]' : 'bg-gray-50 border-gray-200'}`}>
               <Search className="w-4 h-4 text-slate-400" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t("navbar.searchPlaceholder")}
                 onKeyDown={(e) => e.key === "Enter" && handleSearchEnter()}
-                className="bg-transparent flex-1 text-sm outline-none"
+                className={`bg-transparent flex-1 text-sm outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
               />
             </div>
 
             {/* Results */}
             {results.length > 0 && (
-              <div className="mb-4 rounded-lg bg-[rgba(255,255,255,0.04)] p-2">
+              <div className="mb-4 rounded-lg bg-[rgba(255,255,255,0.04)] p-2 max-h-40 overflow-y-auto">
                 {results.map((r) => (
                   <motion.a
                     key={r.path}
                     href={r.path}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setMenuOpen(false)}
-                    className="block px-2 py-1 text-sm text-slate-300 hover:text-emerald-300"
+                    className="block px-3 py-2 text-sm text-slate-300 hover:text-emerald-300 rounded-md hover:bg-white/5"
                   >
                     {r.name}
                   </motion.a>
@@ -226,16 +247,79 @@ export default function Navbar() {
             )}
 
             {/* Menu Items */}
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 text-sm border-b border-[rgba(255,255,255,0.07)]"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <div className="flex flex-col gap-2 mb-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  onClick={() => setMenuOpen(false)}
+                  className={`
+                    block py-2.5 px-2 text-sm font-medium border-b border-transparent
+                    ${theme === 'dark' ? 'text-slate-200 border-b-[rgba(255,255,255,0.05)]' : 'text-slate-700 border-b-[rgba(0,0,0,0.05)]'}
+                  `}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Settings Divider */}
+            <div className={`h-px w-full my-4 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`} />
+
+            {/* Theme & Language Controls */}
+            <div className="space-y-4">
+              {/* Theme Toggle */}
+              <div className="flex items-center justify-between px-2">
+                <span className={`text-sm font-medium ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                  {theme === 'dark' ? "Light Mode" : "Dark Mode"}
+                </span>
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className={`
+                    p-2 rounded-full border transition-colors
+                    ${theme === "dark"
+                      ? "bg-white/5 border-white/10 text-yellow-300 hover:bg-white/10"
+                      : "bg-gray-100 border-gray-200 text-indigo-500 hover:bg-gray-200"}
+                  `}
+                >
+                  {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                </motion.button>
+              </div>
+
+              {/* Language List */}
+              <div className="px-2">
+                <span className={`text-xs font-medium uppercase tracking-wider mb-3 block ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`}>
+                  Language
+                </span>
+                <div className="grid grid-cols-5 gap-2">
+                  {languages.map((lang) => (
+                    <motion.button
+                      key={lang}
+                      whileTap={{ scale: 0.9 }}
+                      onClick={() => {
+                        setLanguage(lang as any);
+                        setMenuOpen(false);
+                      }}
+                      className={`
+                        flex flex-col items-center justify-center p-2 rounded-xl border transition-all
+                        ${language === lang
+                          ? "bg-emerald-500/10 border-emerald-500/50"
+                          : theme === "dark"
+                            ? "bg-white/5 border-white/5 hover:bg-white/10"
+                            : "bg-gray-50 border-gray-100 hover:bg-gray-100"}
+                      `}
+                    >
+                      <span className="text-xl mb-1">{languageFlags[lang]}</span>
+                      <span className={`text-[10px] uppercase font-bold ${language === lang ? "text-emerald-400" : theme === "dark" ? "text-slate-400" : "text-slate-600"}`}>
+                        {lang}
+                      </span>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </motion.div>
         )}
       </AnimatePresence>
