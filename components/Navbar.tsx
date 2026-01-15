@@ -205,21 +205,21 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            transition={{ duration: 0.2 }}
             className={`
-              fixed top-20 right-4 left-4 rounded-2xl px-5 py-6
-              backdrop-blur-xl z-40 shadow-2xl border
+              fixed top-20 right-4 left-4 rounded-2xl p-4
+              backdrop-blur-xl z-40 shadow-2xl border origin-top
               ${theme === "dark"
-                ? "bg-[rgba(20,20,24,0.9)] border-[rgba(255,255,255,0.08)]"
-                : "bg-[rgba(255,255,255,0.9)] border-[rgba(0,0,0,0.1)]"}
+                ? "bg-[rgba(20,20,24,0.37)] border-[rgba(255,255,255,0.08)]"
+                : "bg-[rgba(255,255,255,0.95)] border-[rgba(0,0,0,0.1)]"}
             `}
           >
             {/* Search */}
-            <div className={`flex items-center gap-2 mb-6 px-3 py-2.5 rounded-xl border ${theme === 'dark' ? 'bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.06)]' : 'bg-gray-50 border-gray-200'}`}>
-              <Search className="w-4 h-4 text-slate-400" />
+            <div className={`flex items-center gap-2 mb-3 px-3 py-2 rounded-xl border ${theme === 'dark' ? 'bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.06)]' : 'bg-gray-50 border-gray-200'}`}>
+              <Search className="w-3.5 h-3.5 text-slate-400" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -231,14 +231,14 @@ export default function Navbar() {
 
             {/* Results */}
             {results.length > 0 && (
-              <div className="mb-4 rounded-lg bg-[rgba(255,255,255,0.04)] p-2 max-h-40 overflow-y-auto">
+              <div className="mb-3 rounded-lg bg-[rgba(255,255,255,0.04)] p-1.5 max-h-32 overflow-y-auto">
                 {results.map((r) => (
                   <motion.a
                     key={r.path}
                     href={r.path}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setMenuOpen(false)}
-                    className="block px-3 py-2 text-sm text-slate-300 hover:text-emerald-300 rounded-md hover:bg-white/5"
+                    className="block px-3 py-1.5 text-xs text-slate-300 hover:text-emerald-300 rounded-md hover:bg-white/5"
                   >
                     {r.name}
                   </motion.a>
@@ -247,15 +247,17 @@ export default function Navbar() {
             )}
 
             {/* Menu Items */}
-            <div className="flex flex-col gap-2 mb-6">
+            <div className="flex flex-col gap-1 mb-3">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
                   onClick={() => setMenuOpen(false)}
                   className={`
-                    block py-2.5 px-2 text-sm font-medium border-b border-transparent
-                    ${theme === 'dark' ? 'text-slate-200 border-b-[rgba(255,255,255,0.05)]' : 'text-slate-700 border-b-[rgba(0,0,0,0.05)]'}
+                    block py-2 px-3 text-sm font-medium rounded-lg transition-colors
+                    ${theme === 'dark'
+                      ? 'text-slate-300 hover:bg-white/5 hover:text-white'
+                      : 'text-slate-600 hover:bg-black/5 hover:text-black'}
                   `}
                 >
                   {item.label}
@@ -264,35 +266,13 @@ export default function Navbar() {
             </div>
 
             {/* Settings Divider */}
-            <div className={`h-px w-full my-4 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`} />
+            <div className={`h-px w-full my-3 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`} />
 
-            {/* Theme & Language Controls */}
-            <div className="space-y-4">
-              {/* Theme Toggle */}
-              <div className="flex items-center justify-between px-2">
-                <span className={`text-sm font-medium ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                  {theme === 'dark' ? "Light Mode" : "Dark Mode"}
-                </span>
-                <motion.button
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className={`
-                    p-2 rounded-full border transition-colors
-                    ${theme === "dark"
-                      ? "bg-white/5 border-white/10 text-yellow-300 hover:bg-white/10"
-                      : "bg-gray-100 border-gray-200 text-indigo-500 hover:bg-gray-200"}
-                  `}
-                >
-                  {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-                </motion.button>
-              </div>
-
-              {/* Language List */}
-              <div className="px-2">
-                <span className={`text-xs font-medium uppercase tracking-wider mb-3 block ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`}>
-                  Language
-                </span>
-                <div className="grid grid-cols-5 gap-2">
+            {/* Theme & Language Controls Row */}
+            <div className="flex items-center justify-between gap-4">
+              {/* Language List - Horizontal Scroll or Compact Grid */}
+              <div className="flex-1 overflow-x-auto no-scrollbar">
+                <div className="flex gap-1.5">
                   {languages.map((lang) => (
                     <motion.button
                       key={lang}
@@ -302,22 +282,38 @@ export default function Navbar() {
                         setMenuOpen(false);
                       }}
                       className={`
-                        flex flex-col items-center justify-center p-2 rounded-xl border transition-all
-                        ${language === lang
+                          flex flex-col items-center justify-center p-1.5 min-w-[36px] rounded-lg border transition-all
+                          ${language === lang
                           ? "bg-emerald-500/10 border-emerald-500/50"
                           : theme === "dark"
-                            ? "bg-white/5 border-white/5 hover:bg-white/10"
-                            : "bg-gray-50 border-gray-100 hover:bg-gray-100"}
-                      `}
+                            ? "bg-white/5 border-white/5"
+                            : "bg-gray-50 border-gray-100"}
+                        `}
                     >
-                      <span className="text-xl mb-1">{languageFlags[lang]}</span>
-                      <span className={`text-[10px] uppercase font-bold ${language === lang ? "text-emerald-400" : theme === "dark" ? "text-slate-400" : "text-slate-600"}`}>
+                      <span className="text-lg leading-none">{languageFlags[lang]}</span>
+                      <span className={`text-[9px] uppercase font-bold mt-0.5 ${language === lang ? "text-emerald-400" : theme === "dark" ? "text-slate-400" : "text-slate-500"}`}>
                         {lang}
                       </span>
                     </motion.button>
                   ))}
                 </div>
               </div>
+
+              {/* Theme Toggle - Compact */}
+              <div className={`w-px h-8 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`} />
+
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className={`
+                    p-2 rounded-full border transition-colors flex-shrink-0
+                    ${theme === "dark"
+                    ? "bg-white/5 border-white/10 text-yellow-300"
+                    : "bg-gray-100 border-gray-200 text-indigo-500"}
+                  `}
+              >
+                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              </motion.button>
             </div>
 
           </motion.div>
