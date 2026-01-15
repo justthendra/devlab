@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Sun, Moon, Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -73,12 +74,12 @@ export default function Navbar() {
       >
         {/* 🔥 Logo */}
         <Link href="/" className="flex items-center gap-2 mr-auto">
-          <span
-            className={`text-sm font-semibold ${theme === "dark" ? "text-slate-200" : "text-slate-900"
-              }`}
-          >
-            DevLab
-          </span>
+          <Image
+            src={theme === "dark" ? "/DevLab.png" : "/DevLabDark.png"}
+            alt="DevLab Logo"
+            width={32}
+            height={32}
+          />
         </Link>
 
         {/* 📌 Desktop Menu */}
@@ -90,10 +91,10 @@ export default function Navbar() {
                 key={item.path}
                 href={item.path}
                 className={`text-sm transition ${isActive
-                    ? "text-emerald-400 font-semibold"
-                    : theme === "dark"
-                      ? "text-slate-400 hover:text-white"
-                      : "text-slate-600 hover:text-slate-800"
+                  ? "text-emerald-400 font-semibold"
+                  : theme === "dark"
+                    ? "text-slate-400 hover:text-white"
+                    : "text-slate-600 hover:text-slate-800"
                   }`}
               >
                 {item.label}
