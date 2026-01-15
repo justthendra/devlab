@@ -84,7 +84,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className={`
-          max-w-5xl w-full mx-8 md:mx-4 px-4 py-2 flex items-center gap-4
+          max-w-5xl w-full mx-4 px-4 py-2 flex items-center gap-4
           backdrop-blur-md border rounded-full pointer-events-auto
           ${theme === "dark"
             ? "bg-[rgba(11,11,14,0.09)] border-[rgba(255,255,255,0.07)]"
