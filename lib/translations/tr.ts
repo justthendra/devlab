@@ -61,6 +61,35 @@ export const tr = {
     devTool: "Geliştirici Aracı",
   },
 
+  // Bento Grid
+  bento: {
+    title: "Güçlü Araç Seti",
+    description: "İhtiyacınız olan her şey tek bir yerde. Kurulum yok, kayıt yok.",
+    categories: {
+      media: "Medya Sihri",
+      mediaDesc: "Video ve sesi anında işleyin.",
+      image: "Görsel Stüdyosu",
+      imageDesc: "Görselleri optimize edin, boyutlandırın ve düzenleyin.",
+      dev: "Geliştirici Araçları",
+      devDesc: "Biçimlendirin, küçültün ve oluşturun.",
+      design: "Tasarım & Renkler",
+      designDesc: "CSS Oluşturucular ve Paletler.",
+    },
+    cta: {
+      title: "Tüm koleksiyonu keşfedin",
+      description: "Tarayıcınızda kullanıma hazır 30+ geliştirici aracı",
+      button: "Tüm Araçları Gör",
+    },
+  },
+
+  // Community Section
+  community: {
+    title: "Topluluğa Katılın",
+    description: "DevLab açık kaynaktır. Katkıda bulunun, özellik önerin veya Discord'da merhaba deyin.",
+    github: "GitHub'da Yıldızla",
+    discord: "Discord'a Katıl",
+  },
+
   // Featured tools
   featuredTools: {
     mp4towebm: {
@@ -79,9 +108,13 @@ export const tr = {
     description: "DevLab, bireysel geliştiriciler, tasarımcılar ve verimlilik tutkunları için modern, tarayıcı tabanlı araçlar sunar. Kodlama ve tasarım süreçlerini hızlandırmak için tasarlanmış çözümler—kurulum gerektirmez.",
     features: {
       browserBased: "🔌 Tarayıcı Tabanlı",
+      browserBasedDesc: "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalar cihazınızdan asla çıkmaz.",
       fast: "⚡ Hızlı & Hafif",
+      fastDesc: "Kurulum gerektirmeden, WebAssembly ile yerel performansa yakın hız.",
       uiux: "🎨 UI/UX Dostu",
+      uiuxDesc: "Odaklanma ve verimlilik için tasarlanmış temiz, dikkat dağıtmayan arayüz.",
       productivity: "🚀 Verimlilik Odaklı",
+      productivityDesc: "Açık kaynak ve ücretsiz. Gizli abonelik veya ödeme duvarı yok.",
     },
   },
 
@@ -118,6 +151,54 @@ export const tr = {
     title: "Araç Merkezi",
     description: "Tarayıcı tabanlı medya dönüştürme araçları.",
     noUpload: "Hiçbir veri sunucuya yüklenmez.",
+  },
+
+  // About page
+  about: {
+    hero: {
+      tagline: "Tarayıcı Araçlarının Geleceğini İnşa Ediyoruz",
+      subtext: "DevLab, geliştiricileri ve içerik üreticilerini karmaşa olmadan güçlendirmek için tasarlanmış, gizlilik öncelikli ve açık kaynaklı bir araç takımıdır.",
+    },
+    meetDeveloper: {
+      title: "Geliştirici İle Tanışın",
+      name: "JustThendra",
+      bio: "Sezgisel, estetik ve yüksek performanslı web uygulamaları oluşturmaya odaklanmış tutkulu bir Full Stack Geliştirici. Açık kaynak ve topluluk odaklı geliştirmeye adanmış.",
+    },
+    techStack: {
+      title: "Modern Teknolojilerle İnşa Edildi",
+      desc: "Maksimum performans ve ölçeklenebilirlik için en son web teknolojileriyle güçlendirildi.",
+    },
+    community: {
+        title: "Yolculuğumuza Katılın",
+        desc: "Büyüyen DevLab topluluğunun bir parçası olun. Fikirlerinizi paylaşın, hataları bildirin veya sadece selam verin!",
+        discord: "Discord'a Katıl",
+        github: "GitHub'da Yıldızla"
+    },
+    timeline: {
+      title: "Yolculuğumuz",
+      2025: { title: "Başlangıç ve Alfa", desc: "DevLab, yerel öncelikli araçlar vizyonu olarak başladı. Temel özelliklerle ilk halka açık sürüm." },
+      2026: { title: "Topluluk Büyümesi", desc: "Çoklu dil desteğine ve topluluk odaklı özelliklere genişleme." },
+      2027: { title: "Ekosistem Genişlemesi", desc: "Gelişmiş geliştirici araçlarının ve (isteğe bağlı) bulut senkronizasyonunun planlanan lansmanı." },
+    },
+    title: "DevLab Hakkında",
+    description: "Geliştiricileri güvenli, tarayıcı tabanlı araçlarla güçlendiriyoruz.",
+    contact: "İletişim",
+    whyDevlab: {
+      title: "Neden DevLab?",
+      desc: "Güçlü araçlara kurulumsuz anında erişim."
+    },
+    technology: {
+      title: "Modern Teknoloji",
+      desc: "Next.js 14, React ve Tailwind CSS ile geliştirildi."
+    },
+    vision: {
+      title: "Vizyonumuz",
+      desc: "Anlamlı geliştirme araçlarını herkes için erişilebilir kılmak."
+    },
+    developer: {
+      title: "Geliştirici Odaklı",
+      desc: "Geliştiriciler tarafından, geliştiriciler için yapıldı."
+    },
   },
 
   // Page content
@@ -226,31 +307,13 @@ export const tr = {
     imagetotext: "Görsellerden metin çıkar (OCR).",
   },
 
-  // About page
-  about: {
-    title: "Hakkında",
-    description: "DevLab, medya dönüşümlerini doğrudan tarayıcınızda gerçekleştiren hızlı ve güvenli bir platformdur. Hiçbir dosya herhangi bir sunucuya yüklenmez.",
-    whyDevlab: {
-      title: "🚀 Neden DevLab?",
-      desc: "Dosyalar cihazda işlenir, gizlilik korunur ve performans ultra hızlıdır.",
-    },
-    technology: {
-      title: "🛠 Teknoloji",
-      desc: "Next.js, WebAssembly, FFmpeg, Tailwind CSS ve Framer Motion ile oluşturuldu.",
-    },
-    vision: {
-      title: "🌍 Vizyon",
-      desc: "Herkes için basit, güvenli ve erişilebilir medya dönüştürme araçları oluşturun.",
-    },
-    developer: {
-      title: "👤 Geliştirici",
-      desc: "Modern UI ve performans odaklı sistemlere odaklanan Thendra tarafından tasarlandı.",
-    },
-    contact: "Daha fazla bilgi veya iletişim için:",
-  },
-
   // Docs pages
   docs: {
+    hero: {
+      title: "Dokümantasyon",
+      subtitle: "DevLab ile geliştirme yapmak için ihtiyacınız olan her şey. Rehberler, API referansları ve daha fazlası.",
+    },
+    readGuide: "Rehberi Oku",
     title: "Dokümantasyon",
     description: "DevLab için teknik dokümantasyon: derleme süreci, güvenlik modeli ve geliştirici bilgileri.",
     sections: {

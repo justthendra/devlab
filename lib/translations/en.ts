@@ -61,6 +61,35 @@ export const en = {
     devTool: "Dev Tool",
   },
 
+  // Bento Grid
+  bento: {
+    title: "Powerful Tools Suite",
+    description: "Everything you need in one place. No installations, no sign-ups.",
+    categories: {
+      media: "Media Magic",
+      mediaDesc: "Process video and audio instantly.",
+      image: "Image Studio",
+      imageDesc: "Optimize, resize, and edit images.",
+      dev: "Dev Utilities",
+      devDesc: "Format, minify, and generate.",
+      design: "Design & Colors",
+      designDesc: "CSS Generators and Palettes.",
+    },
+    cta: {
+      title: "Explore the full collection",
+      description: "30+ developer tools ready to use in your browser",
+      button: "View All Tools",
+    },
+  },
+
+  // Community Section
+  community: {
+    title: "Join the Community",
+    description: "DevLab is open source. Contribute, suggest features, or just say hi on Discord.",
+    github: "Star on GitHub",
+    discord: "Join Discord",
+  },
+
   // Featured tools
   featuredTools: {
     mp4towebm: {
@@ -79,9 +108,13 @@ export const en = {
     description: "DevLab offers modern, browser-based tools for individual developers, designers, and productivity enthusiasts. Solutions designed to accelerate coding and design processes—no installation required.",
     features: {
       browserBased: "🔌 Browser-Based",
+      browserBasedDesc: "All processing happens in your browser. Files never leave your device.",
       fast: "⚡ Fast & Light",
+      fastDesc: "Powered by WebAssembly for near-native performance without installs.",
       uiux: "🎨 UI/UX Friendly",
+      uiuxDesc: "Clean, distraction-free interface designed for focus and efficiency.",
       productivity: "🚀 Productivity-Focused",
+      productivityDesc: "Open source and free to use. No hidden subscriptions or paywalls.",
     },
   },
 
@@ -228,29 +261,60 @@ export const en = {
 
   // About page
   about: {
-    title: "About",
-    description: "DevLab is a fast and secure platform that performs media conversions directly in your browser. No files are uploaded to any server.",
+    hero: {
+      tagline: "Building the Future of Browser Tools",
+      subtext: "DevLab is a privacy-first, open-source suite of utilities designed to empower developers and creators without the bloat.",
+    },
+    meetDeveloper: {
+      title: "Meet the Developer",
+      name: "JustThendra",
+      bio: "A passionate Full Stack Developer focused on building intuitive, beautiful, and high-performance web applications. Dedicated to open source and community-driven development.",
+    },
+    techStack: {
+      title: "Built With Modern Tech",
+      desc: "Powered by the latest web technologies for maximum performance and scalability.",
+    },
+    community: {
+        title: "Join Our Journey",
+        desc: "Be part of the growing DevLab community. Share ideas, report bugs, or just say hi!",
+        discord: "Join Discord",
+        github: "Star on GitHub"
+    },
+    timeline: {
+      title: "Our Journey",
+      2025: { title: "Inception & Alpha", desc: "DevLab started as a vision for local-first tools. First public release with core features." },
+      2026: { title: "Community Growth", desc: "Expansion to multi-language support and community-driven features." },
+      2027: { title: "Ecosystem Expansion", desc: "Planned launch of advanced developer utilities and cloud sync (optional)." },
+    },
+    // Keep existing keys if compatible, or just overwrite/extend
+    title: "About DevLab",
+    description: "Empowering developers with secure, browser-based tools.",
+    contact: "Contact Us",
     whyDevlab: {
-      title: "🚀 Why DevLab?",
-      desc: "Files are processed on-device, privacy is preserved, and performance is ultra fast.",
+      title: "Why DevLab?",
+      desc: "Instant access to powerful tools with zero setup."
     },
     technology: {
-      title: "🛠 Technology",
-      desc: "Built with Next.js, WebAssembly, FFmpeg, Tailwind CSS, and Framer Motion.",
+      title: "Modern Tech",
+      desc: "Built with Next.js 14, React, and Tailwind CSS."
     },
     vision: {
-      title: "🌍 Vision",
-      desc: "Create simple, secure, and accessible media conversion tools for everyone.",
+      title: "Our Vision",
+      desc: "Making meaningful development tools accessible to everyone."
     },
     developer: {
-      title: "👤 Developer",
-      desc: "Designed by Thendra, focused on modern UI and performance-oriented systems.",
+      title: "Developer Driven",
+      desc: "Created by developers, for developers."
     },
-    contact: "For more information or to get in touch:",
   },
 
   // Docs pages
   docs: {
+    hero: {
+      title: "Documentation",
+      subtitle: "Everything you need to build with DevLab. Guides, API references, and more.",
+    },
+    readGuide: "Read Guide",
     title: "Documentation",
     description: "Technical documentation for DevLab: build process, security model, and developer information.",
     sections: {

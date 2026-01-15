@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useLanguage } from "@/lib/LanguageContext";
+import { Rocket, Book, Shield, Cpu, Code, HelpCircle, ArrowRight } from "lucide-react";
 
 export default function DocsPage() {
   const { theme } = useTheme();
@@ -13,97 +14,149 @@ export default function DocsPage() {
     {
       key: "gettingStarted",
       link: "/docs/getting-started",
-      gradient: "from-green-400 to-blue-400",
+      icon: <Rocket className="w-6 h-6" />,
+      gradient: "from-emerald-400 to-teal-500",
+      bg: "bg-emerald-500/10",
+      border: "border-emerald-500/20",
+      hoverBorder: "group-hover:border-emerald-500/50",
+      textClass: "text-emerald-400",
+      hoverText: "group-hover:text-emerald-400"
     },
     {
       key: "howItWorks",
       link: "/docs/how-it-works",
-      gradient: "from-purple-400 to-pink-400",
+      icon: <Book className="w-6 h-6" />,
+      gradient: "from-blue-400 to-indigo-500",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20",
+      hoverBorder: "group-hover:border-blue-500/50",
+      textClass: "text-blue-400",
+      hoverText: "group-hover:text-blue-400"
     },
     {
       key: "security",
       link: "/docs/security",
-      gradient: "from-yellow-400 to-red-400",
+      icon: <Shield className="w-6 h-6" />,
+      gradient: "from-violet-400 to-purple-500",
+      bg: "bg-violet-500/10",
+      border: "border-violet-500/20",
+      hoverBorder: "group-hover:border-violet-500/50",
+      textClass: "text-violet-400",
+      hoverText: "group-hover:text-violet-400"
     },
     {
       key: "ffmpeg",
       link: "/docs/ffmpeg",
-      gradient: "from-indigo-400 to-purple-400",
+      icon: <Cpu className="w-6 h-6" />,
+      gradient: "from-amber-400 to-orange-500",
+      bg: "bg-amber-500/10",
+      border: "border-amber-500/20",
+      hoverBorder: "group-hover:border-amber-500/50",
+      textClass: "text-amber-400",
+      hoverText: "group-hover:text-amber-400"
     },
     {
       key: "api",
       link: "/docs/api",
-      gradient: "from-pink-400 to-red-400",
+      icon: <Code className="w-6 h-6" />,
+      gradient: "from-pink-400 to-rose-500",
+      bg: "bg-pink-500/10",
+      border: "border-pink-500/20",
+      hoverBorder: "group-hover:border-pink-500/50",
+      textClass: "text-pink-400",
+      hoverText: "group-hover:text-pink-400"
     },
     {
       key: "faq",
       link: "/docs/faq",
-      gradient: "from-teal-400 to-cyan-400",
+      icon: <HelpCircle className="w-6 h-6" />,
+      gradient: "from-cyan-400 to-sky-500",
+      bg: "bg-cyan-500/10",
+      border: "border-cyan-500/20",
+      hoverBorder: "group-hover:border-cyan-500/50",
+      textClass: "text-cyan-400",
+      hoverText: "group-hover:text-cyan-400"
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <div
-      className={`
-        min-h-screen w-full flex flex-col justify-start items-center py-24 px-6
-        ${theme === "dark" ? "bg-transparent" : "bg-transparent"}
-      `}
-    >
-      {/* Sayfa geçiş animasyonu */}
+    <div className="min-h-screen w-full relative overflow-hidden bg-dot-pattern selection:bg-emerald-500/30">
+      {/* Background Ambience */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className={`absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] animate-pulse-slow`} />
+        <div className={`absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse-slow delay-1000`} />
+      </div>
+
       <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl w-full text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 max-w-6xl mx-auto px-6 py-32"
       >
-        {/* Başlık */}
-        <motion.h1
-          initial={{ scale: 0.95 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.4 }}
-          className="text-3xl md:text-5xl font-bold mb-3"
-        >
-          <span className="bg-gradient-to-r from-green-400 via-blue-400 to-gray-400 bg-clip-text text-transparent">
-            {t("docs.title")}
-          </span>
-        </motion.h1>
+        {/* Hero Section */}
+        <motion.div variants={itemVariants} className="text-center mb-20 max-w-3xl mx-auto">
+          <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-sm font-medium">
+            {t("docs.hero.title")}
+          </div>
+          <h1 className={`text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-b ${theme === 'dark' ? 'from-white to-white/60' : 'from-slate-900 to-slate-600'}`}>
+            {t("docs.hero.title")}
+          </h1>
+          <p className={`text-lg md:text-xl leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+            {t("docs.hero.subtitle")}
+          </p>
+        </motion.div>
 
-        {/* Açıklama */}
-        <p
-          className={`text-sm md:text-base max-w-2xl mx-auto mb-12 ${theme === "dark" ? "text-slate-300" : "text-slate-600"
-            }`}
-        >
-          {t("docs.description")}
-        </p>
-
-        {/* Bölüm kartları */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Categories Grid */}
+        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sections.map((section) => (
-            <Link key={section.link} href={section.link}>
+            <Link key={section.key} href={section.link} className="group">
               <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ y: -5 }}
                 className={`
-                  p-5 rounded-xl text-left border transition
+                  h-full p-6 rounded-2xl border backdrop-blur-sm transition-all duration-300
                   ${theme === "dark"
-                    ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200"
-                    : "bg-white border-gray-200 text-slate-800 hover:shadow-[0_0_15px_rgba(0,150,255,0.15)]"
+                    ? `bg-[#11111136] border-white/5 ${section.hoverBorder} hover:bg-[#11111160]`
+                    : `bg-white/60 border-slate-200 ${section.hoverBorder} hover:bg-white/80 shadow-sm`
                   }
                 `}
               >
-                <h3 className={`text-lg font-semibold bg-gradient-to-r ${section.gradient} bg-clip-text text-transparent`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${section.bg} ${section.border} border`}>
+                  <div className={`${section.textClass}`}>
+                    {section.icon}
+                  </div>
+                </div>
+
+                <h3 className={`text-xl font-bold mb-2 transition-colors ${section.hoverText} ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
                   {t(`docs.sections.${section.key}.title`)}
                 </h3>
-                <p
-                  className={`text-xs mt-1 ${theme === "dark" ? "text-slate-400" : "text-slate-600"
-                    }`}
-                >
+
+                <p className={`text-sm leading-relaxed mb-4 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                   {t(`docs.sections.${section.key}.desc`)}
                 </p>
+
+                <div className={`flex items-center text-xs font-medium ${section.textClass} opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300`}>
+                  {t("docs.readGuide")} <ArrowRight className="ml-1 w-3 h-3" />
+                </div>
               </motion.div>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

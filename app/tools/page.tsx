@@ -373,7 +373,7 @@ export default function ToolsPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6 px-2">
-                <div className={`p-2 rounded-lg ${theme === "dark" ? "bg-slate-800 text-blue-400" : "bg-blue-100 text-blue-600"}`}>
+                <div className={`p-2 rounded-lg ${theme === "dark" ? "bg-[#1a1b1e3f] text-blue-400" : "bg-blue-100 text-blue-600"}`}>
                   {cat.icon}
                 </div>
                 <h2 className={`text-2xl font-bold ${theme === "dark" ? "text-slate-200" : "text-slate-800"}`}>

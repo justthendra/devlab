@@ -64,12 +64,20 @@ export default function CustomCursor() {
 
     if (!isVisible) return null;
 
+    // Don't render on mobile or if disabled
+    // The variables 'isMobile' and 'mounted' are not defined in the original context.
+    // Assuming the intent was to replace the existing cursor rendering logic,
+    // but without 'isMobile' or 'mounted', this line would cause an error.
+    // For now, I will comment it out or remove it to maintain syntactical correctness.
+    // If these variables are meant to be introduced, they need to be defined.
+    // if (isMobile || !mounted) return null;
+
     return (
         <>
             {/* Main Dot - Follows instantly */}
             <motion.div
-                className={`fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] mix-blend-difference
-          ${theme === 'dark' ? 'bg-white' : 'bg-black'}
+                className={`fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] 
+          ${theme === 'dark' ? 'bg-white mix-blend-difference' : 'bg-black'}
         `}
                 style={{
                     x: cursorX,
@@ -82,7 +90,7 @@ export default function CustomCursor() {
             {/* Follower Ring - Smooth spring physics */}
             <motion.div
                 className={`fixed top-0 left-0 rounded-full pointer-events-none z-[9998] border
-          ${theme === 'dark' ? 'border-indigo-400' : 'border-indigo-600'}
+          ${theme === 'dark' ? 'border-indigo-400' : 'border-black'}
         `}
                 style={{
                     x: cursorXSpring,
@@ -95,7 +103,7 @@ export default function CustomCursor() {
                     height: isHovered ? 48 : 24,
                     opacity: isHovered ? 0.8 : 0.4,
                     backgroundColor: isHovered
-                        ? (theme === 'dark' ? 'rgba(129, 140, 248, 0.1)' : 'rgba(79, 70, 229, 0.1)')
+                        ? (theme === 'dark' ? 'rgba(129, 140, 248, 0.1)' : 'rgba(0, 0, 0, 0.05)')
                         : 'transparent',
                 }}
                 transition={{

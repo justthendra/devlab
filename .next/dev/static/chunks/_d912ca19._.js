@@ -66,6 +66,33 @@ const en = {
         videoTool: "Video Tool",
         devTool: "Dev Tool"
     },
+    // Bento Grid
+    bento: {
+        title: "Powerful Tools Suite",
+        description: "Everything you need in one place. No installations, no sign-ups.",
+        categories: {
+            media: "Media Magic",
+            mediaDesc: "Process video and audio instantly.",
+            image: "Image Studio",
+            imageDesc: "Optimize, resize, and edit images.",
+            dev: "Dev Utilities",
+            devDesc: "Format, minify, and generate.",
+            design: "Design & Colors",
+            designDesc: "CSS Generators and Palettes."
+        },
+        cta: {
+            title: "Explore the full collection",
+            description: "30+ developer tools ready to use in your browser",
+            button: "View All Tools"
+        }
+    },
+    // Community Section
+    community: {
+        title: "Join the Community",
+        description: "DevLab is open source. Contribute, suggest features, or just say hi on Discord.",
+        github: "Star on GitHub",
+        discord: "Join Discord"
+    },
     // Featured tools
     featuredTools: {
         mp4towebm: {
@@ -83,9 +110,13 @@ const en = {
         description: "DevLab offers modern, browser-based tools for individual developers, designers, and productivity enthusiasts. Solutions designed to accelerate coding and design processes—no installation required.",
         features: {
             browserBased: "🔌 Browser-Based",
+            browserBasedDesc: "All processing happens in your browser. Files never leave your device.",
             fast: "⚡ Fast & Light",
+            fastDesc: "Powered by WebAssembly for near-native performance without installs.",
             uiux: "🎨 UI/UX Friendly",
-            productivity: "🚀 Productivity-Focused"
+            uiuxDesc: "Clean, distraction-free interface designed for focus and efficiency.",
+            productivity: "🚀 Productivity-Focused",
+            productivityDesc: "Open source and free to use. No hidden subscriptions or paywalls."
         }
     },
     // Last section
@@ -286,28 +317,68 @@ const en = {
     },
     // About page
     about: {
-        title: "About",
-        description: "DevLab is a fast and secure platform that performs media conversions directly in your browser. No files are uploaded to any server.",
+        hero: {
+            tagline: "Building the Future of Browser Tools",
+            subtext: "DevLab is a privacy-first, open-source suite of utilities designed to empower developers and creators without the bloat."
+        },
+        meetDeveloper: {
+            title: "Meet the Developer",
+            name: "JustThendra",
+            bio: "A passionate Full Stack Developer focused on building intuitive, beautiful, and high-performance web applications. Dedicated to open source and community-driven development."
+        },
+        techStack: {
+            title: "Built With Modern Tech",
+            desc: "Powered by the latest web technologies for maximum performance and scalability."
+        },
+        community: {
+            title: "Join Our Journey",
+            desc: "Be part of the growing DevLab community. Share ideas, report bugs, or just say hi!",
+            discord: "Join Discord",
+            github: "Star on GitHub"
+        },
+        timeline: {
+            title: "Our Journey",
+            2025: {
+                title: "Inception & Alpha",
+                desc: "DevLab started as a vision for local-first tools. First public release with core features."
+            },
+            2026: {
+                title: "Community Growth",
+                desc: "Expansion to multi-language support and community-driven features."
+            },
+            2027: {
+                title: "Ecosystem Expansion",
+                desc: "Planned launch of advanced developer utilities and cloud sync (optional)."
+            }
+        },
+        // Keep existing keys if compatible, or just overwrite/extend
+        title: "About DevLab",
+        description: "Empowering developers with secure, browser-based tools.",
+        contact: "Contact Us",
         whyDevlab: {
-            title: "🚀 Why DevLab?",
-            desc: "Files are processed on-device, privacy is preserved, and performance is ultra fast."
+            title: "Why DevLab?",
+            desc: "Instant access to powerful tools with zero setup."
         },
         technology: {
-            title: "🛠 Technology",
-            desc: "Built with Next.js, WebAssembly, FFmpeg, Tailwind CSS, and Framer Motion."
+            title: "Modern Tech",
+            desc: "Built with Next.js 14, React, and Tailwind CSS."
         },
         vision: {
-            title: "🌍 Vision",
-            desc: "Create simple, secure, and accessible media conversion tools for everyone."
+            title: "Our Vision",
+            desc: "Making meaningful development tools accessible to everyone."
         },
         developer: {
-            title: "👤 Developer",
-            desc: "Designed by Thendra, focused on modern UI and performance-oriented systems."
-        },
-        contact: "For more information or to get in touch:"
+            title: "Developer Driven",
+            desc: "Created by developers, for developers."
+        }
     },
     // Docs pages
     docs: {
+        hero: {
+            title: "Documentation",
+            subtitle: "Everything you need to build with DevLab. Guides, API references, and more."
+        },
+        readGuide: "Read Guide",
         title: "Documentation",
         description: "Technical documentation for DevLab: build process, security model, and developer information.",
         sections: {
@@ -1041,6 +1112,33 @@ const tr = {
         videoTool: "Video Aracı",
         devTool: "Geliştirici Aracı"
     },
+    // Bento Grid
+    bento: {
+        title: "Güçlü Araç Seti",
+        description: "İhtiyacınız olan her şey tek bir yerde. Kurulum yok, kayıt yok.",
+        categories: {
+            media: "Medya Sihri",
+            mediaDesc: "Video ve sesi anında işleyin.",
+            image: "Görsel Stüdyosu",
+            imageDesc: "Görselleri optimize edin, boyutlandırın ve düzenleyin.",
+            dev: "Geliştirici Araçları",
+            devDesc: "Biçimlendirin, küçültün ve oluşturun.",
+            design: "Tasarım & Renkler",
+            designDesc: "CSS Oluşturucular ve Paletler."
+        },
+        cta: {
+            title: "Tüm koleksiyonu keşfedin",
+            description: "Tarayıcınızda kullanıma hazır 30+ geliştirici aracı",
+            button: "Tüm Araçları Gör"
+        }
+    },
+    // Community Section
+    community: {
+        title: "Topluluğa Katılın",
+        description: "DevLab açık kaynaktır. Katkıda bulunun, özellik önerin veya Discord'da merhaba deyin.",
+        github: "GitHub'da Yıldızla",
+        discord: "Discord'a Katıl"
+    },
     // Featured tools
     featuredTools: {
         mp4towebm: {
@@ -1058,9 +1156,13 @@ const tr = {
         description: "DevLab, bireysel geliştiriciler, tasarımcılar ve verimlilik tutkunları için modern, tarayıcı tabanlı araçlar sunar. Kodlama ve tasarım süreçlerini hızlandırmak için tasarlanmış çözümler—kurulum gerektirmez.",
         features: {
             browserBased: "🔌 Tarayıcı Tabanlı",
+            browserBasedDesc: "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalar cihazınızdan asla çıkmaz.",
             fast: "⚡ Hızlı & Hafif",
+            fastDesc: "Kurulum gerektirmeden, WebAssembly ile yerel performansa yakın hız.",
             uiux: "🎨 UI/UX Dostu",
-            productivity: "🚀 Verimlilik Odaklı"
+            uiuxDesc: "Odaklanma ve verimlilik için tasarlanmış temiz, dikkat dağıtmayan arayüz.",
+            productivity: "🚀 Verimlilik Odaklı",
+            productivityDesc: "Açık kaynak ve ücretsiz. Gizli abonelik veya ödeme duvarı yok."
         }
     },
     // Last section
@@ -1094,6 +1196,62 @@ const tr = {
         title: "Araç Merkezi",
         description: "Tarayıcı tabanlı medya dönüştürme araçları.",
         noUpload: "Hiçbir veri sunucuya yüklenmez."
+    },
+    // About page
+    about: {
+        hero: {
+            tagline: "Tarayıcı Araçlarının Geleceğini İnşa Ediyoruz",
+            subtext: "DevLab, geliştiricileri ve içerik üreticilerini karmaşa olmadan güçlendirmek için tasarlanmış, gizlilik öncelikli ve açık kaynaklı bir araç takımıdır."
+        },
+        meetDeveloper: {
+            title: "Geliştirici İle Tanışın",
+            name: "JustThendra",
+            bio: "Sezgisel, estetik ve yüksek performanslı web uygulamaları oluşturmaya odaklanmış tutkulu bir Full Stack Geliştirici. Açık kaynak ve topluluk odaklı geliştirmeye adanmış."
+        },
+        techStack: {
+            title: "Modern Teknolojilerle İnşa Edildi",
+            desc: "Maksimum performans ve ölçeklenebilirlik için en son web teknolojileriyle güçlendirildi."
+        },
+        community: {
+            title: "Yolculuğumuza Katılın",
+            desc: "Büyüyen DevLab topluluğunun bir parçası olun. Fikirlerinizi paylaşın, hataları bildirin veya sadece selam verin!",
+            discord: "Discord'a Katıl",
+            github: "GitHub'da Yıldızla"
+        },
+        timeline: {
+            title: "Yolculuğumuz",
+            2025: {
+                title: "Başlangıç ve Alfa",
+                desc: "DevLab, yerel öncelikli araçlar vizyonu olarak başladı. Temel özelliklerle ilk halka açık sürüm."
+            },
+            2026: {
+                title: "Topluluk Büyümesi",
+                desc: "Çoklu dil desteğine ve topluluk odaklı özelliklere genişleme."
+            },
+            2027: {
+                title: "Ekosistem Genişlemesi",
+                desc: "Gelişmiş geliştirici araçlarının ve (isteğe bağlı) bulut senkronizasyonunun planlanan lansmanı."
+            }
+        },
+        title: "DevLab Hakkında",
+        description: "Geliştiricileri güvenli, tarayıcı tabanlı araçlarla güçlendiriyoruz.",
+        contact: "İletişim",
+        whyDevlab: {
+            title: "Neden DevLab?",
+            desc: "Güçlü araçlara kurulumsuz anında erişim."
+        },
+        technology: {
+            title: "Modern Teknoloji",
+            desc: "Next.js 14, React ve Tailwind CSS ile geliştirildi."
+        },
+        vision: {
+            title: "Vizyonumuz",
+            desc: "Anlamlı geliştirme araçlarını herkes için erişilebilir kılmak."
+        },
+        developer: {
+            title: "Geliştirici Odaklı",
+            desc: "Geliştiriciler tarafından, geliştiriciler için yapıldı."
+        }
     },
     // Page content
     pages: {
@@ -1259,30 +1417,13 @@ const tr = {
         backgroundremover: "Görsel arka planlarını otomatik temizle.",
         imagetotext: "Görsellerden metin çıkar (OCR)."
     },
-    // About page
-    about: {
-        title: "Hakkında",
-        description: "DevLab, medya dönüşümlerini doğrudan tarayıcınızda gerçekleştiren hızlı ve güvenli bir platformdur. Hiçbir dosya herhangi bir sunucuya yüklenmez.",
-        whyDevlab: {
-            title: "🚀 Neden DevLab?",
-            desc: "Dosyalar cihazda işlenir, gizlilik korunur ve performans ultra hızlıdır."
-        },
-        technology: {
-            title: "🛠 Teknoloji",
-            desc: "Next.js, WebAssembly, FFmpeg, Tailwind CSS ve Framer Motion ile oluşturuldu."
-        },
-        vision: {
-            title: "🌍 Vizyon",
-            desc: "Herkes için basit, güvenli ve erişilebilir medya dönüştürme araçları oluşturun."
-        },
-        developer: {
-            title: "👤 Geliştirici",
-            desc: "Modern UI ve performans odaklı sistemlere odaklanan Thendra tarafından tasarlandı."
-        },
-        contact: "Daha fazla bilgi veya iletişim için:"
-    },
     // Docs pages
     docs: {
+        hero: {
+            title: "Dokümantasyon",
+            subtitle: "DevLab ile geliştirme yapmak için ihtiyacınız olan her şey. Rehberler, API referansları ve daha fazlası."
+        },
+        readGuide: "Rehberi Oku",
         title: "Dokümantasyon",
         description: "DevLab için teknik dokümantasyon: derleme süreci, güvenlik modeli ve geliştirici bilgileri.",
         sections: {
@@ -2016,6 +2157,33 @@ const de = {
         videoTool: "Video-Tool",
         devTool: "Entwickler-Tool"
     },
+    // Bento Grid
+    bento: {
+        title: "Mächtige Werkzeug-Suite",
+        description: "Alles, was Sie brauchen, an einem Ort. Keine Installationen, keine Anmeldungen.",
+        categories: {
+            media: "Medien-Magie",
+            mediaDesc: "Video und Audio sofort verarbeiten.",
+            image: "Bild-Studio",
+            imageDesc: "Bilder optimieren, skalieren und bearbeiten.",
+            dev: "Entwickler-Tools",
+            devDesc: "Formatieren, minimieren und generieren.",
+            design: "Design & Farben",
+            designDesc: "CSS-Generatoren und Paletten."
+        },
+        cta: {
+            title: "Entdecken Sie die volle Sammlung",
+            description: "30+ Entwickler-Tools bereit zur Nutzung im Browser",
+            button: "Alle Tools ansehen"
+        }
+    },
+    // Community Section
+    community: {
+        title: "Treten Sie der Community bei",
+        description: "DevLab ist Open Source. Tragen Sie bei, schlagen Sie Funktionen vor oder sagen Sie einfach Hallo auf Discord.",
+        github: "Auf GitHub sternen",
+        discord: "Discord beitreten"
+    },
     // Featured tools
     featuredTools: {
         mp4towebm: {
@@ -2033,9 +2201,13 @@ const de = {
         description: "DevLab bietet moderne, browser-basierte Tools für einzelne Entwickler, Designer und Produktivitäts-Enthusiasten. Lösungen zur Beschleunigung von Coding- und Design-Prozessen—keine Installation erforderlich.",
         features: {
             browserBased: "🔌 Browser-basiert",
+            browserBasedDesc: "Die gesamte Verarbeitung erfolgt in Ihrem Browser. Dateien verlassen niemals Ihr Gerät.",
             fast: "⚡ Schnell & Leicht",
+            fastDesc: "Angetrieben von WebAssembly für nahezu native Leistung ohne Installationen.",
             uiux: "🎨 UI/UX-freundlich",
-            productivity: "🚀 Produktivitätsorientiert"
+            uiuxDesc: "Saubere, ablenkungsfreie Benutzeroberfläche für Fokus und Effizienz.",
+            productivity: "🚀 Produktivitätsorientiert",
+            productivityDesc: "Open Source und kostenlos. Keine versteckten Abonnements oder Paywalls."
         }
     },
     // Last section
@@ -2063,9 +2235,65 @@ const de = {
     },
     // Tools page
     toolsPage: {
-        title: "Tool-Hub",
-        description: "Browser-basierte Medienkonvertierungstools.",
+        title: "Tools-Hub",
+        description: "Browserbasierte Medienkonvertierungstools.",
         noUpload: "Es werden keine Daten auf einen Server hochgeladen."
+    },
+    // About page
+    about: {
+        hero: {
+            tagline: "Die Zukunft der Browser-Tools bauen",
+            subtext: "DevLab ist eine datenschutzorientierte Open-Source-Suite von Dienstprogrammen, die Entwickler und Kreative ohne Ballast unterstützen soll."
+        },
+        meetDeveloper: {
+            title: "Triff den Entwickler",
+            name: "JustThendra",
+            bio: "Ein leidenschaftlicher Full-Stack-Entwickler, der sich auf den Bau intuitiver, schöner und hochleistungsfähiger Webanwendungen konzentriert. Engagiert für Open Source und Community-getriebene Entwicklung."
+        },
+        techStack: {
+            title: "Gebaut mit moderner Technik",
+            desc: "Angetrieben von den neuesten Webtechnologien für maximale Leistung und Skalierbarkeit."
+        },
+        community: {
+            title: "Begleite unsere Reise",
+            desc: "Werde Teil der wachsenden DevLab-Community. Teile Ideen, melde Fehler oder sag einfach Hallo!",
+            discord: "Discord beitreten",
+            github: "Auf GitHub bewerten"
+        },
+        timeline: {
+            title: "Unsere Reise",
+            2025: {
+                title: "Gründung & Alpha",
+                desc: "DevLab begann als Vision für 'Local-First'-Tools. Erste öffentliche Veröffentlichung mit Kernfunktionen."
+            },
+            2026: {
+                title: "Gemeinschaftswachstum",
+                desc: "Erweiterung auf mehrsprachige Unterstützung und von der Gemeinschaft gesteuerte Funktionen."
+            },
+            2027: {
+                title: "Ökosystem-Erweiterung",
+                desc: "Geplante Einführung erweiterter Entwickler-Dienstprogramme und Cloud-Sync (optional)."
+            }
+        },
+        title: "Über DevLab",
+        description: "Entwickler mit sicheren, browserbasierten Tools unterstützen.",
+        contact: "Kontakt",
+        whyDevlab: {
+            title: "Warum DevLab?",
+            desc: "Sofortiger Zugriff auf leistungsstarke Tools ohne Einrichtung."
+        },
+        technology: {
+            title: "Moderne Technik",
+            desc: "Entwickelt mit Next.js 14, React und Tailwind CSS."
+        },
+        vision: {
+            title: "Unsere Vision",
+            desc: "Sinnvolle Entwicklungstools für jeden zugänglich machen."
+        },
+        developer: {
+            title: "Entwicklerorientiert",
+            desc: "Von Entwicklern für Entwickler gemacht."
+        }
     },
     // Tool descriptions
     toolDescriptions: {
@@ -2101,30 +2329,13 @@ const de = {
         backgroundremover: "Bildhintergründe automatisch entfernen.",
         imagetotext: "Text aus Bildern mittels OCR extrahieren."
     },
-    // About page
-    about: {
-        title: "Über uns",
-        description: "DevLab ist eine schnelle und sichere Plattform, die Medienkonvertierungen direkt in Ihrem Browser durchführt. Keine Dateien werden auf einen Server hochgeladen.",
-        whyDevlab: {
-            title: "🚀 Warum DevLab?",
-            desc: "Dateien werden auf dem Gerät verarbeitet, Privatsphäre wird gewahrt, und die Leistung ist ultraschnell."
-        },
-        technology: {
-            title: "🛠 Technologie",
-            desc: "Erstellt mit Next.js, WebAssembly, FFmpeg, Tailwind CSS und Framer Motion."
-        },
-        vision: {
-            title: "🌍 Vision",
-            desc: "Einfache, sichere und zugängliche Medienkonvertierungstools für alle erstellen."
-        },
-        developer: {
-            title: "👤 Entwickler",
-            desc: "Entworfen von Thendra, fokussiert auf modernes UI und leistungsorientierte Systeme."
-        },
-        contact: "Für weitere Informationen oder Kontakt:"
-    },
     // Docs pages
     docs: {
+        hero: {
+            title: "Dokumentation",
+            subtitle: "Alles, was Sie zum Entwickeln mit DevLab benötigen. Anleitungen, API-Referenzen und mehr."
+        },
+        readGuide: "Anleitung lesen",
         title: "Dokumentation",
         description: "Technische Dokumentation für DevLab: Build-Prozess, Sicherheitsmodell und Entwicklerinformationen.",
         sections: {
@@ -2859,6 +3070,33 @@ const fr = {
         videoTool: "Outil Vidéo",
         devTool: "Outil Dev"
     },
+    // Bento Grid
+    bento: {
+        title: "Suite d'Outils Puissante",
+        description: "Tout ce dont vous avez besoin en un seul endroit. Pas d'installations, pas d'inscriptions.",
+        categories: {
+            media: "Magie Média",
+            mediaDesc: "Traitez la vidéo et l'audio instantanément.",
+            image: "Studio Image",
+            imageDesc: "Optimisez, redimensionnez et éditez des images.",
+            dev: "Utilitaires Dev",
+            devDesc: "Formatez, minifiez et générez.",
+            design: "Design & Couleurs",
+            designDesc: "Générateurs CSS et Palettes."
+        },
+        cta: {
+            title: "Explorez la collection complète",
+            description: "Plus de 30 outils de développement prêts à l'emploi dans votre navigateur",
+            button: "Voir tous les outils"
+        }
+    },
+    // Community Section
+    community: {
+        title: "Rejoignez la Communauté",
+        description: "DevLab est open source. Contribuez, suggérez des fonctionnalités ou dites simplement bonjour sur Discord.",
+        github: "Star sur GitHub",
+        discord: "Rejoindre Discord"
+    },
     // Featured tools
     featuredTools: {
         mp4towebm: {
@@ -2876,9 +3114,13 @@ const fr = {
         description: "DevLab propose des outils modernes basés sur navigateur pour les développeurs individuels, designers et passionnés de productivité. Des solutions conçues pour accélérer les processus de codage et de design—aucune installation requise.",
         features: {
             browserBased: "🔌 Basé sur Navigateur",
+            browserBasedDesc: "Tout le traitement se fait dans votre navigateur. Les fichiers ne quittent jamais votre appareil.",
             fast: "⚡ Rapide & Léger",
+            fastDesc: "Propulsé par WebAssembly pour des performances quasi-natives sans installation.",
             uiux: "🎨 UI/UX Friendly",
-            productivity: "🚀 Orienté Productivité"
+            uiuxDesc: "Interface propre et sans distraction conçue pour la concentration et l'efficacité.",
+            productivity: "🚀 Orienté Productivité",
+            productivityDesc: "Open source et gratuit. Pas d'abonnements cachés ni de paywalls."
         }
     },
     // Last section
@@ -2946,28 +3188,67 @@ const fr = {
     },
     // About page
     about: {
-        title: "À propos",
-        description: "DevLab est une plateforme rapide et sécurisée qui effectue les conversions média directement dans votre navigateur. Aucun fichier n'est téléchargé sur un serveur.",
+        hero: {
+            tagline: "Construire l'Avenir des Outils Navigateur",
+            subtext: "DevLab est une suite d'utilitaires open-source axée sur la confidentialité, conçue pour autonomiser les développeurs et les créateurs sans surcharge."
+        },
+        meetDeveloper: {
+            title: "Rencontrez le Développeur",
+            name: "JustThendra",
+            bio: "Un développeur Full Stack passionné, concentré sur la création d'applications web intuitives, belles et performantes. Dédié à l'open source et au développement communautaire."
+        },
+        techStack: {
+            title: "Construit avec le Tech Moderne",
+            desc: "Propulsé par les dernières technologies web pour une performance et une évolutivité maximales."
+        },
+        community: {
+            title: "Rejoignez Notre Aventure",
+            desc: "Faites partie de la communauté DevLab grandissante. Partagez des idées, signalez des bugs ou dites simplement bonjour !",
+            discord: "Rejoindre Discord",
+            github: "Mettre une étoile sur GitHub"
+        },
+        timeline: {
+            title: "Notre Parcours",
+            2025: {
+                title: "Inception & Alpha",
+                desc: "DevLab a commencé comme une vision d'outils locaux. Première version publique avec les fonctionnalités de base."
+            },
+            2026: {
+                title: "Croissance de la Communauté",
+                desc: "Extension au support multilingue et aux fonctionnalités pilotées par la communauté."
+            },
+            2027: {
+                title: "Expansion de l'Écosystème",
+                desc: "Lancement prévu d'utilitaires avancés pour développeurs et de la synchronisation cloud (optionnelle)."
+            }
+        },
+        title: "À propos de DevLab",
+        description: "Autonomiser les développeurs avec des outils sécurisés basés sur navigateur.",
+        contact: "Contact",
         whyDevlab: {
-            title: "🚀 Pourquoi DevLab?",
-            desc: "Les fichiers sont traités sur l'appareil, la confidentialité est préservée, et les performances sont ultra rapides."
+            title: "Pourquoi DevLab ?",
+            desc: "Accès instantané à des outils puissants sans configuration."
         },
         technology: {
-            title: "🛠 Technologie",
-            desc: "Construit avec Next.js, WebAssembly, FFmpeg, Tailwind CSS et Framer Motion."
+            title: "Technologie Moderne",
+            desc: "Construit avec Next.js 14, React et Tailwind CSS."
         },
         vision: {
-            title: "🌍 Vision",
-            desc: "Créer des outils de conversion média simples, sécurisés et accessibles pour tous."
+            title: "Notre Vision",
+            desc: "Rendre les outils de développement significatifs accessibles à tous."
         },
         developer: {
-            title: "👤 Développeur",
-            desc: "Conçu par Thendra, axé sur l'UI moderne et les systèmes orientés performance."
-        },
-        contact: "Pour plus d'informations ou pour nous contacter:"
+            title: "Axé Développeur",
+            desc: "Créé par des développeurs, pour des développeurs."
+        }
     },
     // Docs pages
     docs: {
+        hero: {
+            title: "Documentation",
+            subtitle: "Tout ce dont vous avez besoin pour construire avec DevLab. Guides, références API, et plus encore."
+        },
+        readGuide: "Lire le guide",
         title: "Documentation",
         description: "Documentation technique pour DevLab: processus de build, modèle de sécurité et informations développeur.",
         sections: {
@@ -3702,6 +3983,33 @@ const es = {
         videoTool: "Herramienta de Video",
         devTool: "Herramienta Dev"
     },
+    // Bento Grid
+    bento: {
+        title: "Potente Suite de Herramientas",
+        description: "Todo lo que necesitas en un solo lugar. Sin instalaciones, sin registros.",
+        categories: {
+            media: "Magia Multimedia",
+            mediaDesc: "Procesa video y audio al instante.",
+            image: "Estudio de Imagen",
+            imageDesc: "Optimiza, redimensiona y edita imágenes.",
+            dev: "Utilidades Dev",
+            devDesc: "Formatea, minimiza y genera.",
+            design: "Diseño y Colores",
+            designDesc: "Generadores CSS y Paletas."
+        },
+        cta: {
+            title: "Explora la colección completa",
+            description: "Más de 30 herramientas de desarrollo listas para usar en tu navegador",
+            button: "Ver todas las herramientas"
+        }
+    },
+    // Community Section
+    community: {
+        title: "Únete a la Comunidad",
+        description: "DevLab es de código abierto. Contribuye, sugiere funciones o simplemente di hola en Discord.",
+        github: "Dar estrella en GitHub",
+        discord: "Unirse a Discord"
+    },
     // Featured tools
     featuredTools: {
         mp4towebm: {
@@ -3719,9 +4027,13 @@ const es = {
         description: "DevLab ofrece herramientas modernas basadas en navegador para desarrolladores individuales, diseñadores y entusiastas de la productividad. Soluciones diseñadas para acelerar los procesos de codificación y diseño—sin instalación requerida.",
         features: {
             browserBased: "🔌 Basado en Navegador",
+            browserBasedDesc: "Todo el procesamiento ocurre en tu navegador. Los archivos nunca salen de tu dispositivo.",
             fast: "⚡ Rápido y Ligero",
+            fastDesc: "Impulsado por WebAssembly para un rendimiento casi nativo sin instalaciones.",
             uiux: "🎨 UI/UX Amigable",
-            productivity: "🚀 Enfocado en Productividad"
+            uiuxDesc: "Interfaz limpia y sin distracciones diseñada para el enfoque y la eficiencia.",
+            productivity: "🚀 Enfocado en Productividad",
+            productivityDesc: "Código abierto y gratuito. Sin suscripciones ocultas ni muros de pago."
         }
     },
     // Last section
@@ -3752,6 +4064,62 @@ const es = {
         title: "Hub de Herramientas",
         description: "Herramientas de conversión de medios basadas en navegador.",
         noUpload: "No se suben datos a ningún servidor."
+    },
+    // About page
+    about: {
+        hero: {
+            tagline: "Construyendo el Futuro de las Herramientas del Navegador",
+            subtext: "DevLab es una suite de utilidades de código abierto centrada en la privacidad, diseñada para empoderar a desarrolladores y creadores sin complicaciones."
+        },
+        meetDeveloper: {
+            title: "Conoce al Desarrollador",
+            name: "JustThendra",
+            bio: "Un desarrollador Full Stack apasionado enfocado en construir aplicaciones web intuitivas, hermosas y de alto rendimiento. Dedicado al código abierto y al desarrollo impulsado por la comunidad."
+        },
+        techStack: {
+            title: "Construido con Tecnología Moderna",
+            desc: "Impulsado por las últimas tecnologías web para el máximo rendimiento y escalabilidad."
+        },
+        community: {
+            title: "Únete a Nuestro Viaje",
+            desc: "Sé parte de la creciente comunidad de DevLab. ¡Comparte ideas, reporta errores o simplemente di hola!",
+            discord: "Unirse a Discord",
+            github: "Dar estrella en GitHub"
+        },
+        timeline: {
+            title: "Nuestro Viaje",
+            2025: {
+                title: "Incepción y Alfa",
+                desc: "DevLab comenzó como una visión de herramientas locales. Primer lanzamiento público con características principales."
+            },
+            2026: {
+                title: "Crecimiento de la Comunidad",
+                desc: "Expansión al soporte multilingüe y características impulsadas por la comunidad."
+            },
+            2027: {
+                title: "Expansión del Ecosistema",
+                desc: "Lanzamiento planeado de utilidades avanzadas para desarrolladores y sincronización en la nube (opcional)."
+            }
+        },
+        title: "Sobre DevLab",
+        description: "Empoderando a los desarrolladores con herramientas seguras basadas en el navegador.",
+        contact: "Contacto",
+        whyDevlab: {
+            title: "¿Por qué DevLab?",
+            desc: "Acceso instantáneo a herramientas poderosas sin configuración."
+        },
+        technology: {
+            title: "Tecnología Moderna",
+            desc: "Construido con Next.js 14, React y Tailwind CSS."
+        },
+        vision: {
+            title: "Nuestra Visión",
+            desc: "Hacer accesibles herramientas de desarrollo significativas para todos."
+        },
+        developer: {
+            title: "Centrado en el Desarrollador",
+            desc: "Creado por desarrolladores, para desarrolladores."
+        }
     },
     // Tool descriptions
     toolDescriptions: {
@@ -3787,30 +4155,13 @@ const es = {
         backgroundremover: "Eliminar el fondo de imágenes automáticamente.",
         imagetotext: "Extraer texto de imágenes (OCR)."
     },
-    // About page
-    about: {
-        title: "Acerca de",
-        description: "DevLab es una plataforma rápida y segura que realiza conversiones de medios directamente en tu navegador. No se suben archivos a ningún servidor.",
-        whyDevlab: {
-            title: "🚀 ¿Por qué DevLab?",
-            desc: "Los archivos se procesan en el dispositivo, se preserva la privacidad y el rendimiento es ultra rápido."
-        },
-        technology: {
-            title: "🛠 Tecnología",
-            desc: "Construido con Next.js, WebAssembly, FFmpeg, Tailwind CSS y Framer Motion."
-        },
-        vision: {
-            title: "🌍 Visión",
-            desc: "Crear herramientas de conversión de medios simples, seguras y accesibles para todos."
-        },
-        developer: {
-            title: "👤 Desarrollador",
-            desc: "Diseñado por Thendra, enfocado en UI moderna y sistemas orientados al rendimiento."
-        },
-        contact: "Para más información o para contactar:"
-    },
     // Docs pages
     docs: {
+        hero: {
+            title: "Documentación",
+            subtitle: "Todo lo que necesitas para construir con DevLab. Guías, referencias de API y más."
+        },
+        readGuide: "Leer guía",
         title: "Documentación",
         description: "Documentación técnica para DevLab: proceso de construcción, modelo de seguridad e información para desarrolladores.",
         sections: {
@@ -4962,7 +5313,7 @@ function Navbar() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full flex justify-center mt-6 fixed top-0 z-50",
+        className: "w-full flex justify-center mt-6 fixed top-0 z-50 px-4 sm:px-0",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].nav, {
                 initial: {
@@ -4977,62 +5328,97 @@ function Navbar() {
                     duration: 0.4
                 },
                 className: `
-          max-w-5xl w-full mx-4 px-4 py-2 flex items-center gap-4
-          backdrop-blur-md border rounded-full pointer-events-auto
-          ${theme === "dark" ? "bg-[rgba(11,11,14,0.09)] border-[rgba(255,255,255,0.07)]" : "bg-[rgba(245,245,245,0.6)] border-[rgba(0,0,0,0.1)]"}
+          max-w-5xl w-full px-5 py-3 flex items-center gap-4 h-16
+          backdrop-blur-xl border rounded-full pointer-events-auto shadow-sm
+          ${theme === "dark" ? "bg-[rgba(18,18,23,0.39)] border-[rgba(255,255,255,0.08)] shadow-black/20" : "bg-[rgba(255,255,255,0.7)] border-[rgba(0,0,0,0.05)] shadow-slate-200/50"}
         `,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
-                        className: "flex items-center gap-2 mr-auto",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: theme === "dark" ? "/DevLab.png" : "/DevLabDark.png",
-                            alt: "DevLab Logo",
-                            width: 32,
-                            height: 32
-                        }, void 0, false, {
-                            fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 96,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                        className: "flex items-center gap-2 mr-auto z-10",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                src: theme === "dark" ? "/DevLab.png" : "/DevLabDark.png",
+                                alt: "DevLab Logo",
+                                width: 32,
+                                height: 32,
+                                className: "w-8 h-8"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 96,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: `font-bold text-lg hidden sm:block ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`,
+                                children: "DevLab"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 103,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
                         lineNumber: 95,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden md:flex items-center gap-4",
+                        className: "hidden md:flex items-center gap-1 backdrop-blur-sm px-2 py-1.5 rounded-full border border-transparent",
                         children: navItems.map((item)=>{
                             const isActive = pathname.startsWith(item.path);
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: item.path,
-                                className: `text-sm transition ${isActive ? "text-emerald-400 font-semibold" : theme === "dark" ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-slate-800"}`,
-                                children: item.label
-                            }, item.path, false, {
+                                className: "relative px-4 py-1.5 text-sm font-medium transition-colors",
+                                onMouseEnter: ()=>setFocused(false),
+                                children: [
+                                    isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        layoutId: "desktop-nav-active",
+                                        className: `absolute inset-0 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`,
+                                        transition: {
+                                            type: "spring",
+                                            bounce: 0.2,
+                                            duration: 0.6
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Navbar.tsx",
+                                        lineNumber: 120,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: `relative z-10 ${isActive ? theme === 'dark' ? "text-white" : "text-black" : theme === "dark" ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-slate-900"}`,
+                                        children: item.label
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Navbar.tsx",
+                                        lineNumber: 126,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, item.path, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 109,
+                                lineNumber: 113,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 105,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden md:block relative",
+                        className: "hidden md:block relative group",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `
-              flex items-center gap-1 px-3 py-1.5 rounded-full text-xs border w-52
-              ${theme === "dark" ? "bg-[rgba(15,15,18,0.05)] border-[rgba(255,255,255,0.07)]" : "bg-white border-[rgba(0,0,0,0.39)]"}
+              flex items-center gap-2 px-3 py-2 rounded-full text-xs border w-60 transition-all duration-300
+              ${focused ? 'ring-2 ring-emerald-500/20 w-64' : ''}
+              ${theme === "dark" ? "bg-white/5 border-white/10 focus-within:bg-black/20" : "bg-black/5 border-black/5 focus-within:bg-white"}
             `,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                         className: "w-4 h-4 text-slate-500"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 135,
+                                        lineNumber: 148,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5042,124 +5428,174 @@ function Navbar() {
                                         onBlur: ()=>setTimeout(()=>setFocused(false), 200),
                                         onKeyDown: (e)=>e.key === "Enter" && handleSearchEnter(),
                                         placeholder: t("navbar.searchPlaceholder"),
-                                        className: `bg-transparent outline-none text-xs flex-1 ${theme === "dark" ? "text-slate-300" : "text-slate-900"}`
+                                        className: `bg-transparent outline-none text-xs flex-1 ${theme === "dark" ? "text-slate-300 placeholder:text-slate-600" : "text-slate-900 placeholder:text-slate-500"}`
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 149,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 127,
+                                lineNumber: 139,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                                 children: focused && results.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                     initial: {
                                         opacity: 0,
-                                        y: -4
+                                        y: 8,
+                                        scale: 0.95
                                     },
                                     animate: {
                                         opacity: 1,
-                                        y: 0
+                                        y: 0,
+                                        scale: 1
                                     },
                                     exit: {
                                         opacity: 0,
-                                        y: -4
+                                        y: 8,
+                                        scale: 0.95
                                     },
                                     transition: {
-                                        duration: 0.18
+                                        duration: 0.2
                                     },
-                                    className: "   absolute mt-2 w-full rounded-xl border backdrop-blur-md   bg-[rgba(18,18,23,0.18)] border-[rgba(255,255,255,0.07)]   shadow-[0_4px_14px_rgba(0,0,0,0.4)] overflow-hidden z-50   ",
-                                    children: results.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
-                                            href: r.path,
-                                            whileHover: {
-                                                x: 4
-                                            },
-                                            className: "   block px-3 py-2 text-xs text-slate-300   hover:text-emerald-300 hover:bg-[rgba(255,255,255,0.05)]   ",
-                                            children: r.name
-                                        }, r.path, false, {
-                                            fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 161,
-                                            columnNumber: 19
-                                        }, this))
+                                    className: `
+                  absolute top-full right-0 mt-3 w-80 rounded-2xl border backdrop-blur-xl
+                  shadow-2xl overflow-hidden z-50
+                  ${theme === 'dark' ? 'bg-[#121215]/90 border-white/10 shadow-black/50' : 'bg-white/90 border-black/5 shadow-slate-200/50'}
+                `,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "p-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `text-[10px] font-bold uppercase tracking-wider mb-1 px-2 ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`,
+                                                children: "Results"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Navbar.tsx",
+                                                lineNumber: 176,
+                                                columnNumber: 19
+                                            }, this),
+                                            results.slice(0, 5).map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: r.path,
+                                                    className: `
+                        flex items-center gap-2 px-3 py-2.5 rounded-xl transition-colors
+                        ${theme === 'dark' ? 'text-slate-300 hover:text-white hover:bg-white/10' : 'text-slate-700 hover:text-black hover:bg-black/5'}
+                      `,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                                            size: 14,
+                                                            className: "opacity-50"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Navbar.tsx",
+                                                            lineNumber: 190,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-sm",
+                                                            children: r.name
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Navbar.tsx",
+                                                            lineNumber: 191,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, r.path, true, {
+                                                    fileName: "[project]/components/Navbar.tsx",
+                                                    lineNumber: 180,
+                                                    columnNumber: 21
+                                                }, this))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/Navbar.tsx",
+                                        lineNumber: 175,
+                                        columnNumber: 17
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 147,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 126,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden md:flex items-center gap-2",
+                        className: "hidden md:flex items-center gap-3 pl-2 border-l border-white/10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LanguageSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 180,
+                                lineNumber: 202,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
                                 whileHover: {
-                                    scale: 1.15
+                                    scale: 1.1,
+                                    rotate: 180
+                                },
+                                whileTap: {
+                                    scale: 0.9
+                                },
+                                transition: {
+                                    type: "spring",
+                                    stiffness: 200,
+                                    damping: 10
                                 },
                                 onClick: ()=>setTheme(theme === "dark" ? "light" : "dark"),
-                                className: `w-8 h-8 flex items-center justify-center rounded-full ${theme === "dark" ? "bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]" : "bg-[rgba(255,255,255,0.8)] border border-[rgba(0,0,0,0.27)]"}`,
+                                className: `w-9 h-9 flex items-center justify-center rounded-full transition-colors ${theme === "dark" ? "hover:bg-white/10 text-yellow-300" : "hover:bg-black/5 text-indigo-500"}`,
                                 children: theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                    className: "w-4 h-4 text-yellow-300"
+                                    className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 211,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                    className: "w-4 h-4 text-indigo-500"
+                                    className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 213,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 181,
+                                lineNumber: 203,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 179,
+                        lineNumber: 201,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                        whileHover: {
-                            scale: 1.15
+                        whileTap: {
+                            scale: 0.9
                         },
                         onClick: ()=>setMenuOpen(!menuOpen),
-                        className: "md:hidden w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(24,24,24,0.05)] border border-[rgba(255,255,255,0.15)]",
+                        className: `md:hidden ml-auto w-10 h-10 flex items-center justify-center rounded-full border transition-colors ${theme === 'dark' ? 'bg-white/5 border-white/10 text-white' : 'bg-black/5 border-black/5 text-black'}`,
                         children: menuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                            size: 18
+                            size: 20
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 200,
+                            lineNumber: 224,
                             columnNumber: 23
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                            size: 18
+                            size: 20
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 200,
+                            lineNumber: 224,
                             columnNumber: 41
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 195,
+                        lineNumber: 219,
                         columnNumber: 9
                     }, this)
                 ]
@@ -5172,36 +5608,38 @@ function Navbar() {
                 children: menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
                         opacity: 0,
-                        scale: 0.95,
-                        y: -10
+                        y: -20,
+                        height: 0
                     },
                     animate: {
                         opacity: 1,
-                        scale: 1,
-                        y: 0
+                        y: 0,
+                        height: "auto"
                     },
                     exit: {
                         opacity: 0,
-                        scale: 0.95,
-                        y: -10
+                        y: -10,
+                        height: 0
                     },
                     transition: {
-                        duration: 0.2
+                        type: "spring",
+                        bounce: 0,
+                        duration: 0.4
                     },
                     className: `
-              fixed top-20 right-4 left-4 rounded-2xl p-4
-              backdrop-blur-xl z-40 shadow-2xl border origin-top
-              ${theme === "dark" ? "bg-[rgba(20,20,24,0.95)] border-[rgba(255,255,255,0.08)]" : "bg-[rgba(255,255,255,0.95)] border-[rgba(0,0,0,0.1)]"}
+              fixed top-24 left-0 right-0 mx-4 p-5 rounded-3xl
+              backdrop-blur-2xl z-40 shadow-2xl border
+              ${theme === "dark" ? "bg-[#121215]/95 border-white/10 shadow-black/50" : "bg-white/95 border-black/5 shadow-xl"}
             `,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `flex items-center gap-2 mb-3 px-3 py-2 rounded-xl border ${theme === 'dark' ? 'bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.06)]' : 'bg-gray-50 border-gray-200'}`,
+                            className: `flex items-center gap-3 mb-6 px-4 py-3 rounded-2xl border ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/5'}`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                                    className: "w-3.5 h-3.5 text-slate-400"
+                                    className: "w-5 h-5 text-slate-400"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 246,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5209,166 +5647,195 @@ function Navbar() {
                                     onChange: (e)=>setQuery(e.target.value),
                                     placeholder: t("navbar.searchPlaceholder"),
                                     onKeyDown: (e)=>e.key === "Enter" && handleSearchEnter(),
-                                    className: `bg-transparent flex-1 text-sm outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`
+                                    className: `bg-transparent flex-1 text-base outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`,
+                                    autoFocus: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 247,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 221,
+                            lineNumber: 245,
                             columnNumber: 13
                         }, this),
                         results.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-3 rounded-lg bg-[rgba(255,255,255,0.04)] p-1.5 max-h-32 overflow-y-auto",
-                            children: results.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
+                            className: "mb-6 rounded-2xl bg-black/20 p-2 max-h-48 overflow-y-auto",
+                            children: results.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: r.path,
-                                    whileTap: {
-                                        scale: 0.95
-                                    },
                                     onClick: ()=>setMenuOpen(false),
-                                    className: "block px-3 py-1.5 text-xs text-slate-300 hover:text-emerald-300 rounded-md hover:bg-white/5",
-                                    children: r.name
-                                }, r.path, false, {
+                                    className: "flex items-center gap-3 px-4 py-3 text-sm text-slate-200 hover:text-white hover:bg-white/10 rounded-xl transition-colors",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                            size: 14
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 267,
+                                            columnNumber: 21
+                                        }, this),
+                                        r.name
+                                    ]
+                                }, r.path, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 236,
+                                    lineNumber: 261,
                                     columnNumber: 19
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 234,
+                            lineNumber: 259,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col gap-1 mb-3",
+                            className: "flex flex-col gap-2 mb-6",
                             children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: item.path,
                                     onClick: ()=>setMenuOpen(false),
                                     className: `
-                    block py-2 px-3 text-sm font-medium rounded-lg transition-colors
-                    ${theme === 'dark' ? 'text-slate-300 hover:bg-white/5 hover:text-white' : 'text-slate-600 hover:bg-black/5 hover:text-black'}
+                    flex items-center justify-between px-4 py-3 text-base font-medium rounded-2xl transition-all
+                    ${theme === 'dark' ? 'text-slate-300 hover:bg-white/10 hover:text-white hover:pl-6' : 'text-slate-600 hover:bg-black/5 hover:text-black hover:pl-6'}
                   `,
-                                    children: item.label
-                                }, item.path, false, {
+                                    children: [
+                                        item.label,
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-white/20' : 'bg-black/10'}`
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 289,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, item.path, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 252,
+                                    lineNumber: 277,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 250,
+                            lineNumber: 275,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `h-px w-full my-3 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`
-                        }, void 0, false, {
-                            fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 269,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-between gap-4",
+                            className: `pt-6 border-t ${theme === 'dark' ? 'border-white/10' : 'border-black/5'}`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex-1 overflow-x-auto no-scrollbar",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex gap-1.5",
-                                        children: languages.map((lang)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                                whileTap: {
-                                                    scale: 0.9
-                                                },
-                                                onClick: ()=>{
-                                                    setLanguage(lang);
-                                                    setMenuOpen(false);
-                                                },
-                                                className: `
-                          flex flex-col items-center justify-center p-1.5 min-w-[36px] rounded-lg border transition-all
-                          ${language === lang ? "bg-emerald-500/10 border-emerald-500/50" : theme === "dark" ? "bg-white/5 border-white/5" : "bg-gray-50 border-gray-100"}
-                        `,
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-lg leading-none",
-                                                        children: languageFlags[lang]
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 293,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: `text-[9px] uppercase font-bold mt-0.5 ${language === lang ? "text-emerald-400" : theme === "dark" ? "text-slate-400" : "text-slate-500"}`,
-                                                        children: lang
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 294,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                ]
-                                            }, lang, true, {
-                                                fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 277,
-                                                columnNumber: 21
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 275,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
+                                    className: "flex items-center justify-between mb-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: `text-sm font-medium ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`,
+                                            children: "Theme"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 297,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>setTheme(theme === "dark" ? "light" : "dark"),
+                                            className: `flex items-center gap-2 px-4 py-2 rounded-full border transition-colors ${theme === 'dark' ? 'bg-white/5 border-white/10 text-yellow-300' : 'bg-black/5 border-black/5 text-indigo-500'}`,
+                                            children: [
+                                                theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
+                                                    size: 18
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Navbar.tsx",
+                                                    lineNumber: 302,
+                                                    columnNumber: 39
+                                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
+                                                    size: 18
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Navbar.tsx",
+                                                    lineNumber: 302,
+                                                    columnNumber: 59
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: `text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-black'}`,
+                                                    children: theme === "dark" ? "Dark Mode" : "Light Mode"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Navbar.tsx",
+                                                    lineNumber: 303,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 298,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 296,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: `w-px h-8 ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`
-                                }, void 0, false, {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: `text-sm font-medium block mb-3 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`,
+                                            children: "Language"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 310,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex gap-2 overflow-x-auto pb-2 no-scrollbar",
+                                            children: languages.map((lang)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: ()=>{
+                                                        setLanguage(lang);
+                                                        setTimeout(()=>setMenuOpen(false), 200);
+                                                    },
+                                                    className: `
+                          flex items-center gap-2 px-3 py-2 rounded-xl border transition-all shrink-0
+                          ${language === lang ? "bg-emerald-500/10 border-emerald-500/50" : theme === "dark" ? "bg-white/5 border-white/5" : "bg-gray-50 border-gray-100"}
+                        `,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-lg",
+                                                            children: languageFlags[lang]
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Navbar.tsx",
+                                                            lineNumber: 328,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: `text-xs font-bold uppercase ${language === lang ? "text-emerald-400" : theme === "dark" ? "text-slate-400" : "text-slate-600"}`,
+                                                            children: lang
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Navbar.tsx",
+                                                            lineNumber: 329,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, lang, true, {
+                                                    fileName: "[project]/components/Navbar.tsx",
+                                                    lineNumber: 313,
+                                                    columnNumber: 21
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 311,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 303,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                    whileTap: {
-                                        scale: 0.9
-                                    },
-                                    onClick: ()=>setTheme(theme === "dark" ? "light" : "dark"),
-                                    className: `
-                    p-2 rounded-full border transition-colors shrink-0
-                    ${theme === "dark" ? "bg-white/5 border-white/10 text-yellow-300" : "bg-gray-100 border-gray-200 text-indigo-500"}
-                  `,
-                                    children: theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                        size: 18
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 315,
-                                        columnNumber: 37
-                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                        size: 18
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 315,
-                                        columnNumber: 57
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 305,
+                                    lineNumber: 309,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 272,
+                            lineNumber: 295,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Navbar.tsx",
-                    lineNumber: 207,
+                    lineNumber: 231,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 205,
+                lineNumber: 229,
                 columnNumber: 7
             }, this)
         ]
@@ -5959,11 +6426,18 @@ function CustomCursor() {
         isVisible
     ]);
     if (!isVisible) return null;
+    // Don't render on mobile or if disabled
+    // The variables 'isMobile' and 'mounted' are not defined in the original context.
+    // Assuming the intent was to replace the existing cursor rendering logic,
+    // but without 'isMobile' or 'mounted', this line would cause an error.
+    // For now, I will comment it out or remove it to maintain syntactical correctness.
+    // If these variables are meant to be introduced, they need to be defined.
+    // if (isMobile || !mounted) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: `fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] mix-blend-difference
-          ${theme === 'dark' ? 'bg-white' : 'bg-black'}
+                className: `fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] 
+          ${theme === 'dark' ? 'bg-white mix-blend-difference' : 'bg-black'}
         `,
                 style: {
                     x: cursorX,
@@ -5973,12 +6447,12 @@ function CustomCursor() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/CustomCursor.tsx",
-                lineNumber: 70,
+                lineNumber: 78,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                 className: `fixed top-0 left-0 rounded-full pointer-events-none z-[9998] border
-          ${theme === 'dark' ? 'border-indigo-400' : 'border-indigo-600'}
+          ${theme === 'dark' ? 'border-indigo-400' : 'border-black'}
         `,
                 style: {
                     x: cursorXSpring,
@@ -5990,7 +6464,7 @@ function CustomCursor() {
                     width: isHovered ? 48 : 24,
                     height: isHovered ? 48 : 24,
                     opacity: isHovered ? 0.8 : 0.4,
-                    backgroundColor: isHovered ? theme === 'dark' ? 'rgba(129, 140, 248, 0.1)' : 'rgba(79, 70, 229, 0.1)' : 'transparent'
+                    backgroundColor: isHovered ? theme === 'dark' ? 'rgba(129, 140, 248, 0.1)' : 'rgba(0, 0, 0, 0.05)' : 'transparent'
                 },
                 transition: {
                     type: "spring",
@@ -6000,7 +6474,7 @@ function CustomCursor() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/CustomCursor.tsx",
-                lineNumber: 83,
+                lineNumber: 91,
                 columnNumber: 13
             }, this)
         ]

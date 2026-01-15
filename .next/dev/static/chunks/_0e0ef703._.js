@@ -388,113 +388,113 @@ function ToolsBentoGrid() {
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
     const categories = [
         {
-            title: "Media Magic",
-            description: "Process video and audio instantly.",
+            title: t("bento.categories.media"),
+            description: t("bento.categories.mediaDesc"),
             className: "md:col-span-2 md:row-span-2",
             gradient: "from-pink-500 via-rose-500 to-red-500",
             tools: [
                 {
-                    name: "MP4 to WebM",
+                    name: t("toolNames.mp4towebm"),
                     path: "/tools/mp4towebm",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$video$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Video$3e$__["Video"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 23,
-                        columnNumber: 72
+                        columnNumber: 83
                     }, this)
                 },
                 {
-                    name: "Video Trimmer",
+                    name: t("toolNames.videotrimmer"),
                     path: "/tools/videotrimmer",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$scissors$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Scissors$3e$__["Scissors"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 24,
-                        columnNumber: 77
+                        columnNumber: 89
                     }, this)
                 },
                 {
-                    name: "MP3 Converter",
+                    name: t("toolNames.mp4tomp3"),
                     path: "/tools/mp4tomp3",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__["Music"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 25,
-                        columnNumber: 73
+                        columnNumber: 81
                     }, this)
                 },
                 {
-                    name: "Video to GIF",
+                    name: t("toolNames.videotogif"),
                     path: "/tools/videotogif",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 26,
-                        columnNumber: 74
+                        columnNumber: 85
                     }, this)
                 }
             ]
         },
         {
-            title: "Image Studio",
-            description: "Optimize, resize, and edit images.",
+            title: t("bento.categories.image"),
+            description: t("bento.categories.imageDesc"),
             className: "md:col-span-1 md:row-span-2",
             gradient: "from-emerald-400 via-teal-500 to-green-500",
             tools: [
                 {
-                    name: "Compressor",
+                    name: t("toolNames.imagecompressor"),
                     path: "/tools/image-compressor",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 35,
-                        columnNumber: 78
+                        columnNumber: 96
                     }, this)
                 },
                 {
-                    name: "Background Remover",
+                    name: t("toolNames.backgroundremover"),
                     path: "/tools/background-remover",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wand$2d$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wand2$3e$__["Wand2"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 36,
-                        columnNumber: 88
+                        columnNumber: 100
                     }, this)
                 },
                 {
-                    name: "Resizer",
+                    name: t("toolNames.imageresizer"),
                     path: "/tools/image-resizer",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 37,
-                        columnNumber: 72
+                        columnNumber: 90
                     }, this)
                 }
             ]
         },
         {
-            title: "Dev Utilities",
-            description: "Format, minify, and generate.",
+            title: t("bento.categories.dev"),
+            description: t("bento.categories.devDesc"),
             className: "md:col-span-1 md:row-span-1",
             gradient: "from-blue-400 via-indigo-500 to-violet-500",
             tools: [
                 {
-                    name: "Code Formatter",
+                    name: t("toolNames.formatter"),
                     path: "/tools/formatter",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$code$2d$xml$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Code2$3e$__["Code2"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 46,
-                        columnNumber: 75
+                        columnNumber: 83
                     }, this)
                 },
                 {
@@ -511,42 +511,42 @@ function ToolsBentoGrid() {
             ]
         },
         {
-            title: "Design & Colors",
-            description: "CSS Generators and Palettes.",
+            title: t("bento.categories.design"),
+            description: t("bento.categories.designDesc"),
             className: "md:col-span-2 md:row-span-1",
             gradient: "from-orange-400 via-amber-500 to-yellow-500",
             tools: [
                 {
-                    name: "CSS Glow",
+                    name: t("toolNames.cssglow"),
                     path: "/tools/cssglow",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wand$2d$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wand2$3e$__["Wand2"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 56,
-                        columnNumber: 67
+                        columnNumber: 79
                     }, this)
                 },
                 {
-                    name: "Color Palette",
+                    name: t("toolNames.colorpalette"),
                     path: "/tools/colorpalette",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$palette$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Palette$3e$__["Palette"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 57,
-                        columnNumber: 77
+                        columnNumber: 89
                     }, this)
                 },
                 {
-                    name: "QR Generator",
+                    name: t("toolNames.qrcode"),
                     path: "/tools/qrcode",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$qr$2d$code$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__QrCode$3e$__["QrCode"], {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 58,
-                        columnNumber: 70
+                        columnNumber: 77
                     }, this)
                 }
             ]
@@ -560,7 +560,7 @@ function ToolsBentoGrid() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: `text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`,
-                        children: "Powerful Tools Suite"
+                        children: t("bento.title")
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 66,
@@ -568,7 +568,7 @@ function ToolsBentoGrid() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: `max-w-2xl mx-auto ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`,
-                        children: "Everything you need in one place. No installations, no sign-ups."
+                        children: t("bento.description")
                     }, void 0, false, {
                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                         lineNumber: 69,
@@ -712,7 +712,7 @@ function ToolsBentoGrid() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: `text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`,
-                                        children: "Explore the full collection"
+                                        children: t("bento.cta.title")
                                     }, void 0, false, {
                                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                                         lineNumber: 142,
@@ -720,7 +720,7 @@ function ToolsBentoGrid() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: theme === 'dark' ? 'text-slate-400' : 'text-slate-600',
-                                        children: "30+ developer tools ready to use in your browser"
+                                        children: t("bento.cta.description")
                                     }, void 0, false, {
                                         fileName: "[project]/components/ToolsBentoGrid.tsx",
                                         lineNumber: 145,
@@ -735,7 +735,7 @@ function ToolsBentoGrid() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/tools",
                                 className: "px-8 py-3 rounded-xl font-semibold bg-emerald-500 hover:bg-emerald-600 text-white transition-colors shadow-lg shadow-emerald-500/20",
-                                children: "View All Tools"
+                                children: t("bento.cta.button")
                             }, void 0, false, {
                                 fileName: "[project]/components/ToolsBentoGrid.tsx",
                                 lineNumber: 149,
@@ -807,8 +807,8 @@ function FeaturesSection() {
                 lineNumber: 13,
                 columnNumber: 19
             }, this),
-            title: t("middle.features.browserBased") || "Privacy First",
-            desc: "All processing happens in your browser. Files never leave your device."
+            title: t("middle.features.browserBased"),
+            desc: t("middle.features.browserBasedDesc")
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
@@ -819,8 +819,8 @@ function FeaturesSection() {
                 lineNumber: 18,
                 columnNumber: 19
             }, this),
-            title: t("middle.features.fast") || "Lightning Fast",
-            desc: "Powered by WebAssembly for near-native performance without installs."
+            title: t("middle.features.fast"),
+            desc: t("middle.features.fastDesc")
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$panels$2d$top$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layout$3e$__["Layout"], {
@@ -831,8 +831,8 @@ function FeaturesSection() {
                 lineNumber: 23,
                 columnNumber: 19
             }, this),
-            title: t("middle.features.uiux") || "Modern UI",
-            desc: "Clean, distraction-free interface designed for focus and efficiency."
+            title: t("middle.features.uiux"),
+            desc: t("middle.features.uiuxDesc")
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$coffee$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Coffee$3e$__["Coffee"], {
@@ -843,8 +843,8 @@ function FeaturesSection() {
                 lineNumber: 28,
                 columnNumber: 19
             }, this),
-            title: t("middle.features.productivity") || "Free Forever",
-            desc: "Open source and free to use. No hidden subscriptions or paywalls."
+            title: t("middle.features.productivity"),
+            desc: t("middle.features.productivityDesc")
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -950,7 +950,7 @@ function CommunitySection() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: `text-3xl font-bold mb-6 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`,
-                    children: t("last.contribute") || "Join the Community"
+                    children: t("community.title")
                 }, void 0, false, {
                     fileName: "[project]/components/CommunitySection.tsx",
                     lineNumber: 17,
@@ -958,7 +958,7 @@ function CommunitySection() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: `text-lg mb-10 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`,
-                    children: t("last.description") || "DevLab is open source. Contribute, suggest features, or just say hi on Discord."
+                    children: t("community.description")
                 }, void 0, false, {
                     fileName: "[project]/components/CommunitySection.tsx",
                     lineNumber: 21,
@@ -989,7 +989,7 @@ function CommunitySection() {
                                     lineNumber: 39,
                                     columnNumber: 25
                                 }, this),
-                                "Star on GitHub"
+                                t("community.github")
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CommunitySection.tsx",
@@ -1015,7 +1015,7 @@ function CommunitySection() {
                                     lineNumber: 54,
                                     columnNumber: 25
                                 }, this),
-                                "Join Discord"
+                                t("community.discord")
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CommunitySection.tsx",

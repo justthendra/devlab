@@ -11,23 +11,23 @@ export default function FeaturesSection() {
     const features = [
         {
             icon: <Shield className="text-emerald-500" size={32} />,
-            title: t("middle.features.browserBased") || "Privacy First",
-            desc: "All processing happens in your browser. Files never leave your device."
+            title: t("middle.features.browserBased"),
+            desc: t("middle.features.browserBasedDesc")
         },
         {
             icon: <Zap className="text-amber-500" size={32} />,
-            title: t("middle.features.fast") || "Lightning Fast",
-            desc: "Powered by WebAssembly for near-native performance without installs."
+            title: t("middle.features.fast"),
+            desc: t("middle.features.fastDesc")
         },
         {
             icon: <Layout className="text-blue-500" size={32} />,
-            title: t("middle.features.uiux") || "Modern UI",
-            desc: "Clean, distraction-free interface designed for focus and efficiency."
+            title: t("middle.features.uiux"),
+            desc: t("middle.features.uiuxDesc")
         },
         {
             icon: <Coffee className="text-purple-500" size={32} />,
-            title: t("middle.features.productivity") || "Free Forever",
-            desc: "Open source and free to use. No hidden subscriptions or paywalls."
+            title: t("middle.features.productivity"),
+            desc: t("middle.features.productivityDesc")
         }
     ];
 

@@ -15,11 +15,11 @@ export default function CommunitySection() {
         <section className="py-24 px-6 text-center relative z-10">
             <div className="max-w-7xl mx-auto">
                 <h2 className={`text-3xl font-bold mb-6 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                    {t("last.contribute") || "Join the Community"}
+                    {t("community.title")}
                 </h2>
 
                 <p className={`text-lg mb-10 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                    {t("last.description") || "DevLab is open source. Contribute, suggest features, or just say hi on Discord."}
+                    {t("community.description")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -37,7 +37,7 @@ export default function CommunitySection() {
             `}
                     >
                         <Github size={20} />
-                        Star on GitHub
+                        {t("community.github")}
                     </motion.a>
 
                     <motion.a
@@ -52,7 +52,7 @@ export default function CommunitySection() {
             "
                     >
                         <FaDiscord size={20} />
-                        Join Discord
+                        {t("community.discord")}
                     </motion.a>
                 </div>
             </div>

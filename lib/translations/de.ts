@@ -61,6 +61,35 @@ export const de = {
     devTool: "Entwickler-Tool",
   },
 
+  // Bento Grid
+  bento: {
+    title: "Mächtige Werkzeug-Suite",
+    description: "Alles, was Sie brauchen, an einem Ort. Keine Installationen, keine Anmeldungen.",
+    categories: {
+      media: "Medien-Magie",
+      mediaDesc: "Video und Audio sofort verarbeiten.",
+      image: "Bild-Studio",
+      imageDesc: "Bilder optimieren, skalieren und bearbeiten.",
+      dev: "Entwickler-Tools",
+      devDesc: "Formatieren, minimieren und generieren.",
+      design: "Design & Farben",
+      designDesc: "CSS-Generatoren und Paletten.",
+    },
+    cta: {
+      title: "Entdecken Sie die volle Sammlung",
+      description: "30+ Entwickler-Tools bereit zur Nutzung im Browser",
+      button: "Alle Tools ansehen",
+    },
+  },
+
+  // Community Section
+  community: {
+    title: "Treten Sie der Community bei",
+    description: "DevLab ist Open Source. Tragen Sie bei, schlagen Sie Funktionen vor oder sagen Sie einfach Hallo auf Discord.",
+    github: "Auf GitHub sternen",
+    discord: "Discord beitreten",
+  },
+
   // Featured tools
   featuredTools: {
     mp4towebm: {
@@ -79,9 +108,13 @@ export const de = {
     description: "DevLab bietet moderne, browser-basierte Tools für einzelne Entwickler, Designer und Produktivitäts-Enthusiasten. Lösungen zur Beschleunigung von Coding- und Design-Prozessen—keine Installation erforderlich.",
     features: {
       browserBased: "🔌 Browser-basiert",
+      browserBasedDesc: "Die gesamte Verarbeitung erfolgt in Ihrem Browser. Dateien verlassen niemals Ihr Gerät.",
       fast: "⚡ Schnell & Leicht",
+      fastDesc: "Angetrieben von WebAssembly für nahezu native Leistung ohne Installationen.",
       uiux: "🎨 UI/UX-freundlich",
+      uiuxDesc: "Saubere, ablenkungsfreie Benutzeroberfläche für Fokus und Effizienz.",
       productivity: "🚀 Produktivitätsorientiert",
+      productivityDesc: "Open Source und kostenlos. Keine versteckten Abonnements oder Paywalls.",
     },
   },
 
@@ -112,9 +145,57 @@ export const de = {
 
   // Tools page
   toolsPage: {
-    title: "Tool-Hub",
-    description: "Browser-basierte Medienkonvertierungstools.",
+    title: "Tools-Hub",
+    description: "Browserbasierte Medienkonvertierungstools.",
     noUpload: "Es werden keine Daten auf einen Server hochgeladen.",
+  },
+
+  // About page
+  about: {
+    hero: {
+      tagline: "Die Zukunft der Browser-Tools bauen",
+      subtext: "DevLab ist eine datenschutzorientierte Open-Source-Suite von Dienstprogrammen, die Entwickler und Kreative ohne Ballast unterstützen soll.",
+    },
+    meetDeveloper: {
+      title: "Triff den Entwickler",
+      name: "JustThendra",
+      bio: "Ein leidenschaftlicher Full-Stack-Entwickler, der sich auf den Bau intuitiver, schöner und hochleistungsfähiger Webanwendungen konzentriert. Engagiert für Open Source und Community-getriebene Entwicklung.",
+    },
+    techStack: {
+      title: "Gebaut mit moderner Technik",
+      desc: "Angetrieben von den neuesten Webtechnologien für maximale Leistung und Skalierbarkeit.",
+    },
+    community: {
+        title: "Begleite unsere Reise",
+        desc: "Werde Teil der wachsenden DevLab-Community. Teile Ideen, melde Fehler oder sag einfach Hallo!",
+        discord: "Discord beitreten",
+        github: "Auf GitHub bewerten"
+    },
+    timeline: {
+      title: "Unsere Reise",
+      2025: { title: "Gründung & Alpha", desc: "DevLab begann als Vision für 'Local-First'-Tools. Erste öffentliche Veröffentlichung mit Kernfunktionen." },
+      2026: { title: "Gemeinschaftswachstum", desc: "Erweiterung auf mehrsprachige Unterstützung und von der Gemeinschaft gesteuerte Funktionen." },
+      2027: { title: "Ökosystem-Erweiterung", desc: "Geplante Einführung erweiterter Entwickler-Dienstprogramme und Cloud-Sync (optional)." },
+    },
+    title: "Über DevLab",
+    description: "Entwickler mit sicheren, browserbasierten Tools unterstützen.",
+    contact: "Kontakt",
+    whyDevlab: {
+      title: "Warum DevLab?",
+      desc: "Sofortiger Zugriff auf leistungsstarke Tools ohne Einrichtung."
+    },
+    technology: {
+      title: "Moderne Technik",
+      desc: "Entwickelt mit Next.js 14, React und Tailwind CSS."
+    },
+    vision: {
+      title: "Unsere Vision",
+      desc: "Sinnvolle Entwicklungstools für jeden zugänglich machen."
+    },
+    developer: {
+      title: "Entwicklerorientiert",
+      desc: "Von Entwicklern für Entwickler gemacht."
+    },
   },
 
   // Tool descriptions
@@ -152,31 +233,15 @@ export const de = {
     imagetotext: "Text aus Bildern mittels OCR extrahieren.",
   },
 
-  // About page
-  about: {
-    title: "Über uns",
-    description: "DevLab ist eine schnelle und sichere Plattform, die Medienkonvertierungen direkt in Ihrem Browser durchführt. Keine Dateien werden auf einen Server hochgeladen.",
-    whyDevlab: {
-      title: "🚀 Warum DevLab?",
-      desc: "Dateien werden auf dem Gerät verarbeitet, Privatsphäre wird gewahrt, und die Leistung ist ultraschnell.",
-    },
-    technology: {
-      title: "🛠 Technologie",
-      desc: "Erstellt mit Next.js, WebAssembly, FFmpeg, Tailwind CSS und Framer Motion.",
-    },
-    vision: {
-      title: "🌍 Vision",
-      desc: "Einfache, sichere und zugängliche Medienkonvertierungstools für alle erstellen.",
-    },
-    developer: {
-      title: "👤 Entwickler",
-      desc: "Entworfen von Thendra, fokussiert auf modernes UI und leistungsorientierte Systeme.",
-    },
-    contact: "Für weitere Informationen oder Kontakt:",
-  },
+
 
   // Docs pages
   docs: {
+    hero: {
+      title: "Dokumentation",
+      subtitle: "Alles, was Sie zum Entwickeln mit DevLab benötigen. Anleitungen, API-Referenzen und mehr.",
+    },
+    readGuide: "Anleitung lesen",
     title: "Dokumentation",
     description: "Technische Dokumentation für DevLab: Build-Prozess, Sicherheitsmodell und Entwicklerinformationen.",
     sections: {

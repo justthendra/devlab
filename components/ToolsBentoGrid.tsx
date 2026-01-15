@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import {
     Video, Music, Scissors, Image as ImageIcon, Layers,
-    Code2, FileJson, Palette, QrCode, Wand2, Calculator, Regex
+    Code2, FileJson, Palette, QrCode, Wand2
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -15,47 +15,47 @@ export default function ToolsBentoGrid() {
 
     const categories = [
         {
-            title: "Media Magic",
-            description: "Process video and audio instantly.",
+            title: t("bento.categories.media"),
+            description: t("bento.categories.mediaDesc"),
             className: "md:col-span-2 md:row-span-2",
             gradient: "from-pink-500 via-rose-500 to-red-500",
             tools: [
-                { name: "MP4 to WebM", path: "/tools/mp4towebm", icon: <Video size={18} /> },
-                { name: "Video Trimmer", path: "/tools/videotrimmer", icon: <Scissors size={18} /> },
-                { name: "MP3 Converter", path: "/tools/mp4tomp3", icon: <Music size={18} /> },
-                { name: "Video to GIF", path: "/tools/videotogif", icon: <Layers size={18} /> },
+                { name: t("toolNames.mp4towebm"), path: "/tools/mp4towebm", icon: <Video size={18} /> },
+                { name: t("toolNames.videotrimmer"), path: "/tools/videotrimmer", icon: <Scissors size={18} /> },
+                { name: t("toolNames.mp4tomp3"), path: "/tools/mp4tomp3", icon: <Music size={18} /> },
+                { name: t("toolNames.videotogif"), path: "/tools/videotogif", icon: <Layers size={18} /> },
             ]
         },
         {
-            title: "Image Studio",
-            description: "Optimize, resize, and edit images.",
+            title: t("bento.categories.image"),
+            description: t("bento.categories.imageDesc"),
             className: "md:col-span-1 md:row-span-2",
             gradient: "from-emerald-400 via-teal-500 to-green-500",
             tools: [
-                { name: "Compressor", path: "/tools/image-compressor", icon: <ImageIcon size={18} /> },
-                { name: "Background Remover", path: "/tools/background-remover", icon: <Wand2 size={18} /> },
-                { name: "Resizer", path: "/tools/image-resizer", icon: <Layers size={18} /> },
+                { name: t("toolNames.imagecompressor"), path: "/tools/image-compressor", icon: <ImageIcon size={18} /> },
+                { name: t("toolNames.backgroundremover"), path: "/tools/background-remover", icon: <Wand2 size={18} /> },
+                { name: t("toolNames.imageresizer"), path: "/tools/image-resizer", icon: <Layers size={18} /> },
             ]
         },
         {
-            title: "Dev Utilities",
-            description: "Format, minify, and generate.",
+            title: t("bento.categories.dev"),
+            description: t("bento.categories.devDesc"),
             className: "md:col-span-1 md:row-span-1",
             gradient: "from-blue-400 via-indigo-500 to-violet-500",
             tools: [
-                { name: "Code Formatter", path: "/tools/formatter", icon: <Code2 size={18} /> },
+                { name: t("toolNames.formatter"), path: "/tools/formatter", icon: <Code2 size={18} /> },
                 { name: "JSON Viewer", path: "/tools/formatter", icon: <FileJson size={18} /> },
             ]
         },
         {
-            title: "Design & Colors",
-            description: "CSS Generators and Palettes.",
+            title: t("bento.categories.design"),
+            description: t("bento.categories.designDesc"),
             className: "md:col-span-2 md:row-span-1",
             gradient: "from-orange-400 via-amber-500 to-yellow-500",
             tools: [
-                { name: "CSS Glow", path: "/tools/cssglow", icon: <Wand2 size={18} /> },
-                { name: "Color Palette", path: "/tools/colorpalette", icon: <Palette size={18} /> },
-                { name: "QR Generator", path: "/tools/qrcode", icon: <QrCode size={18} /> },
+                { name: t("toolNames.cssglow"), path: "/tools/cssglow", icon: <Wand2 size={18} /> },
+                { name: t("toolNames.colorpalette"), path: "/tools/colorpalette", icon: <Palette size={18} /> },
+                { name: t("toolNames.qrcode"), path: "/tools/qrcode", icon: <QrCode size={18} /> },
             ]
         },
     ];
@@ -64,10 +64,10 @@ export default function ToolsBentoGrid() {
         <div className="max-w-7xl mx-auto px-6 py-20">
             <div className="mb-12 text-center">
                 <h2 className={`text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                    Powerful Tools Suite
+                    {t("bento.title")}
                 </h2>
                 <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                    Everything you need in one place. No installations, no sign-ups.
+                    {t("bento.description")}
                 </p>
             </div>
 
@@ -140,17 +140,17 @@ export default function ToolsBentoGrid() {
                 >
                     <div className="text-center md:text-left">
                         <h3 className={`text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                            Explore the full collection
+                            {t("bento.cta.title")}
                         </h3>
                         <p className={theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}>
-                            30+ developer tools ready to use in your browser
+                            {t("bento.cta.description")}
                         </p>
                     </div>
                     <Link
                         href="/tools"
                         className="px-8 py-3 rounded-xl font-semibold bg-emerald-500 hover:bg-emerald-600 text-white transition-colors shadow-lg shadow-emerald-500/20"
                     >
-                        View All Tools
+                        {t("bento.cta.button")}
                     </Link>
                 </motion.div>
             </div>

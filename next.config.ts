@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   },
   // Turbopack + Node destekli API için aktif et
   serverExternalPackages: ["ffmpeg-static", "fluent-ffmpeg", "ytdl-core"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.discordapp.com",
+      },
+    ],
+  },
 
   async headers() {
     return [
