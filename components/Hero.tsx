@@ -45,7 +45,7 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="relative z-10 w-full max-w-5xl"
       >
-        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] cursor-default text-slate-300 mb-4 ${theme === "dark" ? "bg-[rgba(22,22,22,0.05)] border border-[rgba(86,95,107,0.3)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.29)] text-slate-900"} hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 transition`}>
+        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] text-slate-300 mb-4 ${theme === "dark" ? "bg-[rgba(22,22,22,0.05)] border border-[rgba(86,95,107,0.3)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.29)] text-slate-900"} hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 transition`}>
           <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
           <span>{t("hero.badge")}</span>
         </div>

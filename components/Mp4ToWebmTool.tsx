@@ -157,7 +157,7 @@ export default function Mp4ToWebmTool() {
 
       {/* Dosya seçimi */}
       <label
-        className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer transition hover:border-indigo-400 hover:bg-slate-900/30"
+        className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 transition hover:border-indigo-400 hover:bg-slate-900/30"
       >
         <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>
           {t("tools.mp4towebm.selectVideo")}
@@ -252,7 +252,7 @@ export default function Mp4ToWebmTool() {
             ? "bg-emerald-500 hover:bg-emerald-600 text-slate-950"
             : "bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:opacity-90 text-white"
           }
-          disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-[1px] hover:scale-[1.01]
+          disabled:opacity-40 hover:-translate-y-[1px] hover:scale-[1.01]
         `}
       >
         {loading ? t("tools.mp4towebm.convertingBtn") : progress === 100 ? t("tools.mp4towebm.convertNewVideo") : t("tools.mp4towebm.convertBtn")}

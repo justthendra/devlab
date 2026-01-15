@@ -9,6 +9,12 @@ html, body {
 
 body {
   @apply transition-colors duration-300;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Ensure accessible cursor for inputs if needed, though we want custom everywhere usually */
+a, button, input, select, textarea {
+  cursor: none;
 }
 
 /* Light Theme */
@@ -57,4 +63,23 @@ html.light ::-webkit-scrollbar-thumb:hover {
   background:
     radial-gradient(circle at top left, rgba(56, 189, 248, 0.3), transparent 60%),
     radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.3), transparent 60%);
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }

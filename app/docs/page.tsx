@@ -84,7 +84,7 @@ export default function DocsPage() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className={`
-                  cursor-pointer p-5 rounded-xl text-left border transition
+                  p-5 rounded-xl text-left border transition
                   ${theme === "dark"
                     ? "bg-[rgba(19,20,22,0.23)] border-[rgba(255,255,255,0.06)] text-slate-200"
                     : "bg-white border-gray-200 text-slate-800 hover:shadow-[0_0_15px_rgba(0,150,255,0.15)]"

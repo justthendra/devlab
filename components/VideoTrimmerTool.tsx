@@ -134,7 +134,7 @@ export default function VideoTrimmerTool() {
             </h2>
 
             {!videoFile ? (
-                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl cursor-pointer transition
+                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl transition
           ${theme === "dark"
                         ? "border-slate-600 hover:border-slate-500 bg-[#111]"
                         : "border-gray-300 hover:border-gray-400 bg-gray-50"}`}>
@@ -224,7 +224,7 @@ export default function VideoTrimmerTool() {
                             disabled={loading || !ffmpegReady}
                             className={`flex-1 py-2 text-sm font-semibold rounded-xl transition
                 ${loading || !ffmpegReady
-                                    ? "bg-slate-600 opacity-50 cursor-not-allowed"
+                                    ? "bg-slate-600 opacity-50"
                                     : "bg-gradient-to-r from-red-500 to-pink-500 hover:opacity-90 text-white"}`}
                         >
                             {loading ? t("tools.common.processing") : t("tools.videotrimmer.trimBtn")}

@@ -137,7 +137,7 @@ function GettingStartedPage() {
                         whileHover: {
                             scale: 1.03
                         },
-                        className: `px-5 py-3 rounded-lg text-center text-sm cursor-pointer transition
+                        className: `px-5 py-3 rounded-lg text-center text-sm transition
               ${theme === "dark" ? "bg-[rgba(0,255,200,0.12)] hover:bg-[rgba(0,255,200,0.18)] text-slate-200" : "bg-[rgba(0,200,255,0.15)] hover:bg-[rgba(0,200,255,0.25)] text-slate-800"}
             `,
                         children: t("docs.gettingStarted.goToTools")

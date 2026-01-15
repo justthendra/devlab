@@ -85,7 +85,7 @@ export default function Base64Tool() {
                     disabled={!input}
                     className={`flex-1 py-2 text-sm font-semibold rounded-xl transition
             ${!input
-                            ? "bg-slate-600 cursor-not-allowed opacity-50"
+                            ? "bg-slate-600 opacity-50"
                             : "bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 text-white"
                         }`}
                 >

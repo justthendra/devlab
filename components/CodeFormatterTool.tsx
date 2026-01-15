@@ -152,7 +152,7 @@ export default function CodeFormatterTool() {
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
               }}
-              className="absolute top-2 right-2 z-20 text-xs px-2 py-1 flex items-center gap-1 bg-[rgba(8,7,7,0.04)] hover:bg-[rgba(46,46,46,0.17)] border border-[rgba(255,255,255,0.15)] rounded-md backdrop-blur transition cursor-pointer pointer-events-auto"
+              className="absolute top-2 right-2 z-20 text-xs px-2 py-1 flex items-center gap-1 bg-[rgba(8,7,7,0.04)] hover:bg-[rgba(46,46,46,0.17)] border border-[rgba(255,255,255,0.15)] rounded-md backdrop-blur transition pointer-events-auto"
               style={{ lineHeight: "1" }}
             >
               {copied ? (

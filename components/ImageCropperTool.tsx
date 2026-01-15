@@ -108,7 +108,7 @@ export default function ImageCropperTool() {
 
             {/* Upload Area */}
             {!image ? (
-                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl cursor-pointer transition
+                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl transition
           ${theme === "dark"
                         ? "border-slate-600 hover:border-slate-500 bg-[#111]"
                         : "border-gray-300 hover:border-gray-400 bg-gray-50"}`}>
@@ -164,7 +164,7 @@ export default function ImageCropperTool() {
                         >
                             {/* Resize Handle */}
                             <div
-                                className="absolute bottom-0 right-0 w-4 h-4 bg-white cursor-se-resize"
+                                className="absolute bottom-0 right-0 w-4 h-4 bg-white"
                                 style={{ transform: "translate(50%, 50%)" }}
                                 onMouseDown={(e) => {
                                     e.stopPropagation();

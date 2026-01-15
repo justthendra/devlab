@@ -194,7 +194,7 @@ export default function ColorPaletteTool() {
                 ? "bg-[#07080842] text-slate-200"
                 : "bg-slate-50 text-slate-800"
               }
-              cursor-pointer hover:border-emerald-400/80 transition`}
+              hover:border-emerald-400/80 transition`}
             onClick={() => fileInputRef.current?.click()}
           >
             <Upload className="w-6 h-6 mb-2 opacity-80" />
@@ -317,7 +317,7 @@ export default function ColorPaletteTool() {
                     <button
                       type="button"
                       onClick={() => handleCopyHex(c.hex)}
-                      className="flex items-center gap-1 text-slate-400 cursor-pointer hover:text-slate-100 transition"
+                      className="flex items-center gap-1 text-slate-400 hover:text-slate-100 transition"
                     >
                       <Copy className="w-3 h-3 opacity-70 group-hover:opacity-100" />
                       {copiedHex === c.hex ? t("tools.common.copied") : t("tools.common.copy")}
@@ -326,7 +326,7 @@ export default function ColorPaletteTool() {
                     <button
                       type="button"
                       onClick={() => generateGradient(c.hex)}
-                      className="px-2 py-1 rounded-md border cursor-pointer border-[#272727] hover:bg-[#18181838] transition"
+                      className="px-2 py-1 rounded-md border border-[#272727] hover:bg-[#18181838] transition"
                     >
                       🎨 Gradient
                     </button>
@@ -365,8 +365,8 @@ export default function ColorPaletteTool() {
               <div className="flex gap-2 mt-2">
                 <button
                   className={`text-[10px] px-2 py-1 border rounded-md ${gradientMode === "linear"
-                      ? "bg-emerald-500 text-white border-emerald-400"
-                      : "border-slate-600 text-slate-300"
+                    ? "bg-emerald-500 text-white border-emerald-400"
+                    : "border-slate-600 text-slate-300"
                     }`}
                   onClick={() => setGradientMode("linear")}
                 >
@@ -374,8 +374,8 @@ export default function ColorPaletteTool() {
                 </button>
                 <button
                   className={`text-[10px] px-2 py-1 border rounded-md ${gradientMode === "radial"
-                      ? "bg-blue-500 text-white border-blue-400"
-                      : "border-slate-600 text-slate-300"
+                    ? "bg-blue-500 text-white border-blue-400"
+                    : "border-slate-600 text-slate-300"
                     }`}
                   onClick={() => setGradientMode("radial")}
                 >

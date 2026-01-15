@@ -111,7 +111,7 @@ export default function JsBeautifierTool() {
           {outputCode && (
             <button
               onClick={copyOutput}
-              className={`absolute top-3 right-3 flex items-center cursor-pointer gap-1 px-2 py-1 rounded-md text-[11px]
+              className={`absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-md text-[11px]
                 ${copied
                   ? "bg-emerald-500 text-white"
                   : "bg-[rgba(255,255,255,0)] border border-[#242424] hover:bg-[rgba(255,255,255,0.02)]"
@@ -129,7 +129,7 @@ export default function JsBeautifierTool() {
       <div className="mt-4 flex gap-3">
         <button
           onClick={formatCode}
-          className="px-4 py-2 rounded-lg flex items-center cursor-pointer gap-2 text-sm font-semibold
+          className="px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-semibold
             bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:opacity-80 transition"
         >
           <Wand2 className="w-4 h-4" /> {t("tools.formatter.beautify")}
@@ -137,7 +137,7 @@ export default function JsBeautifierTool() {
 
         <button
           onClick={minifyCode}
-          className="px-4 py-2 rounded-lg flex items-center cursor-pointer gap-2 text-sm font-semibold
+          className="px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-semibold
             bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:opacity-80 transition"
         >
           <Scissors className="w-4 h-4" /> {t("tools.formatter.minify")}

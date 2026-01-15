@@ -109,6 +109,8 @@ export const en = {
     support: "Support",
     allRightsReserved: "All rights reserved.",
     by: "by",
+    tools: "Tools",
+    docs: "Documentation",
   },
 
   // Tools page

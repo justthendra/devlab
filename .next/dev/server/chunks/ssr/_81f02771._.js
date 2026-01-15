@@ -186,7 +186,7 @@ function Mp4ToWebmTool() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                className: "flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer transition hover:border-indigo-400 hover:bg-slate-900/30",
+                className: "flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 transition hover:border-indigo-400 hover:bg-slate-900/30",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: `text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`,
@@ -330,7 +330,7 @@ function Mp4ToWebmTool() {
                 onClick: handleConvert,
                 className: `mt-6 w-full py-3 text-sm font-semibold rounded-xl transition
           ${progress === 100 ? "bg-emerald-500 hover:bg-emerald-600 text-slate-950" : "bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:opacity-90 text-white"}
-          disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-[1px] hover:scale-[1.01]
+          disabled:opacity-40 hover:-translate-y-[1px] hover:scale-[1.01]
         `,
                 children: loading ? t("tools.mp4towebm.convertingBtn") : progress === 100 ? t("tools.mp4towebm.convertNewVideo") : t("tools.mp4towebm.convertBtn")
             }, void 0, false, {

@@ -90,7 +90,7 @@ export default function ImageResizerTool() {
 
             {/* Upload Area */}
             {!image ? (
-                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl cursor-pointer transition
+                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl transition
           ${theme === "dark"
                         ? "border-slate-600 hover:border-slate-500 bg-[#111]"
                         : "border-gray-300 hover:border-gray-400 bg-gray-50"}`}>
@@ -149,7 +149,7 @@ export default function ImageResizerTool() {
                     </div>
 
                     {/* Maintain Ratio */}
-                    <label className="flex items-center gap-2 cursor-pointer">
+                    <label className="flex items-center gap-2">
                         <input
                             type="checkbox"
                             checked={maintainRatio}

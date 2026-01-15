@@ -127,7 +127,7 @@ export default function QrCodeTool() {
             <button
               type="button"
               onClick={handleCopy}
-              className="flex items-center cursor-pointer gap-1 px-2 py-1 rounded-md border border-[rgba(48,48,48,0.36)] text-[11px] text-slate-200 hover:bg-[#141414c2] transition"
+              className="flex items-center gap-1 px-2 py-1 rounded-md border border-[rgba(48,48,48,0.36)] text-[11px] text-slate-200 hover:bg-[#141414c2] transition"
             >
               {copied ? (
                 <>
@@ -174,7 +174,7 @@ export default function QrCodeTool() {
                   type="color"
                   value={fgColor}
                   onChange={(e) => setFgColor(e.target.value)}
-                  className="w-7 h-7 rounded-full border border-slate-500 bg-transparent cursor-pointer"
+                  className="w-7 h-7 rounded-full border border-slate-500 bg-transparent"
                 />
                 <span className="text-[10px] text-slate-400">{fgColor}</span>
               </div>
@@ -184,7 +184,7 @@ export default function QrCodeTool() {
                   type="color"
                   value={bgColor}
                   onChange={(e) => setBgColor(e.target.value)}
-                  className="w-7 h-7 rounded-full border border-slate-500 bg-transparent cursor-pointer"
+                  className="w-7 h-7 rounded-full border border-slate-500 bg-transparent"
                 />
                 <span className="text-[10px] text-slate-400">{bgColor}</span>
               </div>
@@ -197,7 +197,7 @@ export default function QrCodeTool() {
             disabled={!text || downloading}
             className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-[12px] font-semibold
               bg-gradient-to-r from-emerald-500 to-cyan-500 text-white
-              hover:opacity-90 disabled:opacity-40 cursor-pointer transition"
+              hover:opacity-90 disabled:opacity-40 transition"
           >
             <Download className="w-4 h-4" />
             {downloading ? t("tools.qrcode.downloading") : t("tools.qrcode.downloadBtn")}

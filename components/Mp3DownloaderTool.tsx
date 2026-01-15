@@ -79,7 +79,7 @@ export default function Mp3DownloaderTool() {
         disabled={loading || !url}
         className={`mt-4 w-full py-2 text-sm font-semibold rounded-xl transition
           ${loading
-            ? "bg-slate-600 cursor-not-allowed opacity-50"
+            ? "bg-slate-600 opacity-50"
             : "bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:opacity-90 text-white"
           }`}
       >

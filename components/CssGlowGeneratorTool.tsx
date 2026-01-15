@@ -162,24 +162,21 @@ ${posToCss(sPos)}
     <div
       className={`
         relative p-7 rounded-2xl max-w-5xl mx-auto shadow-xl border
-        ${
-          theme === "dark"
-            ? "bg-[rgba(11,11,14,0.1)] border-[rgba(255,255,255,0.06)]"
-            : "bg-white border-[rgba(0,0,0,0.08)]"
+        ${theme === "dark"
+          ? "bg-[rgba(11,11,14,0.1)] border-[rgba(255,255,255,0.06)]"
+          : "bg-white border-[rgba(0,0,0,0.08)]"
         }
       `}
     >
       <h2
-        className={`text-xl font-semibold mb-1 ${
-          theme === "dark" ? "text-white" : "text-slate-900"
-        }`}
+        className={`text-xl font-semibold mb-1 ${theme === "dark" ? "text-white" : "text-slate-900"
+          }`}
       >
         CSS Glow / Orb Generator
       </h2>
       <p
-        className={`text-[13px] mb-6 ${
-          theme === "dark" ? "text-slate-300" : "text-slate-700"
-        }`}
+        className={`text-[13px] mb-6 ${theme === "dark" ? "text-slate-300" : "text-slate-700"
+          }`}
       >
         Design orb/glow backgrounds here,{" "}
         <span
@@ -201,10 +198,9 @@ ${posToCss(sPos)}
         <div
           className={`
             relative rounded-2xl overflow-hidden p-6 min-h-[260px]
-            ${
-              theme === "dark"
-                ? "bg-[#05070c]"
-                : "bg-gradient-to-br from-slate-50 to-slate-200"
+            ${theme === "dark"
+              ? "bg-[#05070c]"
+              : "bg-gradient-to-br from-slate-50 to-slate-200"
             }
           `}
         >
@@ -274,9 +270,8 @@ ${posToCss(sPos)}
         <div>
           <div className="flex items-center justify-between mb-2">
             <span
-              className={`text-xs font-semibold ${
-                theme === "dark" ? "text-slate-200" : "text-slate-800"
-              }`}
+              className={`text-xs font-semibold ${theme === "dark" ? "text-slate-200" : "text-slate-800"
+                }`}
             >
               Tailwind Snippet
             </span>
@@ -284,10 +279,9 @@ ${posToCss(sPos)}
           <div
             className={`
               text-[11px] rounded-xl p-3 font-mono whitespace-pre-wrap break-all
-              ${
-                theme === "dark"
-                  ? "bg-[#08090aa6] text-slate-200 border border-[#292929]"
-                  : "bg-slate-100 text-slate-800 border border-slate-300"
+              ${theme === "dark"
+                ? "bg-[#08090aa6] text-slate-200 border border-[#292929]"
+                : "bg-slate-100 text-slate-800 border border-slate-300"
               }
             `}
           >
@@ -298,9 +292,8 @@ ${posToCss(sPos)}
         <div>
           <div className="flex items-center justify-between mb-2">
             <span
-              className={`text-xs font-semibold ${
-                theme === "dark" ? "text-slate-200" : "text-slate-800"
-              }`}
+              className={`text-xs font-semibold ${theme === "dark" ? "text-slate-200" : "text-slate-800"
+                }`}
             >
               CSS Snippet
             </span>
@@ -308,10 +301,9 @@ ${posToCss(sPos)}
           <div
             className={`
               text-[11px] rounded-xl p-3 font-mono whitespace-pre overflow-auto max-h-[220px]
-              ${
-                theme === "dark"
-                  ? "bg-[#08090aa6] text-slate-200 border border-[#292929]"
-                  : "bg-slate-100 text-slate-800 border border-slate-300"
+              ${theme === "dark"
+                ? "bg-[#08090aa6] text-slate-200 border border-[#292929]"
+                : "bg-slate-100 text-slate-800 border border-slate-300"
               }
             `}
           >
@@ -336,18 +328,16 @@ function GlowControls({
     <div
       className={`
         rounded-xl p-3 border text-[11px]
-        ${
-          theme === "dark"
-            ? "border-[#292929] bg-[#0c0d0f09]"
-            : "border-slate-300 bg-slate-50"
+        ${theme === "dark"
+          ? "border-[#292929] bg-[#0c0d0f09]"
+          : "border-slate-300 bg-slate-50"
         }
       `}
     >
       <div className="flex items-center justify-between mb-2">
         <span
-          className={`font-semibold ${
-            theme === "dark" ? "text-slate-100" : "text-slate-800"
-          }`}
+          className={`font-semibold ${theme === "dark" ? "text-slate-100" : "text-slate-800"
+            }`}
         >
           {config.label}
         </span>
@@ -360,7 +350,7 @@ function GlowControls({
             type="color"
             value={config.color}
             onChange={(e) => onChange({ ...config, color: e.target.value })}
-            className="w-7 h-7 rounded-full border border-slate-500 bg-transparent cursor-pointer"
+            className="w-7 h-7 rounded-full border border-slate-500 bg-transparent"
           />
           <span className="text-[10px] opacity-70">{config.color}</span>
         </div>
@@ -400,10 +390,9 @@ function GlowControls({
               onClick={() => onChange({ ...config, size: opt.key })}
               className={`
                 px-2 py-1 rounded-md border text-[10px]
-                ${
-                  config.size === opt.key
-                    ? "bg-emerald-500 border-emerald-400 text-white"
-                    : theme === "dark"
+                ${config.size === opt.key
+                  ? "bg-emerald-500 border-emerald-400 text-white"
+                  : theme === "dark"
                     ? "border-slate-700 text-slate-300 hover:bg-slate-800"
                     : "border-slate-300 text-slate-700 hover:bg-slate-100"
                 }
@@ -429,10 +418,9 @@ function GlowControls({
               onClick={() => onChange({ ...config, blur: opt.key })}
               className={`
                 px-2 py-1 rounded-md border text-[10px]
-                ${
-                  config.blur === opt.key
-                    ? "bg-cyan-500 border-cyan-400 text-white"
-                    : theme === "dark"
+                ${config.blur === opt.key
+                  ? "bg-cyan-500 border-cyan-400 text-white"
+                  : theme === "dark"
                     ? "border-slate-700 text-slate-300 hover:bg-slate-800"
                     : "border-slate-300 text-slate-700 hover:bg-slate-100"
                 }
@@ -462,10 +450,9 @@ function GlowControls({
               onClick={() => onChange({ ...config, position: pos })}
               className={`
                 px-2 py-1 rounded-md border text-[10px] capitalize
-                ${
-                  config.position === pos
-                    ? "bg-indigo-500 border-indigo-400 text-white"
-                    : theme === "dark"
+                ${config.position === pos
+                  ? "bg-indigo-500 border-indigo-400 text-white"
+                  : theme === "dark"
                     ? "border-slate-700 text-slate-300 hover:bg-slate-800"
                     : "border-slate-300 text-slate-700 hover:bg-slate-100"
                 }

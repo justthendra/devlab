@@ -79,7 +79,7 @@ export default function ImageToTextTool() {
 
             {/* Upload Area */}
             {!image ? (
-                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl cursor-pointer transition
+                <label className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl transition
           ${theme === "dark"
                         ? "border-slate-600 hover:border-slate-500 bg-[#111]"
                         : "border-gray-300 hover:border-gray-400 bg-gray-50"}`}>
@@ -121,7 +121,7 @@ export default function ImageToTextTool() {
                                 disabled={loading}
                                 className={`w-full py-3 text-sm font-semibold rounded-xl transition
                     ${loading
-                                        ? "bg-slate-600 opacity-50 cursor-not-allowed"
+                                        ? "bg-slate-600 opacity-50"
                                         : "bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 text-white"}`}
                             >
                                 {loading ? t("tools.common.processing") : t("tools.imagetotext.extractBtn")}

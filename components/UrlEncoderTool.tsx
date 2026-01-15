@@ -76,7 +76,7 @@ export default function UrlEncoderTool() {
                 disabled={!input}
                 className={`mt-4 w-full py-2 text-sm font-semibold rounded-xl transition
           ${!input
-                        ? "bg-slate-600 cursor-not-allowed opacity-50"
+                        ? "bg-slate-600 opacity-50"
                         : "bg-gradient-to-r from-orange-500 to-red-500 hover:opacity-90 text-white"
                     }`}
             >

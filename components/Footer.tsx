@@ -7,6 +7,30 @@ import { Github, Twitter, Globe, Heart } from "lucide-react";
 import Image from "next/image";
 import { FaDiscord } from "react-icons/fa";
 
+const AnimatedLink = ({
+  href,
+  children,
+  className,
+  ...props
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+  <Link
+    href={href}
+    className={`group relative inline-block overflow-hidden ${className || ""}`}
+    {...props}
+  >
+    <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">
+      {children}
+    </span>
+    <span className="absolute top-0 left-0 block translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0 text-indigo-600 font-medium">
+      {children}
+    </span>
+  </Link>
+);
+
 export default function Footer() {
   const { theme } = useTheme();
   const { t } = useLanguage();
@@ -23,22 +47,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Brand */}
           <div className="col-span-1 md:col-span-1">
-            <h2 className={`text-xl font-bold mb-4 flex items-center gap-2 ${theme === "dark" ? "text-white" : "text-slate-900"}`}>
+            <h2 className={`text-xl font-medium mb-4 flex items-center gap-2 ${theme === "dark" ? "text-white" : "text-slate-900"}`}>
               <Image src={theme === "dark" ? "/DevLab.png" : "/DevLabDark.png"} alt="Logo" width={32} height={32} />
-              DevLab
+              dev<span className="text-indigo-600 font-extrabold text-2xl -ml-[7px]">Lab</span>
             </h2>
             <p className="text-sm leading-relaxed opacity-80 mb-6">
               {t("footer.desc") || "Privacy-first, browser-based tools for developers and creators."}
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://github.com/justthendra" target="_blank" rel="noopener noreferrer"
-                className="hover:text-indigo-400 transition-colors">
+              <AnimatedLink href="https://github.com/justthendra" target="_blank" rel="noopener noreferrer"
+                className="hover:text-indigo-600 transition-colors">
                 <Github size={20} />
-              </a>
-              <a href="https://discord.gg/JWx8qJ7B8W" target="_blank" rel="noopener noreferrer"
-                className="hover:text-indigo-400 transition-colors">
+              </AnimatedLink>
+              <AnimatedLink href="https://discord.gg/JWx8qJ7B8W" target="_blank" rel="noopener noreferrer"
+                className="hover:text-indigo-600 transition-colors">
                 <FaDiscord size={20} />
-              </a>
+              </AnimatedLink>
             </div>
           </div>
 
@@ -48,10 +72,10 @@ export default function Footer() {
               {t("footer.product") || "Product"}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/tools" className="hover:text-indigo-400 transition-colors">{t("navbar.tools") || "Tools"}</Link></li>
-              <li><Link href="/docs" className="hover:text-indigo-400 transition-colors">{t("navbar.docs") || "Documentation"}</Link></li>
-              <li><Link href="/changelog" className="hover:text-indigo-400 transition-colors">{t("footer.changelog") || "Changelog"}</Link></li>
-              <li><Link href="/roadmap" className="hover:text-indigo-400 transition-colors">{t("footer.roadmap") || "Roadmap"}</Link></li>
+              <li><AnimatedLink href="/tools">{t("footer.tools") || "Tools"}</AnimatedLink></li>
+              <li><AnimatedLink href="/docs">{t("footer.docs") || "Documentation"}</AnimatedLink></li>
+              <li><AnimatedLink href="/changelog">{t("footer.changelog") || "Changelog"}</AnimatedLink></li>
+              <li><AnimatedLink href="/roadmap">{t("footer.roadmap") || "Roadmap"}</AnimatedLink></li>
             </ul>
           </div>
 
@@ -61,10 +85,10 @@ export default function Footer() {
               {t("footer.legal") || "Legal"}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/privacy" className="hover:text-indigo-400 transition-colors">{t("footer.privacy") || "Privacy Policy"}</Link></li>
-              <li><Link href="/terms" className="hover:text-indigo-400 transition-colors">{t("footer.terms") || "Terms of Service"}</Link></li>
-              <li><Link href="/cookies" className="hover:text-indigo-400 transition-colors">{t("footer.cookies") || "Cookie Policy"}</Link></li>
-              <li><Link href="/licenses" className="hover:text-indigo-400 transition-colors">{t("footer.licenses") || "Licenses"}</Link></li>
+              <li><AnimatedLink href="/privacy">{t("footer.privacy") || "Privacy Policy"}</AnimatedLink></li>
+              <li><AnimatedLink href="/terms">{t("footer.terms") || "Terms of Service"}</AnimatedLink></li>
+              <li><AnimatedLink href="/cookies">{t("footer.cookies") || "Cookie Policy"}</AnimatedLink></li>
+              <li><AnimatedLink href="/licenses">{t("footer.licenses") || "Licenses"}</AnimatedLink></li>
             </ul>
           </div>
 
@@ -74,9 +98,9 @@ export default function Footer() {
               {t("navbar.about") || "About"}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:text-indigo-400 transition-colors">{t("footer.ourStory") || "Our Story"}</Link></li>
-              <li><Link href="/contact" className="hover:text-indigo-400 transition-colors">{t("footer.contact") || "Contact"}</Link></li>
-              <li><Link href="#" className="hover:text-indigo-400 transition-colors">{t("footer.support") || "Support"}</Link></li>
+              <li><AnimatedLink href="/about">{t("footer.ourStory") || "Our Story"}</AnimatedLink></li>
+              <li><AnimatedLink href="/contact">{t("footer.contact") || "Contact"}</AnimatedLink></li>
+              <li><AnimatedLink href="#">{t("footer.support") || "Support"}</AnimatedLink></li>
             </ul>
           </div>
         </div>
@@ -97,7 +121,7 @@ export default function Footer() {
               href="https://github.com/justthendra"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium hover:text-indigo-400 transition-colors"
+              className="font-medium hover:text-emerald-400 transition-colors"
             >
               Thendra
             </a>

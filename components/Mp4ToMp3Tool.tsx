@@ -147,7 +147,7 @@ export default function Mp4ToMp3Tool() {
         {t("tools.mp4tomp3.description")} <span className="font-semibold text-emerald-400">{t("tools.common.runsInBrowser")}</span>
       </p>
 
-      <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
+      <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
         <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>{t("tools.mp4tomp3.selectVideo")}</span>
         <input
           type="file"

@@ -88,8 +88,8 @@ export default function ImageGeneratorTool() {
         className={`
           w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition
           ${loading
-            ? "opacity-50 cursor-not-allowed"
-            : "cursor-pointer bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:opacity-90"
+            ? "opacity-50"
+            : "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:opacity-90"
           }
         `}
       >

@@ -185,28 +185,47 @@ function RootLayout({ children }) {
                     enableSystem: false,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "pointer-events-none absolute -top-40 -left-20 w-[500px] h-[500px] bg-[rgba(0,255,200,0.08)] blur-[120px] rounded-full mix-blend-screen opacity-50 animate-pulse"
+                            className: "pointer-events-none absolute -top-40 -left-20 w-[600px] h-[600px] bg-emerald-500/10 blur-[130px] rounded-full mix-blend-screen opacity-40 animate-blob"
                         }, void 0, false, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "pointer-events-none fixed bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-[rgba(120,50,255,0.15)] blur-[150px] rounded-full mix-blend-screen opacity-50 animate-pulse z-0"
+                            className: "pointer-events-none absolute top-20 -left-40 w-[500px] h-[500px] bg-indigo-600/15 blur-[130px] rounded-full mix-blend-screen opacity-50 animate-blob animation-delay-2000"
                         }, void 0, false, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 33,
+                            lineNumber: 32,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "pointer-events-none fixed bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-indigo-600/10 blur-[160px] rounded-full mix-blend-screen opacity-50 z-0 animate-blob animation-delay-4000"
+                        }, void 0, false, {
+                            fileName: "[project]/app/layout.tsx",
+                            lineNumber: 35,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "pointer-events-none fixed bottom-[50px] right-[-150px] w-[400px] h-[400px] bg-violet-500/10 blur-[120px] rounded-full mix-blend-screen opacity-40 z-0 animate-blob"
+                        }, void 0, false, {
+                            fileName: "[project]/app/layout.tsx",
+                            lineNumber: 36,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 34,
+                            lineNumber: 37,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(CustomCursor, {}, void 0, false, {
+                            fileName: "[project]/app/layout.tsx",
+                            lineNumber: 38,
                             columnNumber: 13
                         }, this),
                         children,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 36,
+                            lineNumber: 40,
                             columnNumber: 13
                         }, this)
                     ]

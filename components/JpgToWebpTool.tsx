@@ -68,7 +68,7 @@ export default function JpgToWebpTool() {
       </p>
 
       {/* Dosya seçimi */}
-      <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 cursor-pointer hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
+      <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-500 rounded-xl px-6 py-7 hover:border-emerald-400 hover:bg-slate-900/30 transition duration-300">
         <span className={`text-sm font-medium ${theme === "dark" ? "text-slate-100" : "text-slate-900"}`}>
           {t("tools.jpgtowebp.selectImage")}
         </span>
@@ -94,8 +94,8 @@ export default function JpgToWebpTool() {
             key={key}
             onClick={() => setQuality(key as Quality)}
             className={`px-3 py-1.5 rounded-lg border transition ${quality === key
-                ? "shadow-[0_0_12px_rgba(0,255,150,0.7)] text-white"
-                : "hover:bg-[#0e121a] text-slate-300"
+              ? "shadow-[0_0_12px_rgba(0,255,150,0.7)] text-white"
+              : "hover:bg-[#0e121a] text-slate-300"
               }`}
           >
             {label}

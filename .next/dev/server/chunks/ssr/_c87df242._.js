@@ -76,7 +76,7 @@ function Hero() {
             className: "relative z-10 w-full max-w-5xl",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] cursor-default text-slate-300 mb-4 ${theme === "dark" ? "bg-[rgba(22,22,22,0.05)] border border-[rgba(86,95,107,0.3)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.29)] text-slate-900"} hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 transition`,
+                    className: `inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] text-slate-300 mb-4 ${theme === "dark" ? "bg-[rgba(22,22,22,0.05)] border border-[rgba(86,95,107,0.3)] text-slate-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.29)] text-slate-900"} hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 transition`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
                             className: "w-3.5 h-3.5 text-emerald-400"
@@ -498,9 +498,9 @@ function Middle() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-8 flex flex-wrap justify-center cursor-default gap-3 text-[11px]",
+                className: "mt-8 flex flex-wrap justify-center gap-3 text-[11px]",
                 children: features.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: `px-3 py-1 rounded-full cursor-pointer
+                        className: `px-3 py-1 rounded-full
         ${theme === "dark" ? "bg-[rgba(3,3,3,0.04)] border border-[rgba(255,255,255,0.06)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300" : "bg-[rgba(0,0,0,0.05)] border border-[rgba(0,0,0,0.1)] hover:border-[rgba(0,255,200,0.35)] hover:text-emerald-300 text-slate-700 hover:border-emerald-600 hover:text-emerald-500"} transition`,
                         children: item
                     }, item, false, {

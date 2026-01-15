@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import CustomCursor from "../components/CustomCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,11 +28,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             enableSystem={false}
           >
             {/* Top Left Glow */}
-            <div className="pointer-events-none absolute -top-40 -left-20 w-[500px] h-[500px] bg-[rgba(0,255,200,0.08)] blur-[120px] rounded-full mix-blend-screen opacity-50 animate-pulse" />
+            {/* Top Left Glows */}
+            <div className="pointer-events-none absolute -top-40 -left-20 w-[600px] h-[600px] bg-emerald-500/10 blur-[130px] rounded-full mix-blend-screen opacity-40 animate-blob" />
+            <div className="pointer-events-none absolute top-20 -left-40 w-[500px] h-[500px] bg-indigo-600/15 blur-[130px] rounded-full mix-blend-screen opacity-50 animate-blob animation-delay-2000" />
 
-            {/* Bottom Right Glow (fixed position to ensure it stays in corner) */}
-            <div className="pointer-events-none fixed bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-[rgba(120,50,255,0.15)] blur-[150px] rounded-full mix-blend-screen opacity-50 animate-pulse z-0" />
+            {/* Bottom Right Glows */}
+            <div className="pointer-events-none fixed bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-indigo-600/10 blur-[160px] rounded-full mix-blend-screen opacity-50 z-0 animate-blob animation-delay-4000" />
+            <div className="pointer-events-none fixed bottom-[50px] right-[-150px] w-[400px] h-[400px] bg-violet-500/10 blur-[120px] rounded-full mix-blend-screen opacity-40 z-0 animate-blob" />
             <Navbar />
+            <CustomCursor />
             {children}
             <Footer />
           </ThemeProvider>
