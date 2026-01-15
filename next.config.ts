@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
     serverActions: {
       bodySizeLimit: "1mb",
     },
-    // Turbopack + Node destekli API için aktif et
-    serverComponentsExternalPackages: ["ffmpeg-static", "fluent-ffmpeg", "ytdl-core"],
   },
+  // Turbopack + Node destekli API için aktif et
+  serverExternalPackages: ["ffmpeg-static", "fluent-ffmpeg", "ytdl-core"],
 
   async headers() {
     return [

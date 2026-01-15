@@ -100,6 +100,15 @@ export const tr = {
     privacy: "Gizlilik Politikası",
     terms: "Kullanım Koşulları",
     desc: "Geliştiriciler ve içerik üreticileri için gizlilik odaklı, tarayıcı tabanlı araçlar.",
+    changelog: "Değişiklik Günlüğü",
+    roadmap: "Yol Haritası",
+    cookies: "Çerez Politikası",
+    licenses: "Lisanslar",
+    ourStory: "Hikayemiz",
+    contact: "İletişim",
+    support: "Destek",
+    allRightsReserved: "Tüm hakları saklıdır.",
+    by: "tarafından",
   },
 
   // Tools page

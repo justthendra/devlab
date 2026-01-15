@@ -101,7 +101,16 @@ const en = {
         social: "Social",
         privacy: "Privacy Policy",
         terms: "Terms of Service",
-        desc: "Privacy-first, browser-based tools for developers and creators."
+        desc: "Privacy-first, browser-based tools for developers and creators.",
+        changelog: "Changelog",
+        roadmap: "Roadmap",
+        cookies: "Cookie Policy",
+        licenses: "Licenses",
+        ourStory: "Our Story",
+        contact: "Contact",
+        support: "Support",
+        allRightsReserved: "All rights reserved.",
+        by: "by"
     },
     // Tools page
     toolsPage: {
@@ -1065,7 +1074,16 @@ const tr = {
         social: "Sosyal",
         privacy: "Gizlilik Politikası",
         terms: "Kullanım Koşulları",
-        desc: "Geliştiriciler ve içerik üreticileri için gizlilik odaklı, tarayıcı tabanlı araçlar."
+        desc: "Geliştiriciler ve içerik üreticileri için gizlilik odaklı, tarayıcı tabanlı araçlar.",
+        changelog: "Değişiklik Günlüğü",
+        roadmap: "Yol Haritası",
+        cookies: "Çerez Politikası",
+        licenses: "Lisanslar",
+        ourStory: "Hikayemiz",
+        contact: "İletişim",
+        support: "Destek",
+        allRightsReserved: "Tüm hakları saklıdır.",
+        by: "tarafından"
     },
     // Tools page
     toolsPage: {
@@ -2023,7 +2041,17 @@ const de = {
     },
     // Footer
     footer: {
-        developedBy: "Entwickelt mit"
+        developedBy: "Entwickelt mit",
+        desc: "Datenschutzorientierte, browserbasierte Tools für Entwickler und Ersteller.",
+        changelog: "Änderungsprotokoll",
+        roadmap: "Roadmap",
+        cookies: "Cookie-Richtlinie",
+        licenses: "Lizenzen",
+        ourStory: "Unsere Geschichte",
+        contact: "Kontakt",
+        support: "Support",
+        allRightsReserved: "Alle Rechte vorbehalten.",
+        by: "von"
     },
     // Tools page
     toolsPage: {
@@ -2852,7 +2880,17 @@ const fr = {
     },
     // Footer
     footer: {
-        developedBy: "Développé avec"
+        developedBy: "Développé avec",
+        desc: "Des outils basés sur navigateur, axés sur la confidentialité, pour les développeurs et les créateurs.",
+        changelog: "Journal des modifications",
+        roadmap: "Feuille de route",
+        cookies: "Politique de cookies",
+        licenses: "Licences",
+        ourStory: "Notre histoire",
+        contact: "Contact",
+        support: "Support",
+        allRightsReserved: "Tous droits réservés.",
+        by: "par"
     },
     // Tools page
     toolsPage: {
@@ -3681,7 +3719,17 @@ const es = {
     },
     // Footer
     footer: {
-        developedBy: "Desarrollado con"
+        developedBy: "Desarrollado con",
+        desc: "Herramientas basadas en navegador y centradas en la privacidad para desarrolladores y creadores.",
+        changelog: "Registro de cambios",
+        roadmap: "Hoja de ruta",
+        cookies: "Política de cookies",
+        licenses: "Licencias",
+        ourStory: "Nuestra historia",
+        contact: "Contacto",
+        support: "Soporte",
+        allRightsReserved: "Todos los derechos reservados.",
+        by: "por"
     },
     // Tools page
     toolsPage: {
@@ -5343,7 +5391,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/changelog",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Changelog"
+                                                children: t("footer.changelog") || "Changelog"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 53,
@@ -5358,7 +5406,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/roadmap",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Roadmap"
+                                                children: t("footer.roadmap") || "Roadmap"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 54,
@@ -5428,7 +5476,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/cookies",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Cookie Policy"
+                                                children: t("footer.cookies") || "Cookie Policy"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 66,
@@ -5443,7 +5491,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/licenses",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Licenses"
+                                                children: t("footer.licenses") || "Licenses"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 67,
@@ -5483,7 +5531,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/about",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Our Story"
+                                                children: t("footer.ourStory") || "Our Story"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 77,
@@ -5498,7 +5546,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/contact",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Contact"
+                                                children: t("footer.contact") || "Contact"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 78,
@@ -5513,7 +5561,7 @@ function Footer() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "#",
                                                 className: "hover:text-indigo-400 transition-colors",
-                                                children: "Support"
+                                                children: t("footer.support") || "Support"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
                                                 lineNumber: 79,
@@ -5552,7 +5600,8 @@ function Footer() {
                             children: [
                                 "© ",
                                 new Date().getFullYear(),
-                                " DevLab. All rights reserved."
+                                " DevLab. ",
+                                t("footer.allRightsReserved") || "All rights reserved."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Footer.tsx",
@@ -5578,7 +5627,7 @@ function Footer() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "by"
+                                    children: t("footer.by")
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.tsx",
                                     lineNumber: 95,

@@ -100,6 +100,15 @@ export const en = {
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     desc: "Privacy-first, browser-based tools for developers and creators.",
+    changelog: "Changelog",
+    roadmap: "Roadmap",
+    cookies: "Cookie Policy",
+    licenses: "Licenses",
+    ourStory: "Our Story",
+    contact: "Contact",
+    support: "Support",
+    allRightsReserved: "All rights reserved.",
+    by: "by",
   },
 
   // Tools page

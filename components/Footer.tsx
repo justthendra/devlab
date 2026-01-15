@@ -50,8 +50,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/tools" className="hover:text-indigo-400 transition-colors">{t("navbar.tools") || "Tools"}</Link></li>
               <li><Link href="/docs" className="hover:text-indigo-400 transition-colors">{t("navbar.docs") || "Documentation"}</Link></li>
-              <li><Link href="/changelog" className="hover:text-indigo-400 transition-colors">Changelog</Link></li>
-              <li><Link href="/roadmap" className="hover:text-indigo-400 transition-colors">Roadmap</Link></li>
+              <li><Link href="/changelog" className="hover:text-indigo-400 transition-colors">{t("footer.changelog") || "Changelog"}</Link></li>
+              <li><Link href="/roadmap" className="hover:text-indigo-400 transition-colors">{t("footer.roadmap") || "Roadmap"}</Link></li>
             </ul>
           </div>
 
@@ -63,8 +63,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/privacy" className="hover:text-indigo-400 transition-colors">{t("footer.privacy") || "Privacy Policy"}</Link></li>
               <li><Link href="/terms" className="hover:text-indigo-400 transition-colors">{t("footer.terms") || "Terms of Service"}</Link></li>
-              <li><Link href="/cookies" className="hover:text-indigo-400 transition-colors">Cookie Policy</Link></li>
-              <li><Link href="/licenses" className="hover:text-indigo-400 transition-colors">Licenses</Link></li>
+              <li><Link href="/cookies" className="hover:text-indigo-400 transition-colors">{t("footer.cookies") || "Cookie Policy"}</Link></li>
+              <li><Link href="/licenses" className="hover:text-indigo-400 transition-colors">{t("footer.licenses") || "Licenses"}</Link></li>
             </ul>
           </div>
 
@@ -74,9 +74,9 @@ export default function Footer() {
               {t("navbar.about") || "About"}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:text-indigo-400 transition-colors">Our Story</Link></li>
-              <li><Link href="/contact" className="hover:text-indigo-400 transition-colors">Contact</Link></li>
-              <li><Link href="#" className="hover:text-indigo-400 transition-colors">Support</Link></li>
+              <li><Link href="/about" className="hover:text-indigo-400 transition-colors">{t("footer.ourStory") || "Our Story"}</Link></li>
+              <li><Link href="/contact" className="hover:text-indigo-400 transition-colors">{t("footer.contact") || "Contact"}</Link></li>
+              <li><Link href="#" className="hover:text-indigo-400 transition-colors">{t("footer.support") || "Support"}</Link></li>
             </ul>
           </div>
         </div>
@@ -86,13 +86,13 @@ export default function Footer() {
           ${theme === "dark" ? "border-slate-800" : "border-slate-100"}
         `}>
           <div className="opacity-60">
-            © {new Date().getFullYear()} DevLab. All rights reserved.
+            © {new Date().getFullYear()} DevLab. {t("footer.allRightsReserved") || "All rights reserved."}
           </div>
 
           <div className="flex items-center gap-1 opacity-80">
             <span>{t("footer.developedBy")}</span>
             <Heart size={14} className="text-emerald-400 fill-emerald-400 animate-pulse" />
-            <span>by</span>
+            <span>{t("footer.by")}</span>
             <a
               href="https://github.com/justthendra"
               target="_blank"

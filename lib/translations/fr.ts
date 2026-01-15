@@ -94,6 +94,16 @@ export const fr = {
   // Footer
   footer: {
     developedBy: "Développé avec",
+    desc: "Des outils basés sur navigateur, axés sur la confidentialité, pour les développeurs et les créateurs.",
+    changelog: "Journal des modifications",
+    roadmap: "Feuille de route",
+    cookies: "Politique de cookies",
+    licenses: "Licences",
+    ourStory: "Notre histoire",
+    contact: "Contact",
+    support: "Support",
+    allRightsReserved: "Tous droits réservés.",
+    by: "par",
   },
 
   // Tools page
