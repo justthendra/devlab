@@ -84,7 +84,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className={`
-          max-w-5xl w-full mx-4 px-4 py-2 flex items-center gap-4
+          max-w-5xl w-full mx-8 md:mx-4 px-4 py-2 flex items-center gap-4
           backdrop-blur-md border rounded-full pointer-events-auto
           ${theme === "dark"
             ? "bg-[rgba(11,11,14,0.09)] border-[rgba(255,255,255,0.07)]"
@@ -210,8 +210,8 @@ export default function Navbar() {
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
             className={`
-              fixed top-20 right-4 w-72 rounded-2xl p-4
-              backdrop-blur-xl z-40 shadow-2xl border origin-top-right
+              fixed top-20 right-4 left-4 rounded-2xl p-4
+              backdrop-blur-xl z-40 shadow-2xl border origin-top
               ${theme === "dark"
                 ? "bg-[rgba(20,20,24,0.95)] border-[rgba(255,255,255,0.08)]"
                 : "bg-[rgba(255,255,255,0.95)] border-[rgba(0,0,0,0.1)]"}
