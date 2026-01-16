@@ -392,8 +392,39 @@ const en = {
             desc: "Making meaningful development tools accessible to everyone."
         },
         developer: {
-            title: "Developer Driven",
-            desc: "Created by developers, for developers."
+            title: "Developer Profile",
+            subtitle: "Meet the creator behind DevLab",
+            role: "Full Stack Developer",
+            bio: "Passionate about crafting beautiful, performant web experiences. Building the future of developer tools, one commit at a time. ✨",
+            stats: {
+                years: "Years",
+                projects: "Projects",
+                linesPerDay: "Lines/Day"
+            },
+            status: {
+                title: "Current Status",
+                available: "Available",
+                openTo: "Open to collaborations",
+                idle: "Idle",
+                dnd: "Do Not Disturb",
+                offline: "Offline",
+                playing: "Playing",
+                listening: "Listening to"
+            },
+            location: {
+                country: "Turkey",
+                timezone: "Online"
+            },
+            skills: {
+                title: "Tech Stack"
+            },
+            quote: {
+                text: "\"Code is poetry written for machines, but read by humans.\"",
+                author: "— Personal Philosophy"
+            },
+            discord: {
+                addMe: "Add me!"
+            }
         }
     },
     // Docs pages
@@ -1270,8 +1301,39 @@ const tr = {
             desc: "Anlamlı geliştirme araçlarını herkes için erişilebilir kılmak."
         },
         developer: {
-            title: "Geliştirici Odaklı",
-            desc: "Geliştiriciler tarafından, geliştiriciler için yapıldı."
+            title: "Geliştirici Profili",
+            subtitle: "DevLab'ın arkasındaki yaratıcıyla tanışın",
+            role: "Full Stack Geliştirici",
+            bio: "Güzel ve performanslı web deneyimleri oluşturma tutkusu. Geliştirici araçlarının geleceğini her commit ile inşa ediyorum. ✨",
+            stats: {
+                years: "Yıl",
+                projects: "Proje",
+                linesPerDay: "Satır/Gün"
+            },
+            status: {
+                title: "Mevcut Durum",
+                available: "Müsait",
+                openTo: "İşbirlikleri için açık",
+                idle: "Boşta",
+                dnd: "Rahatsız Etmeyin",
+                offline: "Çevrimdışı",
+                playing: "Oynuyor:",
+                listening: "Dinliyor:"
+            },
+            location: {
+                country: "Türkiye",
+                timezone: "Çevrimiçi"
+            },
+            skills: {
+                title: "Teknoloji Yığını"
+            },
+            quote: {
+                text: "\"Kod, makineler için yazılmış ama insanlar tarafından okunan şiirdir.\"",
+                author: "— Kişisel Felsefe"
+            },
+            discord: {
+                addMe: "Ekle beni!"
+            }
         }
     },
     // Page content
@@ -2309,8 +2371,39 @@ const de = {
             desc: "Sinnvolle Entwicklungstools für jeden zugänglich machen."
         },
         developer: {
-            title: "Entwicklerorientiert",
-            desc: "Von Entwicklern für Entwickler gemacht."
+            title: "Entwicklerprofil",
+            subtitle: "Triff den Schöpfer hinter DevLab",
+            role: "Full Stack Entwickler",
+            bio: "Leidenschaftlich für die Erstellung schöner, leistungsstarker Web-Erlebnisse. Die Zukunft der Entwickler-Tools aufbauen, ein Commit nach dem anderen. ✨",
+            stats: {
+                years: "Jahre",
+                projects: "Projekte",
+                linesPerDay: "Zeilen/Tag"
+            },
+            status: {
+                title: "Aktueller Status",
+                available: "Verfügbar",
+                openTo: "Offen für Zusammenarbeit",
+                idle: "Abwesend",
+                dnd: "Bitte nicht stören",
+                offline: "Offline",
+                playing: "Spielt",
+                listening: "Hört"
+            },
+            location: {
+                country: "Türkei",
+                timezone: "Online"
+            },
+            skills: {
+                title: "Tech Stack"
+            },
+            quote: {
+                text: "\"Code ist Poesie, geschrieben für Maschinen, aber gelesen von Menschen.\"",
+                author: "— Persönliche Philosophie"
+            },
+            discord: {
+                addMe: "Füg mich hinzu!"
+            }
         }
     },
     // Tool descriptions
@@ -3253,8 +3346,39 @@ const fr = {
             desc: "Rendre les outils de développement significatifs accessibles à tous."
         },
         developer: {
-            title: "Axé Développeur",
-            desc: "Créé par des développeurs, pour des développeurs."
+            title: "Profil Développeur",
+            subtitle: "Rencontrez le créateur derrière DevLab",
+            role: "Développeur Full Stack",
+            bio: "Passionné par la création d'expériences web belles et performantes. Construire l'avenir des outils de développement, un commit à la fois. ✨",
+            stats: {
+                years: "Années",
+                projects: "Projets",
+                linesPerDay: "Lignes/Jour"
+            },
+            status: {
+                title: "Statut Actuel",
+                available: "Disponible",
+                openTo: "Ouvert aux collaborations",
+                idle: "Inactif",
+                dnd: "Ne pas déranger",
+                offline: "Hors ligne",
+                playing: "Joue à",
+                listening: "Écoute"
+            },
+            location: {
+                country: "Turquie",
+                timezone: "En ligne"
+            },
+            skills: {
+                title: "Stack Technique"
+            },
+            quote: {
+                text: "\"Le code est de la poésie écrite pour les machines, mais lue par les humains.\"",
+                author: "— Philosophie Personnelle"
+            },
+            discord: {
+                addMe: "Ajoutez-moi !"
+            }
         }
     },
     // Docs pages
@@ -4129,8 +4253,39 @@ const es = {
             desc: "Hacer accesibles herramientas de desarrollo significativas para todos."
         },
         developer: {
-            title: "Centrado en el Desarrollador",
-            desc: "Creado por desarrolladores, para desarrolladores."
+            title: "Perfil del Desarrollador",
+            subtitle: "Conoce al creador detrás de DevLab",
+            role: "Desarrollador Full Stack",
+            bio: "Apasionado por crear experiencias web hermosas y de alto rendimiento. Construyendo el futuro de las herramientas de desarrollo, un commit a la vez. ✨",
+            stats: {
+                years: "Años",
+                projects: "Proyectos",
+                linesPerDay: "Líneas/Día"
+            },
+            status: {
+                title: "Estado Actual",
+                available: "Disponible",
+                openTo: "Abierto a colaboraciones",
+                idle: "Ausente",
+                dnd: "No molestar",
+                offline: "Sin conexión",
+                playing: "Jugando",
+                listening: "Escuchando"
+            },
+            location: {
+                country: "Turquía",
+                timezone: "En línea"
+            },
+            skills: {
+                title: "Stack Tecnológico"
+            },
+            quote: {
+                text: "\"El código es poesía escrita para máquinas, pero leída por humanos.\"",
+                author: "— Filosofía Personal"
+            },
+            discord: {
+                addMe: "¡Agrégame!"
+            }
         }
     },
     // Tool descriptions
@@ -5330,7 +5485,7 @@ function Navbar() {
                                 children: [
                                     isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                         layoutId: "desktop-nav-active",
-                                        className: `absolute inset-0 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`,
+                                        className: `absolute inset-0 rounded-full ${theme === 'dark' ? 'bg-indigo-400/10' : 'bg-black/5'}`,
                                         transition: {
                                             type: "spring",
                                             bounce: 0.2,

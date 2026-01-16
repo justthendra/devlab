@@ -196,8 +196,39 @@ export const tr = {
       desc: "Anlamlı geliştirme araçlarını herkes için erişilebilir kılmak."
     },
     developer: {
-      title: "Geliştirici Odaklı",
-      desc: "Geliştiriciler tarafından, geliştiriciler için yapıldı."
+      title: "Geliştirici Profili",
+      subtitle: "DevLab'ın arkasındaki yaratıcıyla tanışın",
+      role: "Full Stack Geliştirici",
+      bio: "Güzel ve performanslı web deneyimleri oluşturma tutkusu. Geliştirici araçlarının geleceğini her commit ile inşa ediyorum. ✨",
+      stats: {
+        years: "Yıl",
+        projects: "Proje",
+        linesPerDay: "Satır/Gün",
+      },
+      status: {
+        title: "Mevcut Durum",
+        available: "Müsait",
+        openTo: "İşbirlikleri için açık",
+        idle: "Boşta",
+        dnd: "Rahatsız Etmeyin",
+        offline: "Çevrimdışı",
+        playing: "Oynuyor:",
+        listening: "Dinliyor:",
+      },
+      location: {
+        country: "Türkiye",
+        timezone: "Çevrimiçi",
+      },
+      skills: {
+        title: "Teknoloji Yığını",
+      },
+      quote: {
+        text: "\"Kod, makineler için yazılmış ama insanlar tarafından okunan şiirdir.\"",
+        author: "— Kişisel Felsefe",
+      },
+      discord: {
+        addMe: "Ekle beni!",
+      },
     },
   },
 

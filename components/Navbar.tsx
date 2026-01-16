@@ -119,7 +119,7 @@ export default function Navbar() {
                 {isActive && (
                   <motion.div
                     layoutId="desktop-nav-active"
-                    className={`absolute inset-0 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`}
+                    className={`absolute inset-0 rounded-full ${theme === 'dark' ? 'bg-indigo-400/10' : 'bg-black/5'}`}
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}

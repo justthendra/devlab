@@ -193,8 +193,39 @@ export const es = {
       desc: "Hacer accesibles herramientas de desarrollo significativas para todos."
     },
     developer: {
-      title: "Centrado en el Desarrollador",
-      desc: "Creado por desarrolladores, para desarrolladores."
+      title: "Perfil del Desarrollador",
+      subtitle: "Conoce al creador detrás de DevLab",
+      role: "Desarrollador Full Stack",
+      bio: "Apasionado por crear experiencias web hermosas y de alto rendimiento. Construyendo el futuro de las herramientas de desarrollo, un commit a la vez. ✨",
+      stats: {
+        years: "Años",
+        projects: "Proyectos",
+        linesPerDay: "Líneas/Día",
+      },
+      status: {
+        title: "Estado Actual",
+        available: "Disponible",
+        openTo: "Abierto a colaboraciones",
+        idle: "Ausente",
+        dnd: "No molestar",
+        offline: "Sin conexión",
+        playing: "Jugando",
+        listening: "Escuchando",
+      },
+      location: {
+        country: "Turquía",
+        timezone: "En línea",
+      },
+      skills: {
+        title: "Stack Tecnológico",
+      },
+      quote: {
+        text: "\"El código es poesía escrita para máquinas, pero leída por humanos.\"",
+        author: "— Filosofía Personal",
+      },
+      discord: {
+        addMe: "¡Agrégame!",
+      },
     },
   },
 

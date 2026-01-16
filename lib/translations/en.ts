@@ -303,8 +303,39 @@ export const en = {
       desc: "Making meaningful development tools accessible to everyone."
     },
     developer: {
-      title: "Developer Driven",
-      desc: "Created by developers, for developers."
+      title: "Developer Profile",
+      subtitle: "Meet the creator behind DevLab",
+      role: "Full Stack Developer",
+      bio: "Passionate about crafting beautiful, performant web experiences. Building the future of developer tools, one commit at a time. ✨",
+      stats: {
+        years: "Years",
+        projects: "Projects",
+        linesPerDay: "Lines/Day",
+      },
+      status: {
+        title: "Current Status",
+        available: "Available",
+        openTo: "Open to collaborations",
+        idle: "Idle",
+        dnd: "Do Not Disturb",
+        offline: "Offline",
+        playing: "Playing",
+        listening: "Listening to",
+      },
+      location: {
+        country: "Turkey",
+        timezone: "Online",
+      },
+      skills: {
+        title: "Tech Stack",
+      },
+      quote: {
+        text: "\"Code is poetry written for machines, but read by humans.\"",
+        author: "— Personal Philosophy",
+      },
+      discord: {
+        addMe: "Add me!",
+      },
     },
   },
 
