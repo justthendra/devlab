@@ -197,6 +197,7 @@ export const tr = {
     },
     developer: {
       title: "Geliştirici Profili",
+      desc: "DevLab'ın arkasındaki yaratıcıyla tanışın ve geliştirme yolculuğunu keşfedin.",
       subtitle: "DevLab'ın arkasındaki yaratıcıyla tanışın",
       role: "Full Stack Geliştirici",
       bio: "Güzel ve performanslı web deneyimleri oluşturma tutkusu. Geliştirici araçlarının geleceğini her commit ile inşa ediyorum. ✨",

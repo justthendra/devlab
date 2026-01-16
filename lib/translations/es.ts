@@ -194,6 +194,7 @@ export const es = {
     },
     developer: {
       title: "Perfil del Desarrollador",
+      desc: "Conoce al creador detrás de DevLab y explora el viaje de desarrollo.",
       subtitle: "Conoce al creador detrás de DevLab",
       role: "Desarrollador Full Stack",
       bio: "Apasionado por crear experiencias web hermosas y de alto rendimiento. Construyendo el futuro de las herramientas de desarrollo, un commit a la vez. ✨",
